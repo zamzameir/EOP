@@ -24,14 +24,17 @@
 #include <time.h>
 #include <cmath>
 
-void printmessage (void);
-void profile (void);
+#include "info.h"
+
+inline void printmessage (void);
+inline void profile (void);
+inline void info (void);
 
 using namespace std;
 int main()
 {
 	system("color f0");
-	system("title Main menu"); 
+	system("title MAIN MENU"); 
 
 	int index,randNo;
 	char choice;
@@ -64,7 +67,7 @@ do
 			
 	switch(choice) 
 	{
-		case '1' : break;
+		case '1' : info();break;
 		case '2' : profile();break;
 		case '3' : break;
 		case 'x' : 
@@ -72,12 +75,12 @@ do
 	}
 
 } while ( choice != '1' && choice != '2' && choice != '3' && choice != 'x' && choice != 'X' );
-return 0;
+  return 0;
 }
 void profile (void)
 {
 	system("color b0");
-	system("title Job request"); 
+	system("title JOB REQUEST"); 
 	int index;
 	char choice;
 	char view [6][256] = { "Profile","Experience","Education","Languages","Contacts","Technical skills" };
