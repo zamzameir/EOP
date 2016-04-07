@@ -21,7 +21,7 @@ void info (void)
 	cin >> choice;
 	
 	if ( choice !='x' && choice !='X' )
-	printf("\a");
+	cout << "\a";
 	
 	switch(choice) 
 	{
