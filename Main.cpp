@@ -7,9 +7,11 @@
 
 #include "welcomeMessage.h"
 #include "userProfile.h"
+#include "profileDB.h"
 #include "info.h"
 
 inline void printmessage (void);
+inline void userDatabase (void);
 inline void profile (void);
 inline void info (void);
 
@@ -21,7 +23,7 @@ int main()
 
 	int index,randNo;
 	char choice;
-	char view [4][256] = { "Latest info","Job request","User database","Credits" };
+	char view [4][256] = { "News","Job request","Users database","Credits" };
 						 
 	srand (time (NULL));
 	randNo = 100 + rand () % (200-101);
@@ -34,15 +36,15 @@ do
 	system ("cls");
 	printmessage ();
 	
-	cout << " ID No. " << randNo << "\t\t\t\t\t\t" << "DATE: " << t->tm_mday <<"/" << t->tm_mon+1 <<"/" << t->tm_year+1900 << "\n\n";
-	cout << "Select an action\n";
-	cout << "----------------\n\n";
+	cout << "  User No. " << randNo << "\t\t\t\t\t\t" << "\tDATE: " << t->tm_mday <<"/" << t->tm_mon+1 <<"/" << t->tm_year+1900 << "\n\n";
+	cout << " Select an action\n";
+	cout << " ----------------\n\n";
 	
 	for (index = 0; index < 4; ++index)
-	cout << index+1 << " - " << view[index] << "\n";
-	cout << "X - Exit\n";
+	cout << " " << index+1 << " - " << view[index] << "\n";
+	cout << " X - Exit\n";
 		
-	cout << "\nType a number > ";
+	cout << "\n Make a choice > ";
 	fflush(stdin);
 	cin >> choice;
 	

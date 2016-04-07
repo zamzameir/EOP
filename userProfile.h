@@ -1,8 +1,10 @@
 #include <iostream>
 
 extern inline void printmessage ();
+extern void userDatabase ();
 extern void info ();
 extern int main ();
+
 using namespace std;
 void profile (void)
 {
@@ -20,7 +22,7 @@ void profile (void)
 	cout << index+1 << " - " << view[index] << "\n";
 	cout << "X - Go back\n";
 		
-	cout << "\nType a number > ";
+	cout << "\nMake a choice > ";
 	fflush(stdin);
 	cin >> choice;
 	
@@ -29,7 +31,7 @@ void profile (void)
 	
 	switch(choice) 
 	{
-		case '1' : break;
+		case '1' : userDatabase();break;
 		case '2' : break;
 		case '3' : break;
 		case '4' : break;

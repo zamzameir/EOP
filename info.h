@@ -1,8 +1,10 @@
 #include <iostream>
 
 extern inline void printmessage ();
+extern void userDatabase ();
 extern void profile ();
 extern int main ();
+
 using namespace std;
 void info (void)
 {
@@ -12,9 +14,8 @@ void info (void)
 	do
 {
 	system ("cls");
-	printmessage ();
 	
-	cout << "CURRENT NEWS!\n";
+	cout << "\nCURRENT NEWS!\n";
 	cout << "-------------\n\n\n\n";
 		
 	cout << "\nType X to go back > ";
