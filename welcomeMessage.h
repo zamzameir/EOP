@@ -20,17 +20,3 @@ void printmessage (void)
       puts("");puts("");
       return;
 }
-void jobInfo (void)
- {
-      char message1 [] = "--------------------"; 
-      char message2 [] = "Job Application Info";
-      char message3 [] = "--------------------";
-      
-      printf("%*s",40+strlen(message1)/2,message1, 40-strlen(message1)/2,"");
-      puts("");
-      printf("%*s",40+strlen(message2)/2,message2, 40-strlen(message2)/2,"");
-      puts("");
-      printf("%*s",40+strlen(message3)/2,message3, 40-strlen(message3)/2,"");
-      puts("");puts("");
-      return;
-}

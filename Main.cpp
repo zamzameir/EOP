@@ -18,21 +18,20 @@ inline void info (void);
 
 using namespace std;
 int main()
-{
+{	
 	system("color f0");
 	system("title MAIN MENU"); 
 
 	int index,randNo;
 	char choice;
-	char view [4][256] = { "News","Job request","Users database","Credits" };
+	char view [4][256] = { "News (coming soon)","Job request","Users database (coming soon)","Credits" };
 						 
 	srand (time (NULL));
 	randNo = 100 + rand () % (200-101);
 	int month = 4, year = 2015, tm_mon, tm_mday, tm_year;
 	time_t now = time(NULL);
-	struct tm *t = localtime(&now);
-				       
-do
+	struct tm *t = localtime(&now);     
+	do
 {
 	system ("cls");
 	printmessage ();
@@ -62,8 +61,9 @@ do
 		case 'X' : break;
 	}
 
-} while ( choice != '1' && choice != '2' && choice != '3' && choice != 'x' && choice != 'X' );
-  return 0;
+} 	while ( choice != '1' && choice != '2' && choice != '3' && choice != 'x' && choice != 'X' );
+  	return 0;
 }
+
 // END
 

@@ -1,49 +1,65 @@
-// Incomplete
+/* Incomplete */
+
 #include <iostream>
 #include <string.h>
+#include <iomanip>
 
 extern inline void printmessage ();
-extern inline void jobInfo ();
 extern inline void profile ();
 extern inline void info ();
 extern int main ();
 
-const int ROWS = 1;
-const int COLS = 5;
-void display (int [ROWS][COLS]);
-
 using namespace std;
 void userDatabase (void)
 {
+	
 	system("title Database");
+	system("color f0");
 	system("cls");
-	string val[ROWS][COLS];
-	int sum = 0;
-
-	for (int i = 0; i < ROWS; i++)
+	
+	long int dob[1000];
+	string name[256];	
+	string edu[256];
+	string exp[256];
+	char sex[1000];
+	int app;
+	
+	cout << " How many applicant : ";
+	cin  >> app;
+	system("cls");
+	
+	for (int i = 0; i < app; i++)
 	{
-	int sum = 0;
-	cout << "Applicant #" << i+1 << endl;
-	cout << "Enter your name : ";
-	cin >> val[0][0];
-	cout << "IC - Number : ";
-	cin >> val[0][1];
-	cout << "Sex : ";
-	cin >> val[0][2];
-	cout << "Last education : ";
-	cin >> val[0][3];
-	cout <<"Work experience : ";
- 	cin >> val[0][4];
+		cout << " Applicant #" << i+1 << endl;
+			for (int j = 0; j < 1; j++)
+			{
+				cout << " Enter your name : ";
+				cin  >> name[j];
+				fflush(stdin);
+				cout << " Enter your DOB : ";
+				cin  >> dob[j];
+				cout << " Sex : ";
+				cin  >> sex[j];
+				fflush(stdin);
+				cout << " Education : ";
+				cin  >> edu[j];
+				fflush(stdin);
+				cout << " Work Experience : ";
+				cin  >> exp[j];
+				fflush(stdin);
+				cout << "\n\n";
+				cout << " NAME\tDOB\tSEX\tEDUCATION\tEXPERIENCE\n";
+				cout << setw(5) << name[j] << " "
+				     << setw(5) << dob [j] << " "
+				     << setw(5) << sex [j] << " "
+				     << setw(5) << edu [j] << " "
+				     << setw(5) << exp [j] << " "
+				     << endl;
+			}
 
-	int rowNum,colNum;
-	for (rowNum = 0 ; rowNum < ROWS; rowNum++)
-	{
-		for (colNum = 0; colNum < COLS; colNum++)
-		cout << setw(10) << val[rowNum][colNum];
-		
-	cout << endl;
+		cout << "\n";
 	}
-	}
+
 	system("pause");
 }
 

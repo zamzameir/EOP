@@ -2,24 +2,23 @@
 
 extern inline void printmessage ();
 extern inline void userDatabase ();
-extern inline void jobInfo ();
 extern inline void profile ();
 extern int main ();
 
 using namespace std;
 void info (void)
 {
-	system("color cf");
-	system("title INFO"); 
+	system("title INFO");
+	system("color f0");
 	char choice;
 	do
 {
 	system ("cls");
 	
-	cout << "\nCURRENT NEWS!\n";
-	cout << "-------------\n\n\n\n";
+	cout << "\n CURRENT NEWS!\n";
+	cout << " -------------\n\n\n\n";
 		
-	cout << "\nType X to go back > ";
+	cout << "\n Type X to go back > ";
 	fflush(stdin);
 	cin >> choice;
 	
