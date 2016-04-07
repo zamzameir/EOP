@@ -21,7 +21,7 @@ int main()
 
 	int index,randNo;
 	char choice;
-	char view [3][256] = { "Latest info","Job request","User database" };
+	char view [4][256] = { "Latest info","Job request","User database","Credits" };
 						 
 	srand (time (NULL));
 	randNo = 100 + rand () % (200-101);
@@ -34,11 +34,11 @@ do
 	system ("cls");
 	printmessage ();
 	
-	cout << " User No. " << randNo << "\t\t\t\t\t\t" << "DATE: " << t->tm_mday <<"/" << t->tm_mon+1 <<"/" << t->tm_year+1900 << "\n\n";
+	cout << " ID No. " << randNo << "\t\t\t\t\t\t" << "DATE: " << t->tm_mday <<"/" << t->tm_mon+1 <<"/" << t->tm_year+1900 << "\n\n";
 	cout << "Select an action\n";
 	cout << "----------------\n\n";
 	
-	for (index = 0; index < 3; ++index)
+	for (index = 0; index < 4; ++index)
 	cout << index+1 << " - " << view[index] << "\n";
 	cout << "X - Exit\n";
 		
@@ -46,7 +46,7 @@ do
 	fflush(stdin);
 	cin >> choice;
 	
-	if (choice !='1' && choice !='2' && choice !='3' && choice !='x' && choice !='X')
+	if (choice !='1' && choice !='2' && choice !='3' && choice !='4' && choice !='x' && choice !='X')
 	cout << "\a";
 			
 	switch(choice) 
@@ -54,6 +54,7 @@ do
 		case '1' : info();break;
 		case '2' : profile();break;
 		case '3' : break;
+		case '4' : system ("start credits.html");break;
 		case 'x' : 
 		case 'X' : break;
 	}

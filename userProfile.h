@@ -1,6 +1,7 @@
 #include <iostream>
 
 extern inline void printmessage ();
+extern void info ();
 extern int main ();
 using namespace std;
 void profile (void)
