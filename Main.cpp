@@ -12,6 +12,7 @@
 
 inline void printmessage (void);
 inline void userDatabase (void);
+inline void jobInfo (void);
 inline void profile (void);
 inline void info (void);
 

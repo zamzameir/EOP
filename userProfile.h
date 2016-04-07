@@ -1,7 +1,8 @@
 #include <iostream>
 
 extern inline void printmessage ();
-extern void userDatabase ();
+extern inline void userDatabase ();
+extern inline void jobInfo ();
 extern void info ();
 extern int main ();
 

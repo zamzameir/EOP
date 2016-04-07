@@ -3,7 +3,10 @@
 #include <string.h>
 
 extern inline void printmessage ();
-extern void profile ();
+extern inline void jobInfo ();
+extern inline void profile ();
+extern inline void info ();
+extern int main ();
 
 const int ROWS = 1;
 const int COLS = 5;

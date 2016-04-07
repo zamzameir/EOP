@@ -1,8 +1,9 @@
 #include <iostream>
 
 extern inline void printmessage ();
-extern void userDatabase ();
-extern void profile ();
+extern inline void userDatabase ();
+extern inline void jobInfo ();
+extern inline void profile ();
 extern int main ();
 
 using namespace std;

@@ -1,6 +1,10 @@
 #include <iostream>
 
+extern inline void userDatabase ();
+extern inline void profile ();
+extern inline void info ();
 extern int main ();
+
 using namespace std;
 void printmessage (void)
  {
