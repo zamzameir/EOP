@@ -9,7 +9,7 @@ using namespace std;
 void profile (void)
 {
 	char view [6][256] = { "Profile","Experience (coming soon)","Education (coming soon)","Languages (coming soon)","Contacts (coming soon)","Technical skills (coming soon)" };
-	system("title JOB REQUEST"); 
+	system("title "); 
 	system("color f0");
 	char choice;
 	int index;

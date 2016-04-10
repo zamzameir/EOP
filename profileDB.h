@@ -13,7 +13,7 @@ using namespace std;
 void userDatabase (void)
 {
 	
-	system("title Database");
+	system("title ");
 	system("color f0");
 	system("cls");
 	

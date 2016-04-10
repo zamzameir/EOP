@@ -20,11 +20,11 @@ using namespace std;
 int main()
 {	
 	system("color f0");
-	system("title MAIN MENU"); 
+	system("title "); 
 
 	int index,randNo;
 	char choice;
-	char view [4][256] = { "News (coming soon)","Job request","Users database (coming soon)","Credits" };
+	char view [4][256] = { "News","Job request","Users database (coming soon)","Credits" };
 						 
 	srand (time (NULL));
 	randNo = 100 + rand () % (200-101);
