@@ -23,7 +23,7 @@ void info (void)
 	
 	for (int i = 0; i < 2; i++)
 	{
-		cout << " " << i+1 << " - " << ann[i] << "\n";
+	   cout << " " << i+1 << " - " << ann[i] << "\n";
 	}
 		
 	cout << "\n Type X to go back > ";
@@ -39,7 +39,7 @@ void info (void)
 		case 'X' : main();break;
 	}
 
-} while ( choice != 'x' && choice != 'X' );
-  return;
+} 	while ( choice != 'x' && choice != 'X' );
+  	return;
 }
 
