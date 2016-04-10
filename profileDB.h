@@ -1,7 +1,7 @@
 /* Incomplete */
 
 #include <iostream>
-#include <string.h>
+#include <cstring>
 #include <iomanip>
 
 extern inline void printmessage ();
@@ -12,17 +12,16 @@ extern int main ();
 using namespace std;
 void userDatabase (void)
 {
-	
-	system("title ");
-	system("color f0");
-	system("cls");
-	
 	long int dob[1000];
 	string name[256];	
 	string edu[256];
 	string exp[256];
 	char sex[1000];
 	int app;
+
+	system("title ");
+	system("color f0");
+	system("cls");
 	
 	cout << " How many applicant : ";
 	cin  >> app;

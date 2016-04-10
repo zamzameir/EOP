@@ -1,9 +1,10 @@
 #include <iostream>
-#include <string.h>
-#include <stdlib.h>
+#include <cstring>
+#include <cstdlib>
 #include <iomanip>
-#include <time.h>
+#include <ctime>
 #include <cmath>
+
 
 #include "welcomeMessage.h"
 #include "userProfile.h"
@@ -12,13 +13,16 @@
 
 inline void printmessage (void);
 inline void userDatabase (void);
+inline void displayDB (void);
 inline void jobInfo (void);
 inline void profile (void);
 inline void info (void);
 
+
 using namespace std;
 int main()
 {	
+	system("mode con: cols=87 lines=18");
 	system("color f0");
 	system("title "); 
 
@@ -35,7 +39,6 @@ int main()
 {
 	system ("cls");
 	printmessage ();
-	
 	cout << "  User No. " << randNo << "\t\t\t\t\t\t" << "\tDATE: " << t->tm_mday <<"/" << t->tm_mon+1 <<"/" << t->tm_year+1900 << "\n\n";
 	cout << " Select an action\n";
 	cout << " ----------------\n\n";
@@ -55,7 +58,8 @@ int main()
 	{
 		case '1' : info();break;
 		case '2' : profile();break;
-		case '3' : break;
+		case '3' : //displayDB();
+				   break;
 		case '4' : system ("start credits.html");break;
 		case 'x' : 
 		case 'X' : break;
