@@ -3,6 +3,7 @@
 #include <iostream>
 #include <cstring>
 #include <iomanip>
+#include <fstream>
 
 extern inline void printmessage ();
 extern inline void profile ();
@@ -22,10 +23,14 @@ void userDatabase (void)
 	system("title ");
 	system("color f0");
 	system("cls");
+	ofstream fout("database.txt");
 	
-	cout << " How many applicant : ";
-	cin  >> app;
-	system("cls");
+	if(fout.is_open())
+	{
+		cout << "File Opened successfully!!!. Writing data from array to file" << endl;
+		cout << " How many applicant : ";
+		cin  >> app;
+		system("cls");
 	
 	for (int i = 0; i < app; i++)
 	{
@@ -57,6 +62,11 @@ void userDatabase (void)
 			}
 
 		cout << "\n";
+	}
+	}
+	else
+	{
+		cout << "Data is not stored." << endl;
 	}
 
 	system("pause");
