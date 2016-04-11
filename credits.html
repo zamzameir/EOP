@@ -26,19 +26,68 @@
 		<meta charset="UTF-8" />
 	</head>
 	<body>
-	`	<audio autoplay src="credits.mp3"></audio>
+		<audio preload="auto" src="credits.mp3" loop="true" autobuffer></audio>
+
+<script>
+
+function setCookie(c_name,value,exdays)
+{
+    var exdate=new Date();
+    exdate.setDate(exdate.getDate() + exdays);
+    var c_value=escape(value) + ((exdays==null) ? "" : "; expires="+exdate.toUTCString());
+    document.cookie=c_name + "=" + c_value;
+}
+
+function getCookie(c_name)
+{
+    var i,x,y,ARRcookies=document.cookie.split(";");
+    for (i=0;i<ARRcookies.length;i++)
+    {
+      x=ARRcookies[i].substr(0,ARRcookies[i].indexOf("="));
+      y=ARRcookies[i].substr(ARRcookies[i].indexOf("=")+1);
+      x=x.replace(/^\s+|\s+$/g,"");
+      if (x==c_name)
+        {
+        return unescape(y);
+        }
+    }
+}
+
+var song = document.getElementsByTagName('audio')[0];
+var played = false;
+var tillPlayed = getCookie('timePlayed');
+function update()
+{
+    if(!played)
+	{
+        if(tillPlayed)
+		{
+        song.currentTime = tillPlayed;
+        song.play();
+        played = true;
+        }
+        else
+		{
+        song.play();
+        played = true;
+        }
+    }
+
+    else
+	{
+    setCookie('timePlayed', song.currentTime);
+    }
+}
+setInterval(update,1000);
+</script>
 		<p><img src="iium.png" alt="IIUM LOGO"></p>
 		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 		<hl><b>ELEMENTS OF PROGRAMMING CSC1100</b></hl>
 		<p>
 		<p>Final Project SEM2 15/16 : JOB APPLICATION SYSTEM</p>
-		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-		<button type="button" onclick="location.href='https://codeload.github.com/zamzameir/EOP/zip/Final'">Source code</button>
 			<ul>
-				<marquee direction="up" scrolldelay="400" align="{center}" loop="1">
+				<marquee direction="up" scrolldelay="400" align="{center}" loop="10">
 				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 				<b><u>SPECIAL THANKS TO</u></b><br><br>
@@ -53,6 +102,10 @@
 				<tt>Lead programmer : Izzat Ameir 1523329</tt><br>
 				&nbsp;&nbsp;<tt>Programmer : Muhammad Afif&nbsp;&nbsp;1520547</tt><br>&nbsp;&nbsp;<tt>Programmer : Haris Fadhilah 1524571</tt><br>&nbsp;&nbsp;<tt>Programmer : Amirul Ashraaf 152XXXX</tt></marquee>
 			</ul>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		<button type="button" onclick="location.href='https://codeload.github.com/zamzameir/EOP/zip/Final'">Source code</button>
 		</p>
 	</body>
 </html>
