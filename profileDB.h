@@ -23,14 +23,10 @@ void userDatabase (void)
 	system("title ");
 	system("color f0");
 	system("cls");
-	ofstream fout("database.txt");
 	
-	if(fout.is_open())
-	{
-		cout << "File Opened successfully!!!. Writing data from array to file" << endl;
-		cout << " How many applicant : ";
-		cin  >> app;
-		system("cls");
+	cout << " How many applicant : ";
+	cin  >> app;
+	system("cls");
 	
 	for (int i = 0; i < app; i++)
 	{
@@ -52,7 +48,7 @@ void userDatabase (void)
 				cin  >> exp[j];
 				fflush(stdin);
 				cout << "\n\n";
-				cout << " NAME\tDOB\tSEX\tEDUCATION\tEXPERIENCE\n";
+				cout << " NAME\tDOB\tSEX\tEDUCATION\tEXPERIENCE\n"; // display array
 				cout << setw(5) << name[j] << " "
 				     << setw(5) << dob [j] << " "
 				     << setw(5) << sex [j] << " "
@@ -63,10 +59,21 @@ void userDatabase (void)
 
 		cout << "\n";
 	}
+	
+	ifstream file("database.txt"); // creating file name database.txt
+    if(file.is_open()) // save array data into file name database.txt
+	{
+    cout << "File Opened successfully!!!. Writing data from array to file" << endl;
+    file >> name[j];
+    file >> dob[j];
+    file >> sex[j];
+    file >> edu[j];
+    file >> exp[j];
+    cout << "Array data successfully saved into the file test.txt" << endl;
 	}
 	else
 	{
-		cout << "Data is not stored." << endl;
+		cout << "File could not be opened." << endl;
 	}
 
 	system("pause");

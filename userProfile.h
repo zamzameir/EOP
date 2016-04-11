@@ -20,7 +20,7 @@ void profile (void)
 	printmessage ();
 				
 	for (index = 0; index < 6; ++index)
-	cout << " " << index+1 << " - " << view[index] << "\n";
+	cout << " " << index+1 << " - " << view[index] << "\n"; // display char view
 	cout << " X - Go back\n";
 		
 	cout << "\n Make a choice > ";
@@ -32,7 +32,7 @@ void profile (void)
 	
 	switch(choice) 
 	{
-		case '1' : userDatabase();break;
+		case '1' : userDatabase();break; // call function userDatabase
 		case '2' : break;
 		case '3' : break;
 		case '4' : break;

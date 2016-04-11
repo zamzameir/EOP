@@ -23,7 +23,7 @@ void info (void)
 	
 	for (int i = 0; i < 2; i++)
 	{
-	   cout << " " << i+1 << " - " << ann[i] << "\n";
+	   cout << " " << i+1 << " - " << ann[i] << "\n"; // displaty char ann
 	}
 		
 	cout << "\n Type X to go back > ";

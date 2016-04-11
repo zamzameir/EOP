@@ -44,7 +44,7 @@ int main()
 	cout << " ----------------\n\n";
 	
 	for (index = 0; index < 4; ++index)
-	cout << " " << index+1 << " - " << view[index] << "\n";
+	cout << " " << index+1 << " - " << view[index] << "\n"; // display view
 	cout << " X - Exit\n";
 		
 	cout << "\n Make a choice > ";
