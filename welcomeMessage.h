@@ -8,7 +8,7 @@ extern int main ();
 using namespace std;
 void printmessage (void)
  {
-	  char message1 [] = "----------------------------------"; 
+      char message1 [] = "----------------------------------"; 
       char message2 [] = "Welcome To Job Application Program";
       char message3 [] = "----------------------------------";
       
