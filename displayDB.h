@@ -18,7 +18,7 @@ void displayDB (void)
 	system("title ");
 	system("color f0");
 	char choice;
-	
+	// displaying all the data
 	cout << setw(5) << name[j]  << " "
 				     << setw(5) << dob [j] << " "
 				     << setw(5) << sex [j] << " "

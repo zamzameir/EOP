@@ -12,19 +12,18 @@
 #include "profileDB.h"
 #include "info.h"
 
-inline void display_splash(void);
+inline void display_splash(void); // splash function
 inline void printmessage (void);
 inline void userDatabase (void);
 inline void displayDB (void);
-inline void gotoxy(int,int);
-inline void jobInfo (void);
+inline void gotoxy(int,int); // loading function
 inline void profile (void);
 inline void info (void);
-inline void load (void);
+inline void load (void); // loading function
 
 using namespace std;
 
-class StartUp
+class StartUp // run at startup
 {
 public:
    StartUp()
@@ -40,18 +39,18 @@ StartUp startup;
 
 int main()
 {	
-	system("mode con: cols=87 lines=18");
+	system("mode con: cols=87 lines=18"); // set windows size
 	system("color f0");
 	system("title "); 
 	int index,randNo;
 	char choice;
-	char view [4][256] = { "News","Job request","Users database (coming soon)","Credits" };
+	char view [4][256] = { "News update","Job application","Users database","Credits" };
 						 
 	srand (time (NULL));
-	randNo = 100 + rand () % (200-101);
+	randNo = 100 + rand () % (200-101); // random number
 	int month = 4, year = 2015, tm_mon, tm_mday, tm_year;
 	time_t now = time(NULL);
-	struct tm *t = localtime(&now);	
+	struct tm *t = localtime(&now);	// get current date
   	do
 {
 	system ("cls");

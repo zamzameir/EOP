@@ -26,7 +26,7 @@ void load(){
     printf("loading...");
     gotoxy(30,15);
     for(r=1;r<=20;r++){
-    for(q=0;q<=100000000;q++); //to display the character slowly
+    for(q=0;q<=100000000;q++); // to display the character slowly
     printf("%c",177);}
 }
 void display_splash()

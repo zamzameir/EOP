@@ -8,7 +8,7 @@ extern int main ();
 using namespace std;
 void profile (void)
 {
-	char view [6][256] = { "Profile","Experience (coming soon)","Education (coming soon)","Languages (coming soon)","Contacts (coming soon)","Technical skills (coming soon)" };
+	char view [6][256] = { "New application","View application" };
 	system("title "); 
 	system("color f0");
 	char choice;
@@ -19,7 +19,7 @@ void profile (void)
 	system ("cls");
 	printmessage ();
 				
-	for (index = 0; index < 6; ++index)
+	for (index = 0; index < 2; ++index)
 	cout << " " << index+1 << " - " << view[index] << "\n"; // display char view
 	cout << " X - Go back\n";
 		
@@ -34,10 +34,6 @@ void profile (void)
 	{
 		case '1' : userDatabase();break; // call function userDatabase
 		case '2' : break;
-		case '3' : break;
-		case '4' : break;
-		case '5' : break; 
-		case '6' : break;
 		case 'x' : 
 		case 'X' : main();break;
 	}

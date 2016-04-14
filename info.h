@@ -11,7 +11,7 @@ void info (void)
 	system("title ");
 	system("color f0");
 	char choice;
-	char ann [2][256] = {"Job application is open until 5 April", "Resume must be submitted online" };
+	char msg [2][256] = {"Job application is open until 5 April", "Resume must be submitted online" };
 	do
 {
 	system ("cls");
@@ -23,7 +23,7 @@ void info (void)
 	
 	for (int i = 0; i < 2; i++)
 	{
-	   cout << " " << i+1 << " - " << ann[i] << "\n"; // displaty char ann
+	   cout << " " << i+1 << " - " << msg[i] << "\n"; // display message
 	}
 		
 	cout << "\n Type X to go back > ";
