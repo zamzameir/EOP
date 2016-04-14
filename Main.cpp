@@ -2,30 +2,52 @@
 #include <cstring>
 #include <cstdlib>
 #include <iomanip>
+#include <cctype>
 #include <ctime>
 #include <cmath>
 
-
 #include "welcomeMessage.h"
+#include "splashScreen.h"
 #include "userProfile.h"
 #include "profileDB.h"
 #include "info.h"
 
+inline int  splashScreen (int,char**);
+inline void initialize(int,char**);
+inline void display_splash(void);
 inline void printmessage (void);
 inline void userDatabase (void);
 inline void displayDB (void);
+inline void gotoxy(int,int);
 inline void jobInfo (void);
 inline void profile (void);
 inline void info (void);
+inline void load (void);
 
+char** argv;int argc;
 
 using namespace std;
+
+class StartUp
+{
+public:
+   StartUp()
+   { 
+   	 system("mode con: cols=87 lines=18");
+	 system("color f0");
+	 system("title "); 
+	 load();
+	 system("cls");
+   	 splashScreen(argc,argv); 
+    }
+};
+StartUp startup;
+
 int main()
 {	
 	system("mode con: cols=87 lines=18");
 	system("color f0");
 	system("title "); 
-
 	int index,randNo;
 	char choice;
 	char view [4][256] = { "News","Job request","Users database (coming soon)","Credits" };
@@ -34,8 +56,9 @@ int main()
 	randNo = 100 + rand () % (200-101);
 	int month = 4, year = 2015, tm_mon, tm_mday, tm_year;
 	time_t now = time(NULL);
-	struct tm *t = localtime(&now);     
-	do
+	struct tm *t = localtime(&now);
+	
+  	do
 {
 	system ("cls");
 	printmessage ();

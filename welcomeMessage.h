@@ -8,9 +8,9 @@ extern int main ();
 using namespace std;
 void printmessage (void)
  {
-      char message1 [] = "----------------------------------"; 
-      char message2 [] = "Welcome To Job Application Program";
-      char message3 [] = "----------------------------------";
+      char message1 [] = "--------------------------------------"; 
+      char message2 [] = "WELCOME TO EXPRESS ENGINEERING SDN BHD";
+      char message3 [] = "--------------------------------------";
       
       printf("%*s",40+strlen(message1)/2,message1, 40-strlen(message1)/2,""); // center message 1
       puts("");

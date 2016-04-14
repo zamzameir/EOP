@@ -64,7 +64,6 @@ void userDatabase (void)
     if(file.is_open()) // save array data into file name database.txt
 	{
     cout << "File Opened successfully!!!. Writing data from array to file" << endl;
-    cout << name[j];
     cout << "Array data successfully saved into the file test.txt" << endl;
 	}
 	else
