@@ -12,8 +12,6 @@
 #include "profileDB.h"
 #include "info.h"
 
-inline int  splashScreen (int,char**);
-inline void initialize(int,char**);
 inline void display_splash(void);
 inline void printmessage (void);
 inline void userDatabase (void);
@@ -23,8 +21,6 @@ inline void jobInfo (void);
 inline void profile (void);
 inline void info (void);
 inline void load (void);
-
-char** argv;int argc;
 
 using namespace std;
 
@@ -36,7 +32,7 @@ public:
    	 system("mode con: cols=87 lines=18");
 	 system("color f0");
 	 system("title "); 
-   	 splashScreen(argc,argv);
+   	 display_splash();
 	 load(); 
     }
 };
@@ -55,8 +51,7 @@ int main()
 	randNo = 100 + rand () % (200-101);
 	int month = 4, year = 2015, tm_mon, tm_mday, tm_year;
 	time_t now = time(NULL);
-	struct tm *t = localtime(&now);
-	
+	struct tm *t = localtime(&now);	
   	do
 {
 	system ("cls");

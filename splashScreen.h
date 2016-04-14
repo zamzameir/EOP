@@ -26,9 +26,8 @@ void load(){
     printf("loading...");
     gotoxy(30,15);
     for(r=1;r<=20;r++){
-    for(q=0;q<=100000000;q++);//to display the character slowly
+    for(q=0;q<=100000000;q++); //to display the character slowly
     printf("%c",177);}
-    getch();
 }
 void display_splash()
 {
@@ -38,25 +37,9 @@ void display_splash()
     	"              +----------------------------------------------------+ \n"
     	"              ¦                                                    ¦ \n"
     	"              ¦           EXPRESS ENGINEERING SDN. BHD.            ¦ \n"
-    	"              ¦     LEVEL 16, TOWER 1, PETRONAS TWIN TOWERS, KLCC  ¦ \n"
+    	"              ¦    LEVEL 16, TOWER 1, PETRONAS TWIN TOWERS, KLCC   ¦ \n"
     	"              ¦            50088 KUALA LUMPUR MALAYSIA             ¦ \n"
     	"              ¦                                                    ¦ \n"
     	"              +----------------------------------------------------+ \n";
   	cout << string( 8, '\n' );
-}
-void initialize( int argc, char** argv )
-{
-	//string message = "Please wait...";
-  	//cout << message << flush;
-  	time_t start = time( &start );
-  	while (difftime( time( NULL ), start ) < 5.0 /*seconds*/)
-    	{ }
-  	//cout << "\r" << string( message.length(), ' ' ) << "\r" << flush;
-}
-
-int splashScreen( int argc, char** argv )
-{
-	display_splash();
-  	initialize( argc, argv );
-  	return 0;
 }
