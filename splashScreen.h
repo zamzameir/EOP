@@ -46,12 +46,12 @@ void display_splash()
 }
 void initialize( int argc, char** argv )
 {
-	string message = "Please wait...";
-  	cout << message << flush;
+	//string message = "Please wait...";
+  	//cout << message << flush;
   	time_t start = time( &start );
   	while (difftime( time( NULL ), start ) < 5.0 /*seconds*/)
     	{ }
-  	cout << "\r" << string( message.length(), ' ' ) << "\r" << flush;
+  	//cout << "\r" << string( message.length(), ' ' ) << "\r" << flush;
 }
 
 int splashScreen( int argc, char** argv )

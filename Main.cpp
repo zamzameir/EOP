@@ -36,9 +36,8 @@ public:
    	 system("mode con: cols=87 lines=18");
 	 system("color f0");
 	 system("title "); 
-	 load();
-	 system("cls");
-   	 splashScreen(argc,argv); 
+   	 splashScreen(argc,argv);
+	 load(); 
     }
 };
 StartUp startup;
