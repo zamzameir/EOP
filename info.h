@@ -15,8 +15,8 @@ void info (void)
 	do
 {
 	system ("cls");
-	
-	cout << "\n CURRENT NEWS!\n";
+	printmessage ();
+	cout << " CURRENT NEWS!\n";
 	cout << " -------------\n\n";
 	cout << " Hello. Thank you for visiting our site"  << endl;
 	cout << " For now there are a few announcement : " << endl << endl;
