@@ -2,9 +2,12 @@
 #include <process.h>
 #include <iostream>
 #include <stdlib.h>
-#include <cstring>
 #include <conio.h>
 #include <ctype.h>
+#include <cstring>
+#include <stdio.h>
+#include <fstream>
+#include <string>
 #include <time.h>
 
 extern void profile ();
@@ -49,7 +52,7 @@ void userDatabase()
    
    system("cls");
    
-   cout << "Education : " << "\n";
+   cout << "Education background : " << "\n";
    fflush(stdin);
    scanf("%[^\n]",edu);
    for(k=0;edu[k]!='\0';k++)
@@ -196,6 +199,8 @@ void userDatabase()
 }
 void viewData (void)
 {
+   COORD newSize = {100,9999};
+   SetConsoleScreenBufferSize(GetStdHandle(STD_OUTPUT_HANDLE), newSize);
    char c,exit;
    FILE *info;
    info=fopen("database.txt","a+");
@@ -222,9 +227,9 @@ do
 	switch(exit) 
 	{
 		case 'x' : 
-		case 'X' : main();break;
+		case 'X' : break;
 	}	
-} while (exit != 'x' && exit != 'X');
+}  while (exit != 'x' && exit != 'X');
 }
 void peekData (void)
 {
@@ -256,19 +261,21 @@ do
 		case 'X' : profile();break;
 		default  : profile();break;
 	}	
-} while (conts != 'x' || conts != 'X');
+}  while (conts != 'x' || conts != 'X');
 }
 void deleteData (void)
 {
-	system("cls");
+    system("cls");
     load3();
     system("cls");
-    system("del database.txt");
+    std::ofstream ofs; // clear external file input
+    ofs.open("database.txt", std::ofstream::out | std::ofstream::trunc);
+    ofs.close();
 }
 void resetData (void)
 {
-	// reset array data back to 0 
-	system("cls");
+    // reset array data back to 0 
+    system("cls");
     load5();
     system("cls");
     memset(nplname, 0, sizeof(nplname));

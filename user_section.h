@@ -45,8 +45,8 @@ void databaseProfile (void)
 	
 	switch(choice) 
 	{
-		case '1' : viewData();break;
-		case '2' : deleteData();break;
+		case '1' : viewData();databaseProfile();break;
+		case '2' : deleteData();databaseProfile();break;
 		case 'x' : 
 		case 'X' : main();break;
 	}
