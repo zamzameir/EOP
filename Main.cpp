@@ -50,7 +50,7 @@ int main()
 	system("title "); 
 	int index,randNo;
 	char choice;
-	char view [4][256] = { "News update","Job application","Applicant data","Credits" };
+	char view [5][256] = { "News update","Job application","Applicant data","Restart system","Credits" };
 						 
 	srand (time (NULL));
 	randNo = 100 + rand () % (200-101); // random number
@@ -65,7 +65,7 @@ int main()
 	cout << " Select an action\n";
 	cout << " ----------------\n\n";
 	
-	for (index = 0; index < 4; ++index)
+	for (index = 0; index < 5; ++index)
 	cout << " " << index+1 << " - " << view[index] << "\n"; // display view
 	cout << " X - Exit\n";
 		
@@ -81,7 +81,8 @@ int main()
 		case '1' : info();break;
 		case '2' : profile();break;
 		case '3' : databaseProfile();break;
-		case '4' : system ("start credits.html");break;
+		case '4' : StartUp();break;
+		case '5' : system ("start credits.html");break;
 		case 'x' : 
 		case 'X' : adios();break;
 	}
