@@ -65,6 +65,15 @@ void load5(){
     for(q=0;q<=100000000;q++); // to display the character slowly
     printf("%c",177);}
 }
+void load6(){
+    int row,col,r,c,q;
+    gotoxy(36,14);
+    printf("Saving data...");
+    gotoxy(30,15);
+    for(r=1;r<=20;r++){
+    for(q=0;q<=100000000;q++); // to display the character slowly
+    printf("%c",177);}
+}
 void display_splash()
 {
   	cout << string( 10, '\n' );

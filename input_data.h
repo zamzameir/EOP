@@ -15,6 +15,7 @@ extern void gotoxy ();
 extern void load2 ();
 extern void load3 ();
 extern void load5 ();
+extern void load6 ();
 extern int main ();
 
 char plname[256],nplname[256];
@@ -35,9 +36,6 @@ void userDatabase()
    char back;
    FILE *info;
    info=fopen("database.txt","a+");
-   std::ofstream ofs; // clear external file input before input data
-   ofs.open("database.txt", std::ofstream::out | std::ofstream::trunc);
-   ofs.close();
     
    system("cls");
    
@@ -144,6 +142,26 @@ void userDatabase()
    cout << "\n\nPress Y to submit or X to cancel > ";
    fflush(stdin);
    submit = getch();
+   while (submit != 'y' && submit != 'Y' && submit != 'X' && submit != 'x' )
+   {
+   		cout << "\a";
+		system("cls");
+   
+   		cout << " OVERVIEW\n";
+   		cout << " --------\n";
+   
+   		cout << " Name      : " << nplname << endl;
+   		cout << " Education : " << nedu << endl;
+   		cout << " Course    : " << ncourse << endl;
+   		cout << " CGPA      : " << ncgpa << endl;
+   		cout << " Address   : " << naddr << endl;
+   		cout << " Contact   : " << nphone << endl;
+   
+   		cout << "\n\nPress Y to submit or X to cancel > ";
+   		fflush(stdin);
+   		submit = getch();
+   }
+   
    if (submit == 'y' || submit == 'Y')
    {
    		fprintf(info," Applicant Name : %s\n",nplname);
@@ -159,6 +177,8 @@ void userDatabase()
    		fprintf(info,"%c",'_');
    		fprintf(info,"\n\n");
    		fclose(info);
+   		system("cls");
+   		load6();
    		system("cls");
   		cout << "\n\n\n\n";
   		char message1 [] = "----------------------------------"; 
@@ -189,9 +209,6 @@ void userDatabase()
   		puts("");
   		printf("%*s",40+strlen(message3)/2,message3, 40-strlen(message3)/2,""); // center message 3
   		puts("");
-  		info=fopen("database.txt","a+");
-    		fprintf(info," NO DATA FOUND..."); // and print no data
-    		fclose(info);
    }
 	
 	cout << "\n\n\n";
@@ -252,8 +269,8 @@ void peekData (void)
    cout << " Address   : " << naddr << endl;
    cout << " Contact   : " << nphone << endl;
    
-   cout << "\n";
-   cout << " Type X to go back > ";
+   cout < "\n";
+   cout << "\n Type X to go back > ";
    conts = getch();
    
    if ( conts !='x' && conts !='X' )
@@ -274,10 +291,6 @@ void deleteData (void)
     std::ofstream ofs; // clear external file input
     ofs.open("database.txt", std::ofstream::out | std::ofstream::trunc);
     ofs.close();
-    FILE *info;
-    info=fopen("database.txt","a+");
-    fprintf(info," NO DATA FOUND..."); // and print no data
-    fclose(info);
 }
 void resetData (void)
 {
