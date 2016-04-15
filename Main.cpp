@@ -16,11 +16,14 @@ inline void display_splash(void); // splash function
 inline void printmessage (void);
 inline void userDatabase (void);
 inline void displayDB (void);
+inline void viewData (void);
+inline void adios (void);
 inline void gotoxy(int,int); // loading function
 inline void profile (void);
 inline void info (void);
 inline void load (void); // loading function
 
+char** argv;int argc;
 using namespace std;
 
 class StartUp // run at startup
@@ -30,7 +33,8 @@ public:
    { 
    	 system("mode con: cols=87 lines=18");
 	 system("color f0");
-	 system("title "); 
+	 system("title ");
+	 displayCredit(argc,argv); 
    	 display_splash();
 	 load(); 
     }
@@ -39,12 +43,12 @@ StartUp startup;
 
 int main()
 {	
-	system("mode con: cols=87 lines=18"); // set windows size
+	system("mode con: cols=87 lines=19"); // set windows size
 	system("color f0");
 	system("title "); 
 	int index,randNo;
 	char choice;
-	char view [4][256] = { "News update","Job application","Users database","Credits" };
+	char view [4][256] = { "News update","Job application","Applicant data","Credits" };
 						 
 	srand (time (NULL));
 	randNo = 100 + rand () % (200-101); // random number
@@ -53,7 +57,7 @@ int main()
 	struct tm *t = localtime(&now);	// get current date
   	do
 {
-	system ("cls");
+	system ("cls");system ("cls");
 	printmessage ();
 	cout << "  User No. " << randNo << "\t\t\t\t\t\t" << "\tDATE: " << t->tm_mday <<"/" << t->tm_mon+1 <<"/" << t->tm_year+1900 << "\n\n";
 	cout << " Select an action\n";
@@ -65,7 +69,7 @@ int main()
 		
 	cout << "\n Make a choice > ";
 	fflush(stdin);
-	cin >> choice;
+	choice = getch();
 	
 	if (choice !='1' && choice !='2' && choice !='3' && choice !='4' && choice !='x' && choice !='X')
 	cout << "\a";
@@ -74,11 +78,10 @@ int main()
 	{
 		case '1' : info();break;
 		case '2' : profile();break;
-		case '3' : //displayDB();
-				   break;
+		case '3' : viewData();break;
 		case '4' : system ("start credits.html");break;
 		case 'x' : 
-		case 'X' : break;
+		case 'X' : adios();break;
 	}
 
 } 	while ( choice != '1' && choice != '2' && choice != '3' && choice != 'x' && choice != 'X' );

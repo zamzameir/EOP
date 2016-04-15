@@ -11,7 +11,9 @@ void info (void)
 	system("title ");
 	system("color f0");
 	char choice;
-	char msg [2][256] = {"Job application is open until 5 April", "Resume must be submitted online" };
+	char msg [5][256] = { "Calling for fresh graduates! our company needs you!",
+	"Job application is open until 31 May 2016", "Your resume must be submitted directly through our system", 
+	"Interview and acceptance within 2 weeks of submission","Submit now while chance last!" };
 	do
 {
 	system ("cls");
@@ -21,14 +23,14 @@ void info (void)
 	cout << " Hello. Thank you for visiting our site"  << endl;
 	cout << " For now there are a few announcement : " << endl << endl;
 	
-	for (int i = 0; i < 2; i++)
+	for (int i = 0; i < 5; i++)
 	{
 	   cout << " " << i+1 << " - " << msg[i] << "\n"; // display message
 	}
 		
 	cout << "\n Type X to go back > ";
 	fflush(stdin);
-	cin >> choice;
+	choice = getch();
 	
 	if ( choice !='x' && choice !='X' )
 	cout << "\a";

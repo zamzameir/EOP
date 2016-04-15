@@ -15,15 +15,42 @@ using namespace std;
 
 void gotoxy(int x, int y)
 {
- COORD coord;
- coord.X = x;
- coord.Y = y;
- SetConsoleCursorPosition(GetStdHandle(STD_OUTPUT_HANDLE), coord);
+    COORD coord;
+    coord.X = x;
+    coord.Y = y;
+    SetConsoleCursorPosition(GetStdHandle(STD_OUTPUT_HANDLE), coord);
 }
 void load(){
     int row,col,r,c,q;
     gotoxy(36,14);
     printf("loading...");
+    gotoxy(30,15);
+    for(r=1;r<=20;r++){
+    for(q=0;q<=100000000;q++); // to display the character slowly
+    printf("%c",177);}
+}
+void load2(){
+    int row,col,r,c,q;
+    gotoxy(36,14);
+    printf("Getting data...");
+    gotoxy(30,15);
+    for(r=1;r<=20;r++){
+    for(q=0;q<=100000000;q++); // to display the character slowly
+    printf("%c",177);}
+}
+void load3(){
+    int row,col,r,c,q;
+    gotoxy(36,14);
+    printf("Deleting data...");
+    gotoxy(30,15);
+    for(r=1;r<=20;r++){
+    for(q=0;q<=100000000;q++); // to display the character slowly
+    printf("%c",177);}
+}
+void load4(){
+    int row,col,r,c,q;
+    gotoxy(36,14);
+    printf("Exiting...");
     gotoxy(30,15);
     for(r=1;r<=20;r++){
     for(q=0;q<=100000000;q++); // to display the character slowly
@@ -42,4 +69,17 @@ void display_splash()
     	"              ¦                                                    ¦ \n"
     	"              +----------------------------------------------------+ \n";
   	cout << string( 8, '\n' );
+}
+void adios ()
+{
+	cout << string( 10, '\n' );
+  	cout << "\n\n\n\n";
+  	cout <<
+    	"              +----------------------------------------------------+ \n"
+    	"              ¦                                                    ¦ \n"
+    	"              ¦                     THANK YOU                      ¦ \n"
+    	"              ¦                                                    ¦ \n"
+    	"              +----------------------------------------------------+ \n";
+  	cout << string( 8, '\n' );
+  	load4();
 }

@@ -1,76 +1,266 @@
-/* Incomplete */
-
+#include <windows.h>
+#include <process.h>
 #include <iostream>
+#include <stdlib.h>
 #include <cstring>
-#include <iomanip>
-#include <fstream>
+#include <conio.h>
+#include <ctype.h>
+#include <time.h>
 
-extern inline void printmessage ();
-extern inline void profile ();
-extern inline void info ();
+extern void profile ();
+extern void gotoxy ();
+extern void load2 ();
 extern int main ();
 
+char plname[256],nplname[256];
+char course[256],ncourse[256];
+char phone[256],nphone[256];
+char cgpa[256],ncgpa[256];
+char addr[256],naddr[256];
+char edu[256],nedu[256];
+
+char cha,c,submit;
+int i,j,k,l,m,n,p;
+   
 using namespace std;
-void userDatabase (void)
+void userDatabase()
 {
-	long int dob[1000];
-	string name[256];	
-	string edu[256];
-	string exp[256];
-	char sex[1000];
-	int app;
+   system("title ");
+   system("color f0");
+   char back;
+   FILE *info;
+   info=fopen("database.txt","a+");
+   system("cls");
+   
+   cout << "Enter your full name : " << "\n";
+   fflush(stdin);
+   scanf("%[^\n]",plname);
+   for(j=0;plname[j]!='\0';j++)
+   { 
+   nplname[0]=toupper(plname[0]);
+   if(plname[j-1]==' '){
+   nplname[j]=toupper(plname[j]);
+   nplname[j-1]=plname[j-1];}
+   else nplname[j]=plname[j];
+   }
+   nplname[j]='\0';
+   
+   system("cls");
+   
+   cout << "Education : " << "\n";
+   fflush(stdin);
+   scanf("%[^\n]",edu);
+   for(k=0;edu[k]!='\0';k++)
+   { 
+   nedu[0]=toupper(edu[0]);
+   if(edu[k-1]==' '){
+   nedu[k]=toupper(edu[k]);
+   nedu[k-1]=edu[k-1];}
+   else nedu[k]=edu[k];
+   }
+   nedu[k]='\0';
+   
+   system("cls");
+   
+   cout << "Course background : " << "\n";
+   fflush(stdin);
+   scanf("%[^\n]",course);
+   for(l=0;course[l]!='\0';l++)
+   { 
+   ncourse[0]=toupper(course[0]);
+   if(course[l-1]==' '){
+   ncourse[l]=toupper(course[l]);
+   ncourse[l-1]=course[l-1];}
+   else ncourse[l]=course[l];
+   }
+   ncourse[l]='\0';
+   
+   system("cls");
+   
+   cout << "CGPA : " << "\n";
+   fflush(stdin);
+   scanf("%[^\n]",cgpa);
+   for(p=0;cgpa[p]!='\0';p++)
+   { 
+   ncgpa[0]=toupper(cgpa[0]);
+   if(cgpa[p-1]==' '){
+   ncgpa[p]=toupper(cgpa[p]);
+   ncgpa[p-1]=cgpa[p-1];}
+   else ncgpa[p]=cgpa[p];
+   }
+   ncgpa[p]='\0';
+   
+   system("cls");
+   
+   cout << "Address : " << "\n";
+   fflush(stdin);
+   scanf("%[^\n]",addr);
+   for(m=0;addr[m]!='\0';m++)
+   { 
+   naddr[0]=toupper(addr[0]);
+   if(addr[m-1]==' '){
+   naddr[m]=toupper(addr[m]);
+   naddr[m-1]=addr[m-1];}
+   else naddr[m]=addr[m];
+   }
+   naddr[m]='\0';
+   
+   system("cls");
+   
+   cout << "Phone number : " << "\n";
+   fflush(stdin);
+   scanf("%[^\n]",phone);
+   for(n=0;phone[n]!='\0';n++)
+   { 
+   nphone[0]=toupper(phone[0]);
+   if(phone[n-1]==' '){
+   nphone[n]=toupper(phone[n]);
+   nphone[n-1]=phone[n-1];}
+   else nphone[n]=phone[n];
+   }
+   nphone[n]='\0';
+   
+   system("cls");
+   
+   cout << " OVERVIEW\n";
+   cout << " --------\n";
+   
+   cout << " Name      : " << nplname << endl;
+   cout << " Education : " << nedu << endl;
+   cout << " Course    : " << ncourse << endl;
+   cout << " CGPA      : " << ncgpa << endl;
+   cout << " Address   : " << naddr << endl;
+   cout << " Contact   : " << nphone << endl;
+   
+   cout << "\n\nPress Y to submit or X to cancel > ";
+   fflush(stdin);
+   submit = getch();
+   if (submit == 'y' || submit == 'Y')
+   {
+   		fprintf(info,"Applicant Name : %s\n",nplname);
+   		fprintf(info,"Education : %s\n",nedu);
+   		fprintf(info,"Course background : %s\n",ncourse);
+   		fprintf(info,"CGPA : %s\n",ncgpa);
+   		fprintf(info,"Address : %s\n",naddr);
+   		fprintf(info,"Contact : %s\n",nphone);
+   		time_t mytime;
+   		mytime = time(NULL);
+   		fprintf(info,"Application date : %s",ctime(&mytime));
+   		for(i=0;i<=50;i++)
+   		fprintf(info,"%c",'_');
+   		fprintf(info,"\n\n");
+   		fclose(info);
+   		system("cls");
+  		cout << "\n\n\n\n";
+  		char message1 [] = "----------------------------------"; 
+  		char message2 [] = "THANK YOU YOUR DATA HAS BEEN SAVED";
+  		char message3 [] = "----------------------------------";
+      
+  		printf("%*s",40+strlen(message1)/2,message1, 40-strlen(message1)/2,""); // center message 1
+  		puts("");
+  		printf("%*s",40+strlen(message2)/2,message2, 40-strlen(message2)/2,""); // center message 2
+  		puts("");
+  		printf("%*s",40+strlen(message3)/2,message3, 40-strlen(message3)/2,""); // center message 3
+  		puts("");
+  		fclose(info);
+   }
+   
+   else
 
-	system("title ");
-	system("color f0");
-	system("cls");
+   {
+   		system("cls");
+   		cout << "\n\n\n\n";
+  		char message1 [] = "------------------------------"; 
+  		char message2 [] = "SUBMSSION ABORTED BY APPLICANT";
+  		char message3 [] = "------------------------------";
+      
+  		printf("%*s",40+strlen(message1)/2,message1, 40-strlen(message1)/2,""); // center message 1
+  		puts("");
+  		printf("%*s",40+strlen(message2)/2,message2, 40-strlen(message2)/2,""); // center message 2
+  		puts("");
+  		printf("%*s",40+strlen(message3)/2,message3, 40-strlen(message3)/2,""); // center message 3
+  		puts("");
+   }
 	
-	cout << " How many applicant : ";
-	cin  >> app;
-	system("cls");
-	
-	for (int i = 0; i < app; i++)
+	cout << "\n\n\n";
+	char cont [] = "< Press anykey to continue >";
+	printf("%*s",40+strlen(cont)/2,cont, 40-strlen(cont)/2,""); // center cont
+	back = getch();
+	switch (back)
 	{
-		cout << " Applicant #" << i+1 << endl;
-			for (int j = 0; j < 1; j++)
-			{
-				cout << " Enter your name : ";
-				cin  >> name[j];
-				fflush(stdin);
-				cout << " Enter your DOB : ";
-				cin  >> dob[j];
-				cout << " Sex : ";
-				cin  >> sex[j];
-				fflush(stdin);
-				cout << " Education : ";
-				cin  >> edu[j];
-				fflush(stdin);
-				cout << " Work Experience : ";
-				cin  >> exp[j];
-				fflush(stdin);
-				cout << "\n\n";
-				cout << " NAME\tDOB\tSEX\tEDUCATION\tEXPERIENCE\n"; // display array
-				cout << setw(5) << name[j] << " "
-				     << setw(5) << dob [j] << " "
-				     << setw(5) << sex [j] << " "
-				     << setw(5) << edu [j] << " "
-				     << setw(5) << exp [j] << " "
-				     << endl;
-			}
-
-		cout << "\n";
+	    default : profile();break;
 	}
 	
-	ifstream file("database.txt"); // creating file name database.txt
-    if(file.is_open()) // save array data into file name database.txt
+}
+void viewData (void)
+{
+   char c,exit;
+   FILE *info;
+   info=fopen("database.txt","a+");
+   system("cls");
+   load2();
+   system("cls");
+   
+do 
+{
+	info=fopen("database.txt","r");
+   do
+   {
+       putchar(c=getc(info));
+   }
+	   while(c!=EOF);
+       	   fclose(info);
+  
+   cout << "Type X to go back > ";
+   exit = getch();
+   
+   if ( exit !='x' && exit !='X' )
+	cout << "\a";
+	
+	switch(exit) 
 	{
-    cout << "File Opened successfully!!!. Writing data from array to file" << endl;
-    cout << "Array data successfully saved into the file test.txt" << endl;
-	}
-	else
+		case 'x' : 
+		case 'X' : main();break;
+	}	
+} while (exit != 'x' && exit != 'X');
+}
+void peekData (void)
+{
+   char conts;
+   system("cls");
+   load2();
+   system("cls");
+do
+{
+   system ("cls");
+   cout << "\n";
+   cout << " Name      : " << nplname << endl;
+   cout << " Education : " << nedu << endl;
+   cout << " Course    : " << ncourse << endl;
+   cout << " CGPA      : " << ncgpa << endl;
+   cout << " Address   : " << naddr << endl;
+   cout << " Contact   : " << nphone << endl;
+   
+   cout << "\n";
+   cout << " Type X to go back > ";
+   conts = getch();
+   
+   if ( conts !='x' && conts !='X' )
+	cout << "\a";
+	
+	switch(conts) 
 	{
-		cout << "File could not be opened." << endl;
-	}
-
-	system("pause");
+		case 'x' : 
+		case 'X' : profile();break;
+		default : profile();break;
+	}	
+} while (conts != 'x' || conts != 'X');
+}
+void deleteData (void)
+{
+    system("cls");
+    load3();
+    system("cls");
+    system("del database.txt");
 }
 

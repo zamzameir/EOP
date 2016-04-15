@@ -109,17 +109,26 @@ Priority=1000
 OverrideBuildCmd=0
 BuildCmd=
 
-[Unit7]
-FileName=displayDB.h
+[Unit8]
+FileName=credits.mp3
 CompileCpp=1
 Folder=
-Compile=1
-Link=1
+Compile=0
+Link=0
 Priority=1000
 OverrideBuildCmd=0
 BuildCmd=
 
-[Unit8]
+[Unit9]
+FileName=credits.mp3
+Folder=
+Compile=0
+Link=0
+Priority=1000
+OverrideBuildCmd=0
+BuildCmd=
+
+[Unit7]
 FileName=splashScreen.h
 CompileCpp=1
 Folder=
