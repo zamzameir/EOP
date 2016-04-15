@@ -37,8 +37,8 @@ void profile (void)
 	
 	switch(choice) 
 	{
-		case '1' : userDatabase();break; // call function userDatabase
-		case '2' : peekData();profile();break;
+		case '1' : userDatabase();break;
+		case '2' : system("cls");load2();peekData();profile();break;
 		case '3' : resetData();profile();break;
 		case 'x' : 
 		case 'X' : main();break;

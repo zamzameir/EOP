@@ -228,17 +228,14 @@ do
 	{
 		case 'x' : 
 		case 'X' : break;
-	}	
+	}
+		
 }  while (exit != 'x' && exit != 'X');
 }
 void peekData (void)
 {
    char conts;
-   system("cls");
-   load2();
-   system("cls");
-do
-{
+
    system ("cls");
    cout << "\n";
    cout << " Name      : " << nplname << endl;
@@ -258,10 +255,9 @@ do
 	switch(conts) 
 	{
 		case 'x' : 
-		case 'X' : profile();break;
-		default  : profile();break;
+		case 'X' : break;
+		default  : peekData();
 	}	
-}  while (conts != 'x' || conts != 'X');
 }
 void deleteData (void)
 {
