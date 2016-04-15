@@ -13,7 +13,7 @@ extern void info ();
 using namespace std;
 void profile (void)
 {
-	char view [3][256] = { "New job application","View last submission","Reset last submission" };
+	char view [3][256] = { "New job application","View last submission attempt","Reset last submission attempt" };
 	system("title "); 
 	system("color f0");
 	char choice;

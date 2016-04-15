@@ -189,6 +189,9 @@ void userDatabase()
   		puts("");
   		printf("%*s",40+strlen(message3)/2,message3, 40-strlen(message3)/2,""); // center message 3
   		puts("");
+  		info=fopen("database.txt","a+");
+    		fprintf(info," NO DATA FOUND..."); // and print no data
+    		fclose(info);
    }
 	
 	cout << "\n\n\n";
