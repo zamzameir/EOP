@@ -1,0 +1,57 @@
+#include <windows.h>
+#include <process.h>
+#include <iostream>
+#include <stdlib.h>
+#include <cstring>
+#include <conio.h>
+#include <ctype.h>
+#include <time.h>
+
+extern inline void printmessage ();
+extern inline void userDatabase ();
+extern inline void deleteData ();
+extern inline void peekData ();
+extern inline void viewData ();
+extern inline void profile ();
+extern void gotoxy ();
+extern void load3 ();
+extern void info ();
+extern int main ();
+
+using namespace std;
+void databaseProfile (void)
+{
+	char view [2][256] = { "View user database","Delete user database" };
+	system("title "); 
+	system("color f0");
+	char choice;
+	int index;
+	
+	do
+{
+	system ("cls");
+	printmessage ();
+				
+	for (index = 0; index < 2; ++index)
+	cout << " " << index+1 << " - " << view[index] << "\n"; // display char view
+	cout << " X - Go back\n";
+		
+	cout << "\n Make a choice > ";
+	fflush(stdin);
+	choice = getch();
+	
+	if (choice !='1' && choice !='2' && choice !='3' && choice !='4' && choice !='5' && choice !='6' && choice !='x' && choice !='X')
+	cout << "\a";
+	
+	switch(choice) 
+	{
+		case '1' : viewData();break;
+		case '2' : deleteData();break;
+		case 'x' : 
+		case 'X' : main();break;
+	}
+	
+	main ();
+} 	while ( choice != '1' && choice != '2' && choice != '3' && choice != '4' && choice != '5' && choice != '6' && choice != 'x' && choice != 'X' );
+  	return;
+}

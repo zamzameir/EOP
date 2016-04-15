@@ -3,6 +3,7 @@
 extern inline void printmessage ();
 extern inline void userDatabase ();
 extern inline void deleteData ();
+extern inline void resetData ();
 extern inline void peekData ();
 extern inline void profile ();
 extern void gotoxy ();
@@ -12,7 +13,7 @@ extern void info ();
 using namespace std;
 void profile (void)
 {
-	char view [3][256] = { "New application","View submission","Delete submission" };
+	char view [3][256] = { "New job application","View last submission","Reset last submission" };
 	system("title "); 
 	system("color f0");
 	char choice;
@@ -38,7 +39,7 @@ void profile (void)
 	{
 		case '1' : userDatabase();break; // call function userDatabase
 		case '2' : peekData();profile();break;
-		case '3' : deleteData();profile();break;
+		case '3' : resetData();profile();break;
 		case 'x' : 
 		case 'X' : main();break;
 	}

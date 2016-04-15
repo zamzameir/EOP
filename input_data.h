@@ -10,6 +10,8 @@
 extern void profile ();
 extern void gotoxy ();
 extern void load2 ();
+extern void load3 ();
+extern void load5 ();
 extern int main ();
 
 char plname[256],nplname[256];
@@ -137,15 +139,15 @@ void userDatabase()
    submit = getch();
    if (submit == 'y' || submit == 'Y')
    {
-   		fprintf(info,"Applicant Name : %s\n",nplname);
-   		fprintf(info,"Education : %s\n",nedu);
-   		fprintf(info,"Course background : %s\n",ncourse);
-   		fprintf(info,"CGPA : %s\n",ncgpa);
-   		fprintf(info,"Address : %s\n",naddr);
-   		fprintf(info,"Contact : %s\n",nphone);
+   		fprintf(info," Applicant Name : %s\n",nplname);
+   		fprintf(info," Education : %s\n",nedu);
+   		fprintf(info," Course background : %s\n",ncourse);
+   		fprintf(info," CGPA : %s\n",ncgpa);
+   		fprintf(info," Address : %s\n",naddr);
+   		fprintf(info," Contact : %s\n",nphone);
    		time_t mytime;
    		mytime = time(NULL);
-   		fprintf(info,"Application date : %s",ctime(&mytime));
+   		fprintf(info," Application date : %s",ctime(&mytime));
    		for(i=0;i<=50;i++)
    		fprintf(info,"%c",'_');
    		fprintf(info,"\n\n");
@@ -206,7 +208,7 @@ do
 	info=fopen("database.txt","r");
    do
    {
-       putchar(c=getc(info));
+	   putchar(c=getc(info));
    }
 	   while(c!=EOF);
        	   fclose(info);
@@ -258,9 +260,22 @@ do
 }
 void deleteData (void)
 {
-    system("cls");
+	system("cls");
     load3();
     system("cls");
     system("del database.txt");
+}
+void resetData (void)
+{
+	// reset array data back to 0 
+	system("cls");
+    load5();
+    system("cls");
+    memset(nplname, 0, sizeof(nplname));
+    memset(ncourse, 0, sizeof(ncourse));
+    memset(nphone, 0, sizeof(nphone));
+    memset(ncgpa, 0, sizeof(ncgpa));
+    memset(naddr, 0, sizeof(naddr));
+    memset(nedu, 0, sizeof(nedu));
 }
 

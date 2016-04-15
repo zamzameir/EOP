@@ -6,20 +6,22 @@
 #include <ctime>
 #include <cmath>
 
-#include "welcomeMessage.h"
-#include "splashScreen.h"
-#include "userProfile.h"
-#include "profileDB.h"
-#include "info.h"
+#include "input_data.h"
+#include "display_message.h"
+#include "splash_screen.h"
+#include "user_section.h"
+#include "job_section.h"
+#include "news_section.h"
 
-inline void display_splash(void); // splash function
+inline void databaseProfile (void);
+inline void display_splash (void); // splash function
 inline void printmessage (void);
 inline void userDatabase (void);
 inline void displayDB (void);
+inline void gotoxy (int,int); // loading function
 inline void viewData (void);
-inline void adios (void);
-inline void gotoxy(int,int); // loading function
 inline void profile (void);
+inline void adios (void);
 inline void info (void);
 inline void load (void); // loading function
 
@@ -78,7 +80,7 @@ int main()
 	{
 		case '1' : info();break;
 		case '2' : profile();break;
-		case '3' : viewData();break;
+		case '3' : databaseProfile();break;
 		case '4' : system ("start credits.html");break;
 		case 'x' : 
 		case 'X' : adios();break;
