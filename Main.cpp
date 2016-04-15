@@ -57,7 +57,7 @@ int main()
 	struct tm *t = localtime(&now);	// get current date
   	do
 {
-	system ("cls");system ("cls");
+	system ("cls");
 	printmessage ();
 	cout << "  User No. " << randNo << "\t\t\t\t\t\t" << "\tDATE: " << t->tm_mday <<"/" << t->tm_mon+1 <<"/" << t->tm_year+1900 << "\n\n";
 	cout << " Select an action\n";
