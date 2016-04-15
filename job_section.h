@@ -32,7 +32,7 @@ void profile (void)
 	fflush(stdin);
 	choice = getch();
 	
-	if (choice !='1' && choice !='2' && choice !='3' && choice !='4' && choice !='5' && choice !='6' && choice !='x' && choice !='X')
+	if (choice !='1' && choice !='2' && choice !='3' && choice !='x' && choice !='X')
 	cout << "\a";
 	
 	switch(choice) 
@@ -43,6 +43,6 @@ void profile (void)
 		case 'x' : 
 		case 'X' : main();break;
 	}
-} 	while ( choice != '1' && choice != '2' && choice != '3' && choice != '4' && choice != '5' && choice != '6' && choice != 'x' && choice != 'X' );
+} 	while ( choice != '1' && choice != '2' && choice != '3' && choice != 'x' && choice != 'X' );
   	return;
 }

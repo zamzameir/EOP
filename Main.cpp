@@ -73,7 +73,7 @@ int main()
 	fflush(stdin);
 	choice = getch();
 	
-	if (choice !='1' && choice !='2' && choice !='3' && choice !='4' && choice !='x' && choice !='X')
+	if (choice !='1' && choice !='2' && choice !='3' && choice !='4' && choice !='5' && choice !='x' && choice !='X')
 	cout << "\a";
 			
 	switch(choice) 

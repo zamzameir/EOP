@@ -254,7 +254,7 @@ do
 	{
 		case 'x' : 
 		case 'X' : profile();break;
-		default : profile();break;
+		default  : profile();break;
 	}	
 } while (conts != 'x' || conts != 'X');
 }
