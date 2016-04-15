@@ -35,6 +35,10 @@ void userDatabase()
    char back;
    FILE *info;
    info=fopen("database.txt","a+");
+   std::ofstream ofs; // clear external file input before input data
+   ofs.open("database.txt", std::ofstream::out | std::ofstream::trunc);
+   ofs.close();
+    
    system("cls");
    
    cout << "Enter your full name : " << "\n";
@@ -200,7 +204,7 @@ void userDatabase()
 void viewData (void)
 {
    COORD newSize = {100,9999};
-   SetConsoleScreenBufferSize(GetStdHandle(STD_OUTPUT_HANDLE), newSize);
+   SetConsoleScreenBufferSize(GetStdHandle(STD_OUTPUT_HANDLE), newSize); // scroll bar
    char c,exit;
    FILE *info;
    info=fopen("database.txt","a+");
@@ -218,7 +222,7 @@ do
 	   while(c!=EOF);
        	   fclose(info);
   
-   cout << "Type X to go back > ";
+   cout << "\n Type X to go back > ";
    exit = getch();
    
    if ( exit !='x' && exit !='X' )
@@ -267,6 +271,10 @@ void deleteData (void)
     std::ofstream ofs; // clear external file input
     ofs.open("database.txt", std::ofstream::out | std::ofstream::trunc);
     ofs.close();
+    FILE *info;
+    info=fopen("database.txt","a+");
+    fprintf(info," NO DATA FOUND..."); // and print no data
+    fclose(info);
 }
 void resetData (void)
 {
