@@ -48,21 +48,21 @@ void credit (void)
 }
 void initialize (int argc, char** argv)		
  {		
- 	system("title ");
-        system("color f0");
-        cout << "\n\n\n\n\n";
-	string message = " Please wait...";		
-   	cout << message << flush;		
-   	time_t start = time( &start );		
-   	while (difftime( time( NULL ), start ) < 5.0 /*seconds*/)		
-     	{ }		
-    	cout << "\r" << string( message.length(), ' ' ) << "\r" << flush;		
+    system("title ");
+    system("color f0");
+    cout << "\n\n\n\n\n";
+    string message = " Please wait...";		
+    cout << message << flush;		
+    time_t start = time( &start );		
+    while (difftime( time( NULL ), start ) < 5.0 /*seconds*/)		
+    { }		
+    cout << "\r" << string( message.length(), ' ' ) << "\r" << flush;		
  }		
 int displayCredit (int argc, char** argv)		
  {		
- 	system("title ");
-        system("color f0");
-        credit();		
-   	initialize( argc, argv );		
-   	return 0;		
+    system("title ");
+    system("color f0");
+    credit();		
+    initialize( argc, argv );		
+    return 0;		
  }

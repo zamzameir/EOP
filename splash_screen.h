@@ -99,8 +99,7 @@ void display_splash (void)
 {
         system("title ");
         system("color f0");
-        system("mode con: cols=87 lines=19");
-        cout << string( 10, '\n' );
+	cout << string( 10, '\n' );
   	cout << "\n\n";
   	cout <<
     	"              +----------------------------------------------------+ \n"
@@ -116,8 +115,7 @@ void adios (void)
 {
         system("title ");
         system("color f0");
-        system("mode con: cols=87 lines=19");
-        cout << string( 10, '\n' );
+	cout << string( 10, '\n' );
   	cout << "\n\n\n\n";
   	cout <<
     	"              +----------------------------------------------------+ \n"

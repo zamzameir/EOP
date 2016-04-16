@@ -32,7 +32,7 @@ using namespace std;
 class StartUp // run at startup
 {
 public:
-   StartUp (void)
+   StartUp ()
    { 
    	 system("mode con: cols=87 lines=18");
 	 system("color f0");
@@ -83,7 +83,7 @@ int main (void)
 		case '1' : info();break;
 		case '2' : profile();break;
 		case '3' : databaseProfile();break;
-		case '4' : StartUp();break;
+		case '4' : StartUp();main();break;
 		case '5' : system ("start credits.html");break;
 		case 'x' : 
 		case 'X' : adios();break;
