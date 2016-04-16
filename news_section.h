@@ -26,15 +26,17 @@ void info (void)
 	printmessage ();
 	cout << " CURRENT NEWS AS OF " << t->tm_mday <<"/" << t->tm_mon+1 <<"/" << t->tm_year+1900 << "\n";
 	cout << " ____________________________\n\n";
-	cout << " Hello. Thank you for visiting our site"  << endl;
-	cout << " For now there are a few announcement : " << endl << endl;
+	cout << " Hello. Thank you for visiting our site" << endl;
+	cout << " Express Engineering is one of the largest and best performing" << endl; 
+	cout << " contract manufacturing solution suppliers to the Oil & Gas market." << endl;
+	cout << " We have a few announcement for you : " << endl << endl;
 	
 	for (int i = 0; i < 5; i++)
 	{
 	   cout << " " << i+1 << " - " << msg[i] << "\n"; // display message
 	}
 		
-	cout << "\n\n Type X to go back > ";
+	cout << "\n Type X to go back > ";
 	fflush(stdin);
 	choice = getch();
 	
