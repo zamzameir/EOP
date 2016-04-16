@@ -21,6 +21,7 @@ inline void displayDB (void);
 inline void gotoxy (int,int); // loading position
 inline void viewData (void);
 inline void profile (void);
+inline void license (void);
 inline void load (char[]); // loading function
 inline void exit (void);
 inline void info (void);
@@ -52,7 +53,7 @@ int main (void)
 	system("title ");
 	int index,randNo;
 	char choice;
-	char view [5][256] = { "News & announcement","Job application","Applicant data","Restart system","Credits" };
+	char view [6][256] = { "News & announcement","Job application","Applicant data","Restart system","License","Credits" };
 						 
 	srand (time (NULL));
 	randNo = 100 + rand () % (200-101); // random number
@@ -68,7 +69,7 @@ int main (void)
 	cout << " Select an action\n";
 	cout << " ----------------\n\n";
 	
-	for (index = 0; index < 5; ++index)
+	for (index = 0; index < 6; ++index)
 	cout << " " << index+1 << " - " << view[index] << "\n"; // display view
 	cout << " X - Exit\n";
 		
@@ -87,7 +88,8 @@ int main (void)
 		case '2' : profile();break;
 		case '3' : databaseProfile();break;
 		case '4' : system("cls");load(buffer);StartUp();main();break;
-		case '5' : system("start credits.html");main();break;
+		case '5' : system("cls");license();break;
+		case '6' : system("start credits.html");main();break;
 		case 'x' : 
 		case 'X' : exit();break;
 	}

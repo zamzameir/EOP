@@ -325,4 +325,37 @@ void resetData (void)
     memset(naddr, 0, sizeof(naddr));
     memset(nedu, 0, sizeof(nedu));
 }
+void license (void)
+{
+	system("title ");
+    	system("color f0");
+	FILE *license;
+	char exit;
+	char buffer [] = "Loading license...";
+	load(buffer);
+ do 
+{
+   system("cls");
+   license=fopen("license.txt","r");
+   do
+   {
+	   putchar(c=getc(license));
+   }
+	   while(c!=EOF);
+       	   fclose(license);
+   cout << "\n\n";
+   cout << " Type X to go back > ";
+   exit = getch();
+   
+   if (exit !='x' && exit !='X')
+	cout << "\a";
+	
+	switch (exit) 
+	{
+		case 'x' : 
+		case 'X' : main();break;
+	}
+		
+}  while (exit != 'x' && exit != 'X');
+}
 
