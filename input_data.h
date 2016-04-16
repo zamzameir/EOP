@@ -255,7 +255,7 @@ do
 	   while(c!=EOF);
        	   fclose(info);
   
-   cout << " Type X to go back > ";
+   cout << "Type X to go back > ";
    exit = getch();
    
    if (exit !='x' && exit !='X')
