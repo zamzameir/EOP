@@ -16,6 +16,8 @@ using namespace std;
 
 void gotoxy (int x, int y)
 {
+    system("title ");
+    system("color f0");
     COORD coord;
     coord.X = x;
     coord.Y = y;
@@ -23,6 +25,8 @@ void gotoxy (int x, int y)
 }
 void load (void)
 {
+    system("title ");
+    system("color f0");
     int row,col,r,c,q;
     gotoxy(36,14);
     printf("loading...");
@@ -33,6 +37,8 @@ void load (void)
 }
 void load2 (void)
 {
+    system("title ");
+    system("color f0");
     int row,col,r,c,q;
     gotoxy(36,14);
     printf("Getting data...");
@@ -43,6 +49,8 @@ void load2 (void)
 }
 void load3 (void)
 {
+    system("title ");
+    system("color f0");
     int row,col,r,c,q;
     gotoxy(36,14);
     printf("Deleting data...");
@@ -53,6 +61,8 @@ void load3 (void)
 }
 void load4 (void)
 {
+    system("title ");
+    system("color f0");
     int row,col,r,c,q;
     gotoxy(36,14);
     printf("Exiting...");
@@ -63,6 +73,8 @@ void load4 (void)
 }
 void load5 (void)
 {
+    system("title ");
+    system("color f0");
     int row,col,r,c,q;
     gotoxy(36,14);
     printf("Resetting data...");
@@ -73,6 +85,8 @@ void load5 (void)
 }
 void load6 (void)
 {
+    system("title ");
+    system("color f0");
     int row,col,r,c,q;
     gotoxy(36,14);
     printf("Saving data...");
@@ -83,7 +97,10 @@ void load6 (void)
 }
 void display_splash (void)
 {
-  	cout << string( 10, '\n' );
+        system("title ");
+        system("color f0");
+        system("mode con: cols=87 lines=19");
+        cout << string( 10, '\n' );
   	cout << "\n\n";
   	cout <<
     	"              +----------------------------------------------------+ \n"
@@ -97,7 +114,10 @@ void display_splash (void)
 }
 void adios (void)
 {
-	cout << string( 10, '\n' );
+        system("title ");
+        system("color f0");
+        system("mode con: cols=87 lines=19");
+        cout << string( 10, '\n' );
   	cout << "\n\n\n\n";
   	cout <<
     	"              +----------------------------------------------------+ \n"

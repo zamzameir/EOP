@@ -36,7 +36,7 @@ void info (void)
 	if (choice !='x' && choice !='X')
 	cout << "\a";
 	
-	switch(choice) 
+	switch (choice) 
 	{
 		case 'x' : 
 		case 'X' : main();break;

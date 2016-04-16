@@ -78,7 +78,7 @@ int main (void)
 	if (choice !='1' && choice !='2' && choice !='3' && choice !='4' && choice !='5' && choice !='x' && choice !='X')
 	cout << "\a";
 			
-	switch(choice) 
+	switch (choice) 
 	{
 		case '1' : info();break;
 		case '2' : profile();break;

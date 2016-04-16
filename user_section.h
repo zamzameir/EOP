@@ -22,9 +22,10 @@ using namespace std;
 
 void databaseProfile (void)
 {
-	char view [2][256] = { "View user database","Delete user database" };
-	system("title "); 
-	system("color f0");
+	system("title ");
+        system("color f0");
+        system("mode con: cols=87 lines=19");
+        char view [2][256] = { "View user database","Delete user database" };
 	char choice;
 	int index;
 	
@@ -44,7 +45,7 @@ void databaseProfile (void)
 	if (choice !='1' && choice !='2' && choice !='x' && choice !='X')
 	cout << "\a";
 	
-	switch(choice) 
+	switch (choice) 
 	{
 		case '1' : viewData();databaseProfile();break;
 		case '2' : deleteData();databaseProfile();break;

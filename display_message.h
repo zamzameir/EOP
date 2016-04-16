@@ -9,6 +9,8 @@ using namespace std;
 
 void printmessage (void)
  {
+      system("title ");
+      system("color f0");
       char message1 [] = "--------------------------------------"; 
       char message2 [] = "WELCOME TO EXPRESS ENGINEERING SDN BHD";
       char message3 [] = "--------------------------------------";
@@ -23,6 +25,8 @@ void printmessage (void)
 }
 void credit (void)
  {
+      system("title ");
+      system("color f0");
       char line     [] = "----------------------\n"; 
       char message1 [] = "FINAL PROJECT EOP SEM2\n"; 
       char message2 [] = "JOB APPLICATION SYSTEM\n";
@@ -42,9 +46,11 @@ void credit (void)
       printf("%*s",40+strlen(message6)/2,message6, 40-strlen(message6)/2,""); // center message 6
       return;
 }
-void initialize ( int argc, char** argv )		
+void initialize (int argc, char** argv)		
  {		
- 	cout << "\n\n\n\n\n";
+ 	system("title ");
+        system("color f0");
+        cout << "\n\n\n\n\n";
 	string message = " Please wait...";		
    	cout << message << flush;		
    	time_t start = time( &start );		
@@ -52,9 +58,11 @@ void initialize ( int argc, char** argv )
      	{ }		
     	cout << "\r" << string( message.length(), ' ' ) << "\r" << flush;		
  }		
-int displayCredit ( int argc, char** argv )		
+int displayCredit (int argc, char** argv)		
  {		
- 	credit();		
+ 	system("title ");
+        system("color f0");
+        credit();		
    	initialize( argc, argv );		
    	return 0;		
  }

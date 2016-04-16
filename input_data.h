@@ -1,3 +1,8 @@
+/*
+- Most important file
+- Contain all main related data 
+*/
+
 #include <windows.h>
 #include <process.h>
 #include <iostream>
@@ -223,6 +228,8 @@ void userDatabase (void)
 }
 void viewData (void)
 {
+   system("title ");
+   system("color f0");
    COORD newSize = {100,9999};
    SetConsoleScreenBufferSize(GetStdHandle(STD_OUTPUT_HANDLE), newSize); // scroll bar
    char c,exit;
@@ -248,7 +255,7 @@ do
    if (exit !='x' && exit !='X')
 	cout << "\a";
 	
-	switch(exit) 
+	switch (exit) 
 	{
 		case 'x' : 
 		case 'X' : break;
@@ -258,6 +265,8 @@ do
 }
 void peekData (void)
 {
+   system("title ");
+   system("color f0");
    char conts;
 
    system ("cls");
@@ -276,7 +285,7 @@ void peekData (void)
    if (conts !='x' && conts !='X')
 	cout << "\a";
 	
-	switch(conts) 
+	switch (conts) 
 	{
 		case 'x' : 
 		case 'X' : break;
@@ -285,6 +294,8 @@ void peekData (void)
 }
 void deleteData (void)
 {
+    system("title ");
+    system("color f0");
     system("cls");
     load3();
     system("cls");
@@ -295,6 +306,8 @@ void deleteData (void)
 void resetData (void)
 {
  // reset array data back to 0 
+    system("title ");
+    system("color f0");
     system("cls");
     load5();
     system("cls");

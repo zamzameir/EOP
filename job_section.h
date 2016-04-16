@@ -14,9 +14,9 @@ using namespace std;
 
 void profile (void)
 {
-	char view [3][256] = { "New job application","View last submission attempt","Reset last submission attempt" };
-	system("title "); 
-	system("color f0");
+	system("title ");
+        system("color f0");
+        char view [3][256] = { "New job application","View last submission attempt","Reset last submission attempt" };
 	char choice;
 	int index;
 	
@@ -36,7 +36,7 @@ void profile (void)
 	if (choice !='1' && choice !='2' && choice !='3' && choice !='x' && choice !='X')
 	cout << "\a";
 	
-	switch(choice) 
+	switch (choice) 
 	{
 		case '1' : userDatabase();break;
 		case '2' : system("cls");load2();peekData();profile();break;
