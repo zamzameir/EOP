@@ -11,6 +11,7 @@ void info (void)
 {
 	system("title ");
 	system("color f0");
+	system("mode con: cols=87 lines=19");
 	char choice;
 	char msg [5][256] = { "Calling for fresh graduates! our company needs you!",
 	"Job application is open until 31 May 2016", "Your resume must be submitted directly through our system", 

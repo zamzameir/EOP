@@ -32,7 +32,7 @@ using namespace std;
 class StartUp // run at startup
 {
 public:
-   StartUp ()
+   StartUp (void)
    { 
    	 system("mode con: cols=87 lines=18");
 	 system("color f0");
