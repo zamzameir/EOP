@@ -3,11 +3,11 @@
 extern inline void printmessage ();
 extern inline void userDatabase ();
 extern inline void deleteData ();
+extern inline void load (char[]);
 extern inline void resetData ();
 extern inline void peekData ();
 extern inline void profile ();
 extern inline void gotoxy ();
-extern inline void load3 ();
 extern inline void info ();
 extern int main ();
 
@@ -17,6 +17,7 @@ void profile (void)
 {
 	system("title ");
         system("color f0");
+        char buffer [] = "Getting data...";
         system("mode con: cols=87 lines=19");
         char view [3][256] = { "New job application","View last submission attempt","Reset last submission attempt" };
 	char choice;
@@ -41,7 +42,7 @@ void profile (void)
 	switch (choice) 
 	{
 		case '1' : userDatabase();break;
-		case '2' : system("cls");load2();peekData();profile();break;
+		case '2' : system("cls");load(buffer);peekData();profile();break;
 		case '3' : resetData();profile();break;
 		case 'x' : 
 		case 'X' : main();break;

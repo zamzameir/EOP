@@ -23,77 +23,19 @@ void gotoxy (int x, int y)
     coord.Y = y;
     SetConsoleCursorPosition(GetStdHandle(STD_OUTPUT_HANDLE), coord);
 }
-void load (void)
+void load (char buffer[])
 {
-    system("title ");
+    system("title "); // animated function
     system("color f0");
     int row,col,r,c,q;
     gotoxy(36,14);
-    printf("loading...");
+    printf("%s",(buffer));
     gotoxy(30,15);
-    for(r=1;r<=20;r++){
-    for(q=0;q<=100000000;q++); // to display the character slowly
-    printf("%c",177);}
-}
-void load2 (void)
-{
-    system("title ");
-    system("color f0");
-    int row,col,r,c,q;
-    gotoxy(36,14);
-    printf("Getting data...");
-    gotoxy(30,15);
-    for(r=1;r<=20;r++){
-    for(q=0;q<=50000000;q++); // to display the character slowly
-    printf("%c",177);}
-}
-void load3 (void)
-{
-    system("title ");
-    system("color f0");
-    int row,col,r,c,q;
-    gotoxy(36,14);
-    printf("Deleting data...");
-    gotoxy(30,15);
-    for(r=1;r<=20;r++){
-    for(q=0;q<=50000000;q++); // to display the character slowly
-    printf("%c",177);}
-}
-void load4 (void)
-{
-    system("title ");
-    system("color f0");
-    int row,col,r,c,q;
-    gotoxy(36,14);
-    printf("Exiting...");
-    gotoxy(30,15);
-    for(r=1;r<=20;r++){
-    for(q=0;q<=50000000;q++); // to display the character slowly
-    printf("%c",177);}
-}
-void load5 (void)
-{
-    system("title ");
-    system("color f0");
-    int row,col,r,c,q;
-    gotoxy(36,14);
-    printf("Resetting data...");
-    gotoxy(30,15);
-    for(r=1;r<=20;r++){
-    for(q=0;q<=50000000;q++); // to display the character slowly
-    printf("%c",177);}
-}
-void load6 (void)
-{
-    system("title ");
-    system("color f0");
-    int row,col,r,c,q;
-    gotoxy(36,14);
-    printf("Saving data...");
-    gotoxy(30,15);
-    for(r=1;r<=20;r++){
-    for(q=0;q<=50000000;q++); // to display the character slowly
-    printf("%c",177);}
+    for(r=1;r<=20;r++)
+   {
+      for(q=0;q<=50000000;q++); // to display the character slowly
+      printf("%c",177);
+   }
 }
 void display_splash (void)
 {
@@ -111,10 +53,11 @@ void display_splash (void)
     	"              +----------------------------------------------------+ \n";
   	cout << string( 8, '\n' );
 }
-void adios (void)
+void exit (void)
 {
-        system("title ");
+	system("title ");
         system("color f0");
+	char buffer [] = "Exiting...";
 	cout << string( 10, '\n' );
   	cout << "\n\n\n\n";
   	cout <<
@@ -124,5 +67,5 @@ void adios (void)
     	"              ¦                                                    ¦ \n"
     	"              +----------------------------------------------------+ \n";
   	cout << string( 8, '\n' );
-  	load4();
+  	load(buffer);
 }

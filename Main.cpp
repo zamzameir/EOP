@@ -18,12 +18,12 @@ inline void display_splash (void); // splash function
 inline void printmessage (void);
 inline void userDatabase (void);
 inline void displayDB (void);
-inline void gotoxy (int,int); // loading function
+inline void gotoxy (int,int); // loading position
 inline void viewData (void);
 inline void profile (void);
-inline void adios (void);
+inline void load (char[]); // loading function
+inline void exit (void);
 inline void info (void);
-inline void load (void); // loading function
 
 char** argv;int argc;
 
@@ -34,12 +34,13 @@ class StartUp // run at startup
 public:
    StartUp (void)
    { 
-   	 system("mode con: cols=87 lines=18");
+   	 char buffer [] = "Loading...";
+	 system("mode con: cols=87 lines=18");
 	 system("color f0");
 	 system("title ");
 	 displayCredit(argc,argv); 
    	 display_splash();
-	 load(); 
+	 load(buffer); 
     }
 };
 StartUp startup;
@@ -48,7 +49,7 @@ int main (void)
 {	
 	system("mode con: cols=87 lines=19"); // set windows size
 	system("color f0");
-	system("title "); 
+	system("title ");
 	int index,randNo;
 	char choice;
 	char view [5][256] = { "News & announcement","Job application","Applicant data","Restart system","Credits" };
@@ -77,16 +78,18 @@ int main (void)
 	
 	if (choice !='1' && choice !='2' && choice !='3' && choice !='4' && choice !='5' && choice !='x' && choice !='X')
 	cout << "\a";
+	
+	char buffer [] = "Restarting program...";
 			
 	switch (choice) 
 	{
 		case '1' : info();break;
 		case '2' : profile();break;
 		case '3' : databaseProfile();break;
-		case '4' : StartUp();main();break;
-		case '5' : system ("start credits.html");break;
+		case '4' : system("cls");load(buffer);StartUp();main();break;
+		case '5' : system("start credits.html");main();break;
 		case 'x' : 
-		case 'X' : adios();break;
+		case 'X' : exit();break;
 	}
 
 } 	while (choice != '1' && choice != '2' && choice != '3' && choice != '4' && choice != '5' && choice != 'x' && choice != 'X');

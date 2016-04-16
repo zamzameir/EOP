@@ -1,6 +1,6 @@
 /*
-- Most important file
-- Contain all main related data 
+ Most important file
+ Contain all main related data 
 */
 
 #include <windows.h>
@@ -15,12 +15,9 @@
 #include <string>
 #include <time.h>
 
+extern inline void load (char[]);
 extern inline void profile ();
 extern inline void gotoxy ();
-extern inline void load2 ();
-extern inline void load3 ();
-extern inline void load5 ();
-extern inline void load6 ();
 extern int main ();
 
 char plname[256],nplname[256];
@@ -168,7 +165,7 @@ void userDatabase (void)
    		cout << " Address   : " << naddr << endl;
    		cout << " Contact   : " << nphone << endl;
    
-   		cout << "\n\nPress Y to submit or X to cancel > ";
+   		cout << "\n\n Press Y to submit or X to cancel > ";
    		fflush(stdin);
    		submit = getch();
    }
@@ -189,7 +186,8 @@ void userDatabase (void)
    		fprintf(info,"\n\n");
    		fclose(info);
    		system("cls");
-   		load6();
+   		char buffer [] = "Saving data...";
+		load(buffer);
    		system("cls");
   		cout << "\n\n\n\n";
   		char message1 [] = "----------------------------------"; 
@@ -236,13 +234,14 @@ void viewData (void)
 {
    system("title ");
    system("color f0");
+   char buffer [] = "Getting data...";
    COORD newSize = {100,9999};
    SetConsoleScreenBufferSize(GetStdHandle(STD_OUTPUT_HANDLE), newSize); // scroll bar
    char c,exit;
    FILE *info;
    info=fopen("database.txt","a+");
    system("cls");
-   load2();
+   load(buffer);
   
 do 
 {
@@ -302,8 +301,9 @@ void deleteData (void)
 {
     system("title ");
     system("color f0");
+    char buffer [] = "Deleting data...";
     system("cls");
-    load3();
+    load(buffer);
     system("cls");
     std::ofstream ofs; // clear external file input
     ofs.open("database.txt", std::ofstream::out | std::ofstream::trunc);
@@ -314,8 +314,9 @@ void resetData (void)
  // reset array data back to 0 
     system("title ");
     system("color f0");
+    char buffer [] = "Resetting data...";
     system("cls");
-    load5();
+    load(buffer);
     system("cls");
     memset(nplname, 0, sizeof(nplname));
     memset(ncourse, 0, sizeof(ncourse));
