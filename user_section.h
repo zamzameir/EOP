@@ -13,9 +13,9 @@ extern inline void deleteData ();
 extern inline void peekData ();
 extern inline void viewData ();
 extern inline void profile ();
-extern void gotoxy ();
-extern void load3 ();
-extern void info ();
+extern inline void gotoxy ();
+extern inline void load3 ();
+extern inline void info ();
 extern int main ();
 
 using namespace std;

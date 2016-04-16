@@ -15,12 +15,12 @@
 #include <string>
 #include <time.h>
 
-extern void profile ();
-extern void gotoxy ();
-extern void load2 ();
-extern void load3 ();
-extern void load5 ();
-extern void load6 ();
+extern inline void profile ();
+extern inline void gotoxy ();
+extern inline void load2 ();
+extern inline void load3 ();
+extern inline void load5 ();
+extern inline void load6 ();
 extern int main ();
 
 char plname[256],nplname[256];
