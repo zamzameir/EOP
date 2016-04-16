@@ -19,6 +19,7 @@ extern void info ();
 extern int main ();
 
 using namespace std;
+
 void databaseProfile (void)
 {
 	char view [2][256] = { "View user database","Delete user database" };
@@ -51,6 +52,6 @@ void databaseProfile (void)
 		case 'X' : main();break;
 	}
 
-} 	while ( choice != '1' && choice != '2' && choice != 'x' && choice != 'X' );
+} 	while (choice != '1' && choice != '2' && choice != 'x' && choice != 'X');
   	return;
 }

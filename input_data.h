@@ -24,12 +24,12 @@ char phone[256],nphone[256];
 char cgpa[256],ncgpa[256];
 char addr[256],naddr[256];
 char edu[256],nedu[256];
-
 char cha,c,submit;
 int i,j,k,l,m,n,p;
    
 using namespace std;
-void userDatabase()
+
+void userDatabase (void)
 {
    system("title ");
    system("color f0");
@@ -139,10 +139,10 @@ void userDatabase()
    cout << " Address   : " << naddr << endl;
    cout << " Contact   : " << nphone << endl;
    
-   cout << "\n\nPress Y to submit or X to cancel > ";
+   cout << "\n\n Press Y to submit or X to cancel > ";
    fflush(stdin);
    submit = getch();
-   while (submit != 'y' && submit != 'Y' && submit != 'X' && submit != 'x' )
+   while (submit != 'y' && submit != 'Y' && submit != 'X' && submit != 'x')
    {
    		cout << "\a";
 		system("cls");
@@ -199,9 +199,9 @@ void userDatabase()
    {
    		system("cls");
    		cout << "\n\n\n\n";
-  		char message1 [] = "------------------------------"; 
-  		char message2 [] = "SUBMSSION ABORTED BY APPLICANT";
-  		char message3 [] = "------------------------------";
+  		char message1 [] = "-------------------------------"; 
+  		char message2 [] = "SUBMISSION ABORTED BY APPLICANT";
+  		char message3 [] = "-------------------------------";
       
   		printf("%*s",40+strlen(message1)/2,message1, 40-strlen(message1)/2,""); // center message 1
   		puts("");
@@ -230,11 +230,11 @@ void viewData (void)
    info=fopen("database.txt","a+");
    system("cls");
    load2();
-   system("cls");
-   
+  
 do 
 {
-	info=fopen("database.txt","r");
+   system("cls");
+   info=fopen("database.txt","r");
    do
    {
 	   putchar(c=getc(info));
@@ -242,10 +242,10 @@ do
 	   while(c!=EOF);
        	   fclose(info);
   
-   cout << "\n Type X to go back > ";
+   cout << " Type X to go back > ";
    exit = getch();
    
-   if ( exit !='x' && exit !='X' )
+   if (exit !='x' && exit !='X')
 	cout << "\a";
 	
 	switch(exit) 
@@ -273,7 +273,7 @@ void peekData (void)
    cout << "\n Type X to go back > ";
    conts = getch();
    
-   if ( conts !='x' && conts !='X' )
+   if (conts !='x' && conts !='X')
 	cout << "\a";
 	
 	switch(conts) 
@@ -294,7 +294,7 @@ void deleteData (void)
 }
 void resetData (void)
 {
-    // reset array data back to 0 
+ // reset array data back to 0 
     system("cls");
     load5();
     system("cls");

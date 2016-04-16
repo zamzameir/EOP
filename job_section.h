@@ -11,6 +11,7 @@ extern void load3 ();
 extern void info ();
 
 using namespace std;
+
 void profile (void)
 {
 	char view [3][256] = { "New job application","View last submission attempt","Reset last submission attempt" };
@@ -43,6 +44,6 @@ void profile (void)
 		case 'x' : 
 		case 'X' : main();break;
 	}
-} 	while ( choice != '1' && choice != '2' && choice != '3' && choice != 'x' && choice != 'X' );
+} 	while (choice != '1' && choice != '2' && choice != '3' && choice != 'x' && choice != 'X');
   	return;
 }

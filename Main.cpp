@@ -6,12 +6,12 @@
 #include <ctime>
 #include <cmath>
 
-#include "input_data.h"
 #include "display_message.h"
 #include "splash_screen.h"
 #include "user_section.h"
-#include "job_section.h"
 #include "news_section.h"
+#include "job_section.h"
+#include "input_data.h"
 
 inline void databaseProfile (void);
 inline void display_splash (void); // splash function
@@ -26,12 +26,13 @@ inline void info (void);
 inline void load (void); // loading function
 
 char** argv;int argc;
+
 using namespace std;
 
 class StartUp // run at startup
 {
 public:
-   StartUp()
+   StartUp (void)
    { 
    	 system("mode con: cols=87 lines=18");
 	 system("color f0");
@@ -43,21 +44,22 @@ public:
 };
 StartUp startup;
 
-int main()
+int main (void)
 {	
 	system("mode con: cols=87 lines=19"); // set windows size
 	system("color f0");
 	system("title "); 
 	int index,randNo;
 	char choice;
-	char view [5][256] = { "News update","Job application","Applicant data","Restart system","Credits" };
+	char view [5][256] = { "News & announcement","Job application","Applicant data","Restart system","Credits" };
 						 
 	srand (time (NULL));
 	randNo = 100 + rand () % (200-101); // random number
 	int month = 4, year = 2015, tm_mon, tm_mday, tm_year;
 	time_t now = time(NULL);
 	struct tm *t = localtime(&now);	// get current date
-  	do
+  	
+	do
 {
 	system ("cls");
 	printmessage ();
@@ -87,7 +89,7 @@ int main()
 		case 'X' : adios();break;
 	}
 
-} 	while ( choice != '1' && choice != '2' && choice != '3' && choice != 'x' && choice != 'X' );
+} 	while (choice != '1' && choice != '2' && choice != '3' && choice != '4' && choice != '5' && choice != 'x' && choice != 'X');
   	return 0;
 }
 

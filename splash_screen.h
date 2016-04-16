@@ -11,16 +11,18 @@
 #include <ctime>
 
 extern int main ();
+
 using namespace std;
 
-void gotoxy(int x, int y)
+void gotoxy (int x, int y)
 {
     COORD coord;
     coord.X = x;
     coord.Y = y;
     SetConsoleCursorPosition(GetStdHandle(STD_OUTPUT_HANDLE), coord);
 }
-void load(){
+void load (void)
+{
     int row,col,r,c,q;
     gotoxy(36,14);
     printf("loading...");
@@ -29,52 +31,57 @@ void load(){
     for(q=0;q<=100000000;q++); // to display the character slowly
     printf("%c",177);}
 }
-void load2(){
+void load2 (void)
+{
     int row,col,r,c,q;
     gotoxy(36,14);
     printf("Getting data...");
     gotoxy(30,15);
     for(r=1;r<=20;r++){
-    for(q=0;q<=100000000;q++); // to display the character slowly
+    for(q=0;q<=50000000;q++); // to display the character slowly
     printf("%c",177);}
 }
-void load3(){
+void load3 (void)
+{
     int row,col,r,c,q;
     gotoxy(36,14);
     printf("Deleting data...");
     gotoxy(30,15);
     for(r=1;r<=20;r++){
-    for(q=0;q<=100000000;q++); // to display the character slowly
+    for(q=0;q<=50000000;q++); // to display the character slowly
     printf("%c",177);}
 }
-void load4(){
+void load4 (void)
+{
     int row,col,r,c,q;
     gotoxy(36,14);
     printf("Exiting...");
     gotoxy(30,15);
     for(r=1;r<=20;r++){
-    for(q=0;q<=100000000;q++); // to display the character slowly
+    for(q=0;q<=50000000;q++); // to display the character slowly
     printf("%c",177);}
 }
-void load5(){
+void load5 (void)
+{
     int row,col,r,c,q;
     gotoxy(36,14);
     printf("Resetting data...");
     gotoxy(30,15);
     for(r=1;r<=20;r++){
-    for(q=0;q<=100000000;q++); // to display the character slowly
+    for(q=0;q<=50000000;q++); // to display the character slowly
     printf("%c",177);}
 }
-void load6(){
+void load6 (void)
+{
     int row,col,r,c,q;
     gotoxy(36,14);
     printf("Saving data...");
     gotoxy(30,15);
     for(r=1;r<=20;r++){
-    for(q=0;q<=100000000;q++); // to display the character slowly
+    for(q=0;q<=50000000;q++); // to display the character slowly
     printf("%c",177);}
 }
-void display_splash()
+void display_splash (void)
 {
   	cout << string( 10, '\n' );
   	cout << "\n\n";
@@ -88,7 +95,7 @@ void display_splash()
     	"              +----------------------------------------------------+ \n";
   	cout << string( 8, '\n' );
 }
-void adios ()
+void adios (void)
 {
 	cout << string( 10, '\n' );
   	cout << "\n\n\n\n";

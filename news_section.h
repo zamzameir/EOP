@@ -6,6 +6,7 @@ extern inline void profile ();
 extern int main ();
 
 using namespace std;
+
 void info (void)
 {
 	system("title ");
@@ -32,7 +33,7 @@ void info (void)
 	fflush(stdin);
 	choice = getch();
 	
-	if ( choice !='x' && choice !='X' )
+	if (choice !='x' && choice !='X')
 	cout << "\a";
 	
 	switch(choice) 
@@ -41,7 +42,7 @@ void info (void)
 		case 'X' : main();break;
 	}
 
-} 	while ( choice != 'x' && choice != 'X' );
+} 	while (choice != 'x' && choice != 'X');
   	return;
 }
 
