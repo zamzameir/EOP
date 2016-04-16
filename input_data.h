@@ -44,8 +44,9 @@ void userDatabase (void)
     
    system("cls");
    
-   cout << "Enter your full name : " << "\n";
+   cout << " Enter your full name : " << "\n";
    fflush(stdin);
+   cout << " ";
    scanf("%[^\n]",plname);
    for(j=0;plname[j]!='\0';j++)
    { 
@@ -59,8 +60,9 @@ void userDatabase (void)
    
    system("cls");
    
-   cout << "Education background : " << "\n";
+   cout << " Education background : " << "\n";
    fflush(stdin);
+   cout << " ";
    scanf("%[^\n]",edu);
    for(k=0;edu[k]!='\0';k++)
    { 
@@ -74,8 +76,9 @@ void userDatabase (void)
    
    system("cls");
    
-   cout << "Course background : " << "\n";
+   cout << " Course background : " << "\n";
    fflush(stdin);
+   cout << " ";
    scanf("%[^\n]",course);
    for(l=0;course[l]!='\0';l++)
    { 
@@ -89,8 +92,9 @@ void userDatabase (void)
    
    system("cls");
    
-   cout << "CGPA : " << "\n";
+   cout << " CGPA : " << "\n";
    fflush(stdin);
+   cout << " ";
    scanf("%[^\n]",cgpa);
    for(p=0;cgpa[p]!='\0';p++)
    { 
@@ -104,8 +108,9 @@ void userDatabase (void)
    
    system("cls");
    
-   cout << "Address : " << "\n";
+   cout << " Address : " << "\n";
    fflush(stdin);
+   cout << " ";
    scanf("%[^\n]",addr);
    for(m=0;addr[m]!='\0';m++)
    { 
@@ -119,8 +124,9 @@ void userDatabase (void)
    
    system("cls");
    
-   cout << "Phone number : " << "\n";
+   cout << " Phone number : " << "\n";
    fflush(stdin);
+   cout << " ";
    scanf("%[^\n]",phone);
    for(n=0;phone[n]!='\0';n++)
    { 

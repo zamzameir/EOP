@@ -1,4 +1,5 @@
 #include <iostream>
+#include <ctime>
 
 extern inline void printmessage ();
 extern inline void userDatabase ();
@@ -12,6 +13,9 @@ void info (void)
 	system("title ");
 	system("color f0");
 	system("mode con: cols=87 lines=19");
+	int month = 4, year = 2015, tm_mon, tm_mday, tm_year;
+	time_t now = time(NULL);
+	struct tm *t = localtime(&now);
 	char choice;
 	char msg [5][256] = { "Calling for fresh graduates! our company needs you!",
 	"Job application is open until 31 May 2016", "Your resume must be submitted directly through our system", 
@@ -20,8 +24,8 @@ void info (void)
 {
 	system ("cls");
 	printmessage ();
-	cout << " CURRENT NEWS!\n";
-	cout << " -------------\n\n";
+	cout << " CURRENT NEWS AS OF " << t->tm_mday <<"/" << t->tm_mon+1 <<"/" << t->tm_year+1900 << "\n";
+	cout << " ____________________________\n\n";
 	cout << " Hello. Thank you for visiting our site"  << endl;
 	cout << " For now there are a few announcement : " << endl << endl;
 	
