@@ -17,6 +17,7 @@ void profile (void)
 {
 	system("title ");
         system("color f0");
+        system("mode con: cols=87 lines=20");
         char buffer [] = "Getting data...";
         system("mode con: cols=87 lines=19");
         char view [3][256] = { "New job application","View last submission attempt","Reset last submission attempt" };

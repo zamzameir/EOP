@@ -36,7 +36,7 @@ public:
    StartUp (void)
    { 
    	 char buffer [] = "Loading...";
-	 system("mode con: cols=87 lines=18");
+	 system("mode con: cols=87 lines=20");
 	 system("color f0");
 	 system("title ");
 	 displayCredit(argc,argv); 
@@ -48,7 +48,7 @@ StartUp startup;
 
 int main (void)
 {	
-	system("mode con: cols=87 lines=19"); // set windows size
+	system("mode con: cols=87 lines=20"); // set windows size
 	system("color f0");
 	system("title ");
 	int index,randNo;

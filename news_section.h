@@ -12,7 +12,7 @@ void info (void)
 {
 	system("title ");
 	system("color f0");
-	system("mode con: cols=87 lines=19");
+	system("mode con: cols=87 lines=20");
 	int month = 4, year = 2015, tm_mon, tm_mday, tm_year;
 	time_t now = time(NULL);
 	struct tm *t = localtime(&now);
@@ -34,7 +34,7 @@ void info (void)
 	   cout << " " << i+1 << " - " << msg[i] << "\n"; // display message
 	}
 		
-	cout << "\n Type X to go back > ";
+	cout << "\n\n Type X to go back > ";
 	fflush(stdin);
 	choice = getch();
 	

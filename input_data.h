@@ -35,6 +35,7 @@ void userDatabase (void)
 {
    system("title ");
    system("color f0");
+   system("mode con: cols=87 lines=20");
    char back;
    FILE *info;
    info=fopen("database.txt","a+");
