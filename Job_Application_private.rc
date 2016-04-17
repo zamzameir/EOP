@@ -27,11 +27,11 @@ FILETYPE VFT_APP
     {
       VALUE "CompanyName", "EXPRESS ENGINEERING SDN BHD"
       VALUE "FileVersion", "3.2.0.0"
-      VALUE "FileDescription", "Developed using the Dev-C++ IDE"
+      VALUE "FileDescription", "Final Project"
       VALUE "InternalName", "IZZAT AMEIR"
       VALUE "LegalCopyright", "Copyright (C) 2016 zamzameir"
       VALUE "LegalTrademarks", "2016"
-      VALUE "OriginalFilename", "FINAL PROJECT"
+      VALUE "OriginalFilename", "JOB APPLICATION SYSTEM"
       VALUE "ProductName", "JOB APPLICATION SYSTEM"
       VALUE "ProductVersion", "3.2.0.0"
     }
