@@ -6,12 +6,12 @@
 #include <ctime>
 #include <cmath>
 
-#include "applicant_section.h"
-#include "display_message.h"
-#include "splash_screen.h"
-#include "news_section.h"
-#include "job_section.h"
-#include "input_data.h"
+#include "header/applicant_section.h"
+#include "header/display_message.h"
+#include "header/splash_screen.h"
+#include "header/news_section.h"
+#include "header/job_section.h"
+#include "header/input_data.h"
 
 inline void databaseProfile (void);
 inline void display_splash (void); // splash function
@@ -90,7 +90,7 @@ int main (void)
 		case '3' : databaseProfile();break;
 		case '4' : system("cls");load(buffer);StartUp();main();break;
 		case '5' : system("cls");license();break;
-		case '6' : system("start credits.html");main();break;
+		case '6' : system("start credits/credits.html");main();break;
 		case 'x' : 
 		case 'X' : exit();break;
 	}

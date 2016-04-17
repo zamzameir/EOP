@@ -39,7 +39,7 @@ void userDatabase (void)
    system("mode con: cols=87 lines=20");
    char back;
    FILE *info;
-   info=fopen("database.txt","a+");
+   info=fopen("data/database.txt","a+");
     
    system("cls");
    
@@ -252,14 +252,14 @@ void viewData (void)
    SetConsoleScreenBufferSize(GetStdHandle(STD_OUTPUT_HANDLE), newSize); // enable scroll bar
    char c,exit;
    FILE *info;
-   info=fopen("database.txt","a+");
+   info=fopen("data/database.txt","a+");
    system("cls");
    load(buffer);
   
 do 
 {
    system("cls");
-   info=fopen("database.txt","r");
+   info=fopen("data/database.txt","r");
    do
    {
 	   putchar(c=getc(info));
@@ -325,7 +325,7 @@ void deleteData (void)
     load(buffer);
     system("cls");
     std::ofstream ofs; // clear external file input
-    ofs.open("database.txt", std::ofstream::out | std::ofstream::trunc);
+    ofs.open("data/database.txt", std::ofstream::out | std::ofstream::trunc);
     ofs.close();
 }
 void resetData (void)
@@ -355,7 +355,7 @@ void license (void)
  do 
 {
    system("cls");
-   license=fopen("license.txt","r");
+   license=fopen("data/license.txt","r");
    do
    {
 	   putchar(c=getc(license));
