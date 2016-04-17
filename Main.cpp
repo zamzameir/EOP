@@ -27,6 +27,7 @@ inline void exit (void);
 inline void info (void);
 
 char** argv;int argc;
+int randNo;
 
 using namespace std;
 
@@ -51,9 +52,9 @@ int main (void)
 	system("mode con: cols=87 lines=20"); // set windows size
 	system("color f0");
 	system("title ");
-	int index,randNo;
+	int index;
 	char choice;
-	char view [6][256] = { "News & announcement","Job application","Applicant data","Restart system","License","Credits" };
+	char view [6][256] = { "News & announcement","Employment application","Applicant data","Restart system","License","Credits" };
 						 
 	srand (time (NULL));
 	randNo = 100 + rand () % (200-101); // random number
@@ -65,7 +66,7 @@ int main (void)
 {
 	system ("cls");
 	printmessage ();
-	cout << "  User No. " << randNo << "\t\t\t\t\t\t" << "\tDATE: " << t->tm_mday <<"/" << t->tm_mon+1 <<"/" << t->tm_year+1900 << "\n\n";
+	cout << "  Your ID. " << randNo << "\t\t\t\t\t\t" << "\tDATE: " << t->tm_mday <<"/" << t->tm_mon+1 <<"/" << t->tm_year+1900 << "\n\n";
 	cout << " Select an action\n";
 	cout << " ----------------\n\n";
 	

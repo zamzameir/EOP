@@ -33,20 +33,20 @@ UnitCount=9
 
 [VersionInfo]
 Major=3
-Minor=0
+Minor=1
 Release=0
 Build=0
 LanguageID=1033
 CharsetID=1252
 CompanyName=EXPRESS ENGINEERING SDN BHD
-FileVersion=3.0.0.0
+FileVersion=3.1.0.0
 FileDescription=Developed using the Dev-C++ IDE
 InternalName=IZZAT AMEIR
 LegalCopyright=Copyright (C) 2016 zamzameir
 LegalTrademarks=2016
 OriginalFilename=FINAL PROJECT
 ProductName=JOB APPLICATION SYSTEM
-ProductVersion=3.0.0.0
+ProductVersion=3.1.0.0
 AutoIncBuildNr=0
 SyncProduct=1
 

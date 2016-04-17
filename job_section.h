@@ -20,7 +20,7 @@ void profile (void)
         system("mode con: cols=87 lines=20");
         char buffer [] = "Getting data...";
         system("mode con: cols=87 lines=19");
-        char view [3][256] = { "New job application","View last submission attempt","Reset last submission attempt" };
+        char view [3][256] = { "New employment application","View last submission attempt","Reset last submission attempt" };
 	char choice;
 	int index;
 	
