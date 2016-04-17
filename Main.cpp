@@ -6,9 +6,9 @@
 #include <ctime>
 #include <cmath>
 
+#include "applicant_section.h"
 #include "display_message.h"
 #include "splash_screen.h"
-#include "user_section.h"
 #include "news_section.h"
 #include "job_section.h"
 #include "input_data.h"

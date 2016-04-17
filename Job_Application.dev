@@ -34,19 +34,19 @@ UnitCount=9
 [VersionInfo]
 Major=3
 Minor=1
-Release=0
+Release=1
 Build=0
 LanguageID=1033
 CharsetID=1252
 CompanyName=EXPRESS ENGINEERING SDN BHD
-FileVersion=3.1.0.0
+FileVersion=3.1.1.0
 FileDescription=Developed using the Dev-C++ IDE
 InternalName=IZZAT AMEIR
 LegalCopyright=Copyright (C) 2016 zamzameir
 LegalTrademarks=2016
 OriginalFilename=FINAL PROJECT
 ProductName=JOB APPLICATION SYSTEM
-ProductVersion=3.1.0.0
+ProductVersion=3.1.1.0
 AutoIncBuildNr=0
 SyncProduct=1
 
@@ -110,16 +110,6 @@ Priority=1000
 OverrideBuildCmd=0
 BuildCmd=
 
-[Unit9]
-FileName=user_section.h
-Folder=
-Compile=1
-Link=1
-Priority=1000
-OverrideBuildCmd=0
-BuildCmd=
-CompileCpp=1
-
 [Unit7]
 FileName=news_section.h
 CompileCpp=1
@@ -142,6 +132,16 @@ BuildCmd=
 
 [Unit6]
 FileName=job_section.h
+CompileCpp=1
+Folder=
+Compile=1
+Link=1
+Priority=1000
+OverrideBuildCmd=0
+BuildCmd=
+
+[Unit9]
+FileName=applicant_section.h
 CompileCpp=1
 Folder=
 Compile=1

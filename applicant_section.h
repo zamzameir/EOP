@@ -25,7 +25,7 @@ void databaseProfile (void)
 	system("title ");
         system("color f0");
         system("mode con: cols=87 lines=20");
-        char view [2][256] = { "View user database","Delete user database" };
+        char view [2][256] = { "View applicant database","Delete applicant database" };
 	char choice;
 	int index;
 	

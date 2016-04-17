@@ -23,7 +23,7 @@ void info (void)
 	do
 {
 	system ("cls");
-	printmessage ();
+	cout << "\n";
 	cout << " CURRENT NEWS AS OF " << t->tm_mday <<"/" << t->tm_mon+1 <<"/" << t->tm_year+1900 << "\n";
 	cout << " ____________________________\n\n";
 	cout << " Hello. Thank you for visiting our site" << endl;
@@ -36,7 +36,7 @@ void info (void)
 	   cout << " " << i+1 << " - " << msg[i] << "\n"; // display message
 	}
 		
-	cout << "\n Type X to go back > ";
+	cout << "\n\n Type X to go back > ";
 	fflush(stdin);
 	choice = getch();
 	

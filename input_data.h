@@ -146,12 +146,12 @@ void userDatabase (void)
    cout << " ID No. " << randNo << endl;
    cout << " ----------\n" << endl;
    
-   cout << " Name        : " << nplname << endl;
-   cout << " Education   : " << nedu << endl;
-   cout << " Course      : " << ncourse << endl;
-   cout << " CGPA        : " << ncgpa << endl;
-   cout << " Address     : " << naddr << endl;
-   cout << " Contact     : " << nphone << endl;
+   cout << " Name       : " << nplname << endl;
+   cout << " Education  : " << nedu << endl;
+   cout << " Course     : " << ncourse << endl;
+   cout << " CGPA       : " << ncgpa << endl;
+   cout << " Address    : " << naddr << endl;
+   cout << " Contact    : " << nphone << endl;
    
    cout << "\n\n Press Y to submit or X to cancel > ";
    fflush(stdin);
@@ -167,12 +167,12 @@ void userDatabase (void)
    		cout << " ID No. " << randNo << endl;
    		cout << " ----------\n" << endl;
    
-   		cout << " Name        : " << nplname << endl;
-   		cout << " Education   : " << nedu << endl;
-   		cout << " Course      : " << ncourse << endl;
-   		cout << " CGPA        : " << ncgpa << endl;
-   		cout << " Address     : " << naddr << endl;
-   		cout << " Contact     : " << nphone << endl;
+   		cout << " Name       : " << nplname << endl;
+   		cout << " Education  : " << nedu << endl;
+   		cout << " Course     : " << ncourse << endl;
+   		cout << " CGPA       : " << ncgpa << endl;
+   		cout << " Address    : " << naddr << endl;
+   		cout << " Contact    : " << nphone << endl;
    
    		cout << "\n\n Press Y to submit or X to cancel > ";
    		fflush(stdin);
@@ -182,12 +182,12 @@ void userDatabase (void)
    if (submit == 'y' || submit == 'Y')
    {
    		fprintf(info," ID No : %d\n",randNo);
-		fprintf(info," Applicant Name  : %s\n",nplname);
-   		fprintf(info," Education  : %s\n",nedu);
-   		fprintf(info," Course background  : %s\n",ncourse);
-   		fprintf(info," CGPA  : %s\n",ncgpa);
-   		fprintf(info," Address  : %s\n",naddr);
-   		fprintf(info," Contact  : %s\n",nphone);
+		fprintf(info," Applicant Name : %s\n",nplname);
+   		fprintf(info," Education : %s\n",nedu);
+   		fprintf(info," Course background : %s\n",ncourse);
+   		fprintf(info," CGPA : %s\n",ncgpa);
+   		fprintf(info," Address : %s\n",naddr);
+   		fprintf(info," Contact : %s\n",nphone);
    		time_t mytime;
    		mytime = time(NULL);
    		fprintf(info," Application date : %s",ctime(&mytime));
@@ -249,7 +249,7 @@ void viewData (void)
    system("color f0");
    char buffer [] = "Getting data...";
    COORD newSize = {100,9999};
-   SetConsoleScreenBufferSize(GetStdHandle(STD_OUTPUT_HANDLE), newSize); // scroll bar
+   SetConsoleScreenBufferSize(GetStdHandle(STD_OUTPUT_HANDLE), newSize); // enable scroll bar
    char c,exit;
    FILE *info;
    info=fopen("database.txt","a+");
@@ -292,15 +292,14 @@ void peekData (void)
    char message2 [] = "___________________________";
    printf("%*s",40+strlen(message1)/2,message1, 40-strlen(message1)/2,"");puts(""); // center message 1
    printf("%*s",40+strlen(message2)/2,message2, 40-strlen(message2)/2,"");puts(""); // center message 2
-   cout << " ID No. " << randNo << endl;
-   cout << " ----------\n" << endl;
-   cout << " Name        : " << nplname << endl;
-   cout << " Education   : " << nedu << endl;
-   cout << " Course      : " << ncourse << endl;
-   cout << " CGPA        : " << ncgpa << endl;
-   cout << " Address     : " << naddr << endl;
-   cout << " Contact     : " << nphone << endl;
-   cout << "______________________________________________________________\n";
+   cout << "\n";
+   cout << " Name       : " << nplname << endl;
+   cout << " Education  : " << nedu << endl;
+   cout << " Course     : " << ncourse << endl;
+   cout << " CGPA       : " << ncgpa << endl;
+   cout << " Address    : " << naddr << endl;
+   cout << " Contact    : " << nphone << endl;
+   cout << " _____________________________________________________________\n";
    cout << "\t\t\t    This is a computer generated view.\n ";
    
    cout < "\n";
@@ -364,7 +363,7 @@ void license (void)
 	   while(c!=EOF);
        	   fclose(license);
    	   cout << "\n\n";
-           cout << " Type X to go back > ";
+           cout << "  Type X to go back > ";
    	   exit = getch();
    
    if (exit !='x' && exit !='X')
