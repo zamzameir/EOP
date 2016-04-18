@@ -15,7 +15,7 @@ using namespace std;
 
 void profile (void)
 {
-	system("title ");
+	system("title Final Project");
         system("color f0");
         system("mode con: cols=87 lines=20");
         char buffer [] = "Getting data...";

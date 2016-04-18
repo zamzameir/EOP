@@ -34,7 +34,7 @@ using namespace std;
 
 void userDatabase (void)
 {
-   system("title ");
+   system("title Final Project");
    system("color f0");
    system("mode con: cols=87 lines=20");
    char back;
@@ -245,7 +245,7 @@ void userDatabase (void)
 }
 void viewData (void)
 {
-   system("title ");
+   system("title Final Project");
    system("color f0");
    char buffer [] = "Getting data...";
    COORD newSize = {100,9999};
@@ -283,7 +283,7 @@ do
 }
 void peekData (void)
 {
-   system("title ");
+   system("title Final Project");
    system("color f0");
    char conts;
 
@@ -318,7 +318,7 @@ void peekData (void)
 }
 void deleteData (void)
 {
-    system("title ");
+    system("title Final Project");
     system("color f0");
     char buffer [] = "Deleting data...";
     system("cls");
@@ -331,7 +331,7 @@ void deleteData (void)
 void resetData (void)
 {
  // reset array data back to 0 
-    system("title ");
+    system("title Final Project");
     system("color f0");
     char buffer [] = "Resetting data...";
     system("cls");
@@ -346,7 +346,7 @@ void resetData (void)
 }
 void license (void)
 {
-	system("title ");
+	system("title Final Project");
     	system("color f0");
 	FILE *license;
 	char exit;

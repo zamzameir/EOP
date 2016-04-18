@@ -39,7 +39,7 @@ public:
    	 char buffer [] = "Loading...";
 	 system("mode con: cols=87 lines=20");
 	 system("color f0");
-	 system("title ");
+	 system("title Final Project");
 	 displayCredit(argc,argv); 
    	 display_splash();
 	 load(buffer); 
@@ -51,7 +51,7 @@ int main (void)
 {	
 	system("mode con: cols=87 lines=20"); // set windows size
 	system("color f0");
-	system("title ");
+	system("title Final Project");
 	int index;
 	char choice;
 	char view [6][256] = { "News & announcement","Employment application","Applicant data","Restart system","License","Credits" };

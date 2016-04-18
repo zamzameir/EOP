@@ -16,7 +16,7 @@ using namespace std;
 
 void gotoxy (int x, int y)
 {
-    system("title ");
+    system("title Final Project");
     system("color f0");
     COORD coord;
     coord.X = x;
@@ -25,7 +25,7 @@ void gotoxy (int x, int y)
 }
 void load (char buffer[])
 {
-    system("title "); // animated function
+    system("title Final Project"); // animated function
     system("color f0");
     int row,col,r,c,q;
     gotoxy(36,14);
@@ -39,7 +39,7 @@ void load (char buffer[])
 }
 void display_splash (void)
 {
-        system("title ");
+        system("title Final Project");
         system("color f0");
 	cout << string( 10, '\n' );
   	cout << "\n\n";
@@ -55,7 +55,7 @@ void display_splash (void)
 }
 void exit (void)
 {
-	system("title ");
+	system("title Final Project");
         system("color f0");
 	char buffer [] = "Exiting...";
 	cout << string( 10, '\n' );

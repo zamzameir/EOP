@@ -10,7 +10,7 @@ using namespace std;
 
 void info (void)
 {
-	system("title ");
+	system("title Final Project");
 	system("color f0");
 	system("mode con: cols=87 lines=20");
 	int month = 4, year = 2015, tm_mon, tm_mday, tm_year;

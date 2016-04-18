@@ -9,7 +9,7 @@ using namespace std;
 
 void printmessage (void)
  {
-      system("title ");
+      system("title Final Project");
       system("color f0");
       char message1 [] = "--------------------------------------"; 
       char message2 [] = "WELCOME TO EXPRESS ENGINEERING SDN BHD";
@@ -25,7 +25,7 @@ void printmessage (void)
 }
 void credit (void)
  {
-      system("title ");
+      system("title Final Project");
       system("color f0");
       char line     [] = "----------------------\n"; 
       char message1 [] = "FINAL PROJECT EOP SEM2\n"; 
@@ -48,7 +48,7 @@ void credit (void)
 }
 void initialize (int argc, char** argv)		
  {		
-    system("title ");
+    system("title Final Project");
     system("color f0");
     cout << "\n\n\n\n\n";
     string message = " Please wait...";		
@@ -60,7 +60,7 @@ void initialize (int argc, char** argv)
  }		
 int displayCredit (int argc, char** argv)		
  {		
-    system("title ");
+    system("title Final Project");
     system("color f0");
     credit();		
     initialize( argc, argv );		

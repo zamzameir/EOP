@@ -22,7 +22,7 @@ using namespace std;
 
 void databaseProfile (void)
 {
-	system("title ");
+	system("title Final Project");
         system("color f0");
         system("mode con: cols=87 lines=20");
         char view [2][256] = { "View applicant database","Delete applicant database" };
