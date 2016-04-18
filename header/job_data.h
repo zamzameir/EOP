@@ -1,8 +1,3 @@
-/*
- Most important file
- Contain all main related data 
-*/
-
 #include <windows.h>
 #include <process.h>
 #include <iostream>
@@ -243,44 +238,6 @@ void userDatabase (void)
 	}
 	
 }
-void viewData (void)
-{
-   system("title Final Project");
-   system("color f0");
-   char buffer [] = "Getting data...";
-   COORD newSize = {100,9999};
-   SetConsoleScreenBufferSize(GetStdHandle(STD_OUTPUT_HANDLE), newSize); // enable scroll bar
-   char c,exit;
-   FILE *info;
-   info=fopen("data/database.txt","a+");
-   system("cls");
-   load(buffer);
-  
-do 
-{
-   system("cls");
-   info=fopen("data/database.txt","r");
-   do
-   {
-	   putchar(c=getc(info));
-   }
-	   while(c!=EOF);
-       	   fclose(info);
-  
-   cout << "Type X to go back > ";
-   exit = getch();
-   
-   if (exit !='x' && exit !='X')
-	cout << "\a";
-	
-	switch (exit) 
-	{
-		case 'x' : 
-		case 'X' : break;
-	}
-		
-}  while (exit != 'x' && exit != 'X');
-}
 void peekData (void)
 {
    system("title Final Project");
@@ -316,18 +273,6 @@ void peekData (void)
 		default  : peekData();
 	}	
 }
-void deleteData (void)
-{
-    system("title Final Project");
-    system("color f0");
-    char buffer [] = "Deleting data...";
-    system("cls");
-    load(buffer);
-    system("cls");
-    std::ofstream ofs; // clear external file input
-    ofs.open("data/database.txt", std::ofstream::out | std::ofstream::trunc);
-    ofs.close();
-}
 void resetData (void)
 {
  // reset array data back to 0 
@@ -344,37 +289,3 @@ void resetData (void)
     memset(naddr, 0, sizeof(naddr));
     memset(nedu, 0, sizeof(nedu));
 }
-void license (void)
-{
-	system("title Final Project");
-    	system("color f0");
-	FILE *license;
-	char exit;
-	char buffer [] = "Loading license...";
-	load(buffer);
- do 
-{
-   system("cls");
-   license=fopen("data/license.txt","r");
-   do
-   {
-	   putchar(c=getc(license));
-   }
-	   while(c!=EOF);
-       	   fclose(license);
-   	   cout << "\n\n";
-           cout << "  Type X to go back > ";
-   	   exit = getch();
-   
-   if (exit !='x' && exit !='X')
-	cout << "\a";
-	
-	switch (exit) 
-	{
-		case 'x' : 
-		case 'X' : main();break;
-	}
-		
-}  while (exit != 'x' && exit != 'X');
-}
-

@@ -6,12 +6,14 @@
 #include <ctime>
 #include <cmath>
 
-#include "header/applicant_section.h"
-#include "header/display_message.h"
 #include "header/splash_screen.h"
+#include "header/display_message.h"
 #include "header/news_section.h"
 #include "header/job_section.h"
-#include "header/input_data.h"
+#include "header/applicant_section.h"
+#include "header/applicant_data.h"
+#include "header/job_data.h"
+#include "header/license.h"
 
 inline void databaseProfile (void);
 inline void display_splash (void); // splash function
