@@ -6,12 +6,12 @@
 #include <ctime>
 #include <cmath>
 
-#include "header/splash_screen.h"
+#include "header/applicant_section.h"
 #include "header/display_message.h"
+#include "header/applicant_data.h"
+#include "header/splash_screen.h"
 #include "header/news_section.h"
 #include "header/job_section.h"
-#include "header/applicant_section.h"
-#include "header/applicant_data.h"
 #include "header/job_data.h"
 #include "header/license.h"
 
@@ -28,7 +28,8 @@ inline void load (char[]); // loading function
 inline void exit (void);
 inline void info (void);
 
-char** argv;int argc;
+char** argv;
+int argc;
 int randNo;
 
 using namespace std;
