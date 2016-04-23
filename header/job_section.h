@@ -46,6 +46,8 @@ void profile (void)
        case 'x' : 
        case 'X' : main();break;
      }
+
  } while (choice != '1' && choice != '2' && choice != '3' && choice != 'x' && choice != 'X');
+
    return;
 }

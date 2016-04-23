@@ -55,6 +55,7 @@ void viewData (void)
    }
 		
  } while (exit != 'x' && exit != 'X');
+
    return;
 }
 void deleteData (void)
@@ -68,6 +69,7 @@ void deleteData (void)
    std::ofstream ofs; // clear external file input
    ofs.open("data/database.txt", std::ofstream::out | std::ofstream::trunc);
    ofs.close();
+
    return;
 }
 

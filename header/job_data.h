@@ -235,6 +235,7 @@ void userDatabase (void)
     {
       default : main();break;
     }
+
    return;	
 }
 void peekData (void)
@@ -263,14 +264,15 @@ void peekData (void)
    conts = getch();
    
    if (conts !='x' && conts !='X')
-	cout << "\a";
+   cout << "\a";
 	
-	switch (conts) 
-	{
-		case 'x' : 
-		case 'X' : break;
-		default  : peekData();
-	}
+   switch (conts) 
+   {
+     case 'x' : 
+     case 'X' : break;
+     default  : peekData();
+   }
+
    return;	
 }
 void resetData (void)
@@ -287,5 +289,6 @@ void resetData (void)
    memset(ncgpa, 0, sizeof(ncgpa));
    memset(naddr, 0, sizeof(naddr));
    memset(nedu, 0, sizeof(nedu));
+
    return;
 }

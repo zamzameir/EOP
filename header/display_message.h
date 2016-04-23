@@ -19,6 +19,7 @@ void printmessage (void)
    puts("");
    printf("%*s",40+strlen(message3)/2,message3, 40-strlen(message3)/2,""); // center message 3
    puts("");puts("");
+
    return;
 }
 void credit (void)
@@ -42,6 +43,7 @@ void credit (void)
    printf("%*s",40+strlen(message4)/2,message4, 40-strlen(message4)/2,""); // center message 4
    printf("%*s",40+strlen(message5)/2,message5, 40-strlen(message5)/2,""); // center message 5
    printf("%*s",40+strlen(message6)/2,message6, 40-strlen(message6)/2,""); // center message 6
+   
    return;
 }
 void initialize (int argc, char** argv)		
@@ -55,6 +57,7 @@ void initialize (int argc, char** argv)
    while (difftime( time( NULL ), start ) < 5.0 /*seconds*/)		
    { }		
    cout << "\r" << string( message.length(), ' ' ) << "\r" << flush;
+   
    return;		
 }		
 int displayCredit (int argc, char** argv)		
@@ -63,5 +66,6 @@ int displayCredit (int argc, char** argv)
    system("color f0");
    credit();		
    initialize( argc, argv );		
+   
    return 0;		
 }

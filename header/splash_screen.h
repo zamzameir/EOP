@@ -21,6 +21,7 @@ void gotoxy (int x, int y)
    coord.X = x;
    coord.Y = y;
    SetConsoleCursorPosition(GetStdHandle(STD_OUTPUT_HANDLE), coord);
+
    return;
 }
 void load (char buffer[])
@@ -36,6 +37,7 @@ void load (char buffer[])
       for(q=0;q<=50000000;q++); // to display the character slowly
       printf("%c",177);
    }
+
    return;
 }
 void display_splash (void)
@@ -53,6 +55,7 @@ void display_splash (void)
     	  "              ¦                                                    ¦ \n"
     	  "              +----------------------------------------------------+ \n";
    cout << string( 8, '\n' );
+
    return;
 }
 void exit (void)
@@ -70,5 +73,6 @@ void exit (void)
     	  "              +----------------------------------------------------+ \n";
    cout << string( 8, '\n' );
    load(buffer);
+
    return;
 }

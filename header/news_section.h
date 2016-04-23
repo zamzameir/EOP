@@ -47,6 +47,7 @@ void info (void)
     }
 
  }  while (choice != 'x' && choice != 'X');
-   return;
+
+    return;
 }
 

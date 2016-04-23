@@ -19,16 +19,16 @@ void license (void)
    char exit;
    char buffer [] = "Loading license...";
    load(buffer);
- do 
+   do 
  {
     system("cls");
     license=fopen("data/license.txt","r");
     do
-    {
-	putchar(c=getc(license));
-    }
-	while(c!=EOF);
-       	fclose(license);
+   {
+     putchar(c=getc(license));
+   }
+     while(c!=EOF);
+     fclose(license);
    
     cout << "\n\n";
     cout << "  Type X to go back > ";
@@ -44,5 +44,6 @@ void license (void)
     }
 		
  } while (exit != 'x' && exit != 'X');
-   return;
+
+    return;
 }
