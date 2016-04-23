@@ -1,14 +1,8 @@
 #include <iostream>
 
 extern inline void printmessage ();
-extern inline void userDatabase ();
-extern inline void deleteData ();
 extern inline void load (char[]);
-extern inline void resetData ();
-extern inline void peekData ();
-extern inline void profile ();
 extern inline void gotoxy ();
-extern inline void info ();
 extern int main ();
 
 using namespace std;
@@ -44,8 +38,8 @@ void about (void)
 	
 	switch (choice) 
 	{
-		case '1' : system("start credits/credits.html");main();break;
-		case '2' : system("start source_code.bat");main();break;
+		case '1' : system("start credits/credits.html");about();break;
+		case '2' : system("start source_code.bat");about();break;
 		case 'x' : 
 		case 'X' : main();break;
 	}

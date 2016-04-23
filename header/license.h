@@ -1,12 +1,15 @@
 #include <iostream>
-#include <cstring>
 #include <cstdlib>
 #include <iomanip>
+#include <fstream>
+#include <string>
 #include <cctype>
 #include <ctime>
 #include <cmath>
 
 extern inline void load (char[]);
+extern inline void gotoxy ();
+extern int main ();
 
 void license (void)
 {
@@ -16,8 +19,6 @@ void license (void)
 	char exit;
 	char buffer [] = "Loading license...";
 	load(buffer);
-	COORD newSize = {100,9999};
-   	SetConsoleScreenBufferSize(GetStdHandle(STD_OUTPUT_HANDLE), newSize); // enable scroll bar
  do 
 {
    system("cls");

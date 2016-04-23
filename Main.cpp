@@ -16,16 +16,21 @@
 #include "header/license.h"
 #include "header/about.h"
 
+inline int  displayCredit (int,char**);
+inline void initialize (int,char**);
 inline void databaseProfile (void);
 inline void display_splash (void); // splash function
 inline void printmessage (void);
 inline void userDatabase (void);
-inline void displayDB (void);
+inline void deleteData (void);
 inline void gotoxy (int,int); // loading position
+inline void resetData (void);
 inline void viewData (void);
+inline void peekData (void);
 inline void profile (void);
 inline void license (void);
 inline void load (char[]); // loading function
+inline void credit (void);
 inline void about (void);
 inline void exit (void);
 inline void info (void);

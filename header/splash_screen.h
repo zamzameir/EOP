@@ -7,7 +7,6 @@
 #include <stdio.h>
 #include <string>
 #include <cctype>
-#include <time.h>
 #include <ctime>
 
 extern int main ();

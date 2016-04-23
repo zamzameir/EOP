@@ -1,21 +1,17 @@
 #include <windows.h>
 #include <process.h>
 #include <iostream>
-#include <stdlib.h>
-#include <cstring>
+#include <cstdlib>
 #include <conio.h>
 #include <ctype.h>
-#include <time.h>
+#include <string>
+#include <ctime>
 
 extern inline void printmessage ();
-extern inline void userDatabase ();
 extern inline void deleteData ();
 extern inline void load (char[]);
-extern inline void peekData ();
 extern inline void viewData ();
-extern inline void profile ();
 extern inline void gotoxy ();
-extern inline void info ();
 extern int main ();
 
 using namespace std;

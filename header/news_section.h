@@ -1,9 +1,6 @@
 #include <iostream>
 #include <ctime>
 
-extern inline void printmessage ();
-extern inline void userDatabase ();
-extern inline void profile ();
 extern int main ();
 
 using namespace std;

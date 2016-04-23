@@ -2,13 +2,11 @@
 
 extern inline void printmessage ();
 extern inline void userDatabase ();
-extern inline void deleteData ();
 extern inline void load (char[]);
 extern inline void resetData ();
 extern inline void peekData ();
 extern inline void profile ();
 extern inline void gotoxy ();
-extern inline void info ();
 extern int main ();
 
 using namespace std;

@@ -1,8 +1,5 @@
 #include <iostream>
-
-extern inline void userDatabase ();
-extern inline void profile ();
-extern inline void info ();
+#include <cstdio>
 extern int main ();
 
 using namespace std;

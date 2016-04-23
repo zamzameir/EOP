@@ -1,19 +1,14 @@
-/*
- Most important file
- Contain all main related data 
-*/
-
 #include <windows.h>
 #include <process.h>
 #include <iostream>
-#include <stdlib.h>
+#include <cstdlib>
 #include <conio.h>
 #include <ctype.h>
-#include <cstring>
-#include <stdio.h>
 #include <fstream>
 #include <string>
-#include <time.h>
+#include <cstdio>
+#include <string>
+#include <ctime>
 
 extern inline void load (char[]);
 extern inline void profile ();
