@@ -16,6 +16,8 @@ void license (void)
 	char exit;
 	char buffer [] = "Loading license...";
 	load(buffer);
+	COORD newSize = {100,9999};
+   	SetConsoleScreenBufferSize(GetStdHandle(STD_OUTPUT_HANDLE), newSize); // enable scroll bar
  do 
 {
    system("cls");

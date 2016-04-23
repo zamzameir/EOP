@@ -29,7 +29,7 @@ IncludeVersionInfo=1
 SupportXPThemes=1
 CompilerSet=0
 CompilerSettings=0000000000000000000000000
-UnitCount=12
+UnitCount=13
 
 [VersionInfo]
 Major=3
@@ -162,6 +162,16 @@ BuildCmd=
 
 [Unit12]
 FileName=header\license.h
+CompileCpp=1
+Folder=
+Compile=1
+Link=1
+Priority=1000
+OverrideBuildCmd=0
+BuildCmd=
+
+[Unit13]
+FileName=header\about.h
 CompileCpp=1
 Folder=
 Compile=1

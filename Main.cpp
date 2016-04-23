@@ -14,6 +14,7 @@
 #include "header/job_section.h"
 #include "header/job_data.h"
 #include "header/license.h"
+#include "header/about.h"
 
 inline void databaseProfile (void);
 inline void display_splash (void); // splash function
@@ -25,6 +26,7 @@ inline void viewData (void);
 inline void profile (void);
 inline void license (void);
 inline void load (char[]); // loading function
+inline void about (void);
 inline void exit (void);
 inline void info (void);
 
@@ -57,7 +59,7 @@ int main (void)
 	system("title Final Project");
 	int index;
 	char choice;
-	char view [6][256] = { "News & announcement","Employment application","Applicant data","Restart system","License","Credits" };
+	char view [6][256] = { "News & announcement","Employment application","Applicant data","Restart system","License","About" };
 						 
 	srand (time (NULL));
 	randNo = 100 + rand () % (200-101); // random number
@@ -93,7 +95,7 @@ int main (void)
 		case '3' : databaseProfile();break;
 		case '4' : system("cls");load(buffer);StartUp();main();break;
 		case '5' : system("cls");license();break;
-		case '6' : system("start credits/credits.html");main();break;
+		case '6' : about();break;
 		case 'x' : 
 		case 'X' : exit();break;
 	}
