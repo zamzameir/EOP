@@ -106,6 +106,7 @@ int main (void)
     }
 
  } while (choice != '1' && choice != '2' && choice != '3' && choice != '4' && choice != '5' && choice !='6' && choice != 'x' && choice != 'X');
+   
    return 0;
 }
 

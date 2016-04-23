@@ -43,11 +43,13 @@ void userDatabase (void)
    scanf("%[^\n]",plname);
    for(j=0;plname[j]!='\0';j++)
    { 
-   nplname[0]=toupper(plname[0]);
-   if(plname[j-1]==' '){
-   nplname[j]=toupper(plname[j]);
-   nplname[j-1]=plname[j-1];}
-   else nplname[j]=plname[j];
+     nplname[0]=toupper(plname[0]);
+     if(plname[j-1]==' ')
+     {
+       nplname[j]=toupper(plname[j]);
+       nplname[j-1]=plname[j-1];
+     }
+     else nplname[j]=plname[j];
    }
    nplname[j]='\0';
    
@@ -59,11 +61,13 @@ void userDatabase (void)
    scanf("%[^\n]",edu);
    for(k=0;edu[k]!='\0';k++)
    { 
-   nedu[0]=toupper(edu[0]);
-   if(edu[k-1]==' '){
-   nedu[k]=toupper(edu[k]);
-   nedu[k-1]=edu[k-1];}
-   else nedu[k]=edu[k];
+     nedu[0]=toupper(edu[0]);
+     if(edu[k-1]==' ')
+     {
+       nedu[k]=toupper(edu[k]);
+       nedu[k-1]=edu[k-1];
+     }
+     else nedu[k]=edu[k];
    }
    nedu[k]='\0';
    
@@ -75,11 +79,13 @@ void userDatabase (void)
    scanf("%[^\n]",course);
    for(l=0;course[l]!='\0';l++)
    { 
-   ncourse[0]=toupper(course[0]);
-   if(course[l-1]==' '){
-   ncourse[l]=toupper(course[l]);
-   ncourse[l-1]=course[l-1];}
-   else ncourse[l]=course[l];
+     ncourse[0]=toupper(course[0]);
+     if(course[l-1]==' ')
+     {
+       ncourse[l]=toupper(course[l]);
+       ncourse[l-1]=course[l-1];
+     }
+     else ncourse[l]=course[l];
    }
    ncourse[l]='\0';
    
@@ -91,11 +97,13 @@ void userDatabase (void)
    scanf("%[^\n]",cgpa);
    for(p=0;cgpa[p]!='\0';p++)
    { 
-   ncgpa[0]=toupper(cgpa[0]);
-   if(cgpa[p-1]==' '){
-   ncgpa[p]=toupper(cgpa[p]);
-   ncgpa[p-1]=cgpa[p-1];}
-   else ncgpa[p]=cgpa[p];
+     ncgpa[0]=toupper(cgpa[0]);
+     if(cgpa[p-1]==' ')
+     {
+       ncgpa[p]=toupper(cgpa[p]);
+       ncgpa[p-1]=cgpa[p-1];
+     }
+     else ncgpa[p]=cgpa[p];
    }
    ncgpa[p]='\0';
    
@@ -107,11 +115,13 @@ void userDatabase (void)
    scanf("%[^\n]",addr);
    for(m=0;addr[m]!='\0';m++)
    { 
-   naddr[0]=toupper(addr[0]);
-   if(addr[m-1]==' '){
-   naddr[m]=toupper(addr[m]);
-   naddr[m-1]=addr[m-1];}
-   else naddr[m]=addr[m];
+     naddr[0]=toupper(addr[0]);
+     if(addr[m-1]==' ')
+     {
+       naddr[m]=toupper(addr[m]);
+       naddr[m-1]=addr[m-1];
+     }
+     else naddr[m]=addr[m];
    }
    naddr[m]='\0';
    
@@ -123,11 +133,13 @@ void userDatabase (void)
    scanf("%[^\n]",phone);
    for(n=0;phone[n]!='\0';n++)
    { 
-   nphone[0]=toupper(phone[0]);
-   if(phone[n-1]==' '){
-   nphone[n]=toupper(phone[n]);
-   nphone[n-1]=phone[n-1];}
-   else nphone[n]=phone[n];
+     nphone[0]=toupper(phone[0]);
+     if(phone[n-1]==' ')
+     {
+       nphone[n]=toupper(phone[n]);
+       nphone[n-1]=phone[n-1];
+     }
+     else nphone[n]=phone[n];
    }
    nphone[n]='\0';
    
