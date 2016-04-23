@@ -1,11 +1,12 @@
 #include <iostream>
 #include <cstdio>
+
 extern int main ();
 
 using namespace std;
 
 void printmessage (void)
- {
+{
       system("title Final Project");
       system("color f0");
       char message1 [] = "--------------------------------------"; 
@@ -21,7 +22,7 @@ void printmessage (void)
       return;
 }
 void credit (void)
- {
+{
       system("title Final Project");
       system("color f0");
       char line     [] = "----------------------\n"; 
@@ -44,22 +45,22 @@ void credit (void)
       return;
 }
 void initialize (int argc, char** argv)		
- {		
-    system("title Final Project");
-    system("color f0");
-    cout << "\n\n\n\n\n";
-    string message = " Please wait...";		
-    cout << message << flush;		
-    time_t start = time( &start );		
-    while (difftime( time( NULL ), start ) < 5.0 /*seconds*/)		
-    { }		
-    cout << "\r" << string( message.length(), ' ' ) << "\r" << flush;		
- }		
+{		
+      system("title Final Project");
+      system("color f0");
+      cout << "\n\n\n\n\n";
+      string message = " Please wait...";		
+      cout << message << flush;		
+      time_t start = time( &start );		
+      while (difftime( time( NULL ), start ) < 5.0 /*seconds*/)		
+      { }		
+      cout << "\r" << string( message.length(), ' ' ) << "\r" << flush;		
+}		
 int displayCredit (int argc, char** argv)		
- {		
-    system("title Final Project");
-    system("color f0");
-    credit();		
-    initialize( argc, argv );		
-    return 0;		
- }
+{		
+      system("title Final Project");
+      system("color f0");
+      credit();		
+      initialize( argc, argv );		
+      return 0;		
+}

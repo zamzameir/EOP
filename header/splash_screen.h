@@ -38,33 +38,33 @@ void load (char buffer[])
 }
 void display_splash (void)
 {
-        system("title Final Project");
-        system("color f0");
-	cout << string( 10, '\n' );
-  	cout << "\n\n";
-  	cout <<
-    	"              +----------------------------------------------------+ \n"
-    	"              ¦                                                    ¦ \n"
-    	"              ¦           EXPRESS ENGINEERING SDN. BHD.            ¦ \n"
-    	"              ¦    LEVEL 16, TOWER 1, PETRONAS TWIN TOWERS, KLCC   ¦ \n"
-    	"              ¦            50088 KUALA LUMPUR MALAYSIA             ¦ \n"
-    	"              ¦                                                    ¦ \n"
-    	"              +----------------------------------------------------+ \n";
-  	cout << string( 8, '\n' );
+    system("title Final Project");
+    system("color f0");
+    cout << string( 10, '\n' );
+    cout << "\n\n";
+    cout <<
+    	  "              +----------------------------------------------------+ \n"
+    	  "              ¦                                                    ¦ \n"
+    	  "              ¦           EXPRESS ENGINEERING SDN. BHD.            ¦ \n"
+    	  "              ¦    LEVEL 16, TOWER 1, PETRONAS TWIN TOWERS, KLCC   ¦ \n"
+    	  "              ¦            50088 KUALA LUMPUR MALAYSIA             ¦ \n"
+    	  "              ¦                                                    ¦ \n"
+    	  "              +----------------------------------------------------+ \n";
+    cout << string( 8, '\n' );
 }
 void exit (void)
 {
-	system("title Final Project");
-        system("color f0");
-	char buffer [] = "Exiting...";
-	cout << string( 10, '\n' );
-  	cout << "\n\n\n\n";
-  	cout <<
-    	"              +----------------------------------------------------+ \n"
-    	"              ¦                                                    ¦ \n"
-    	"              ¦             THANK YOU FOR CHOOSING US              ¦ \n"
-    	"              ¦                                                    ¦ \n"
-    	"              +----------------------------------------------------+ \n";
-  	cout << string( 8, '\n' );
-  	load(buffer);
+    system("title Final Project");
+    system("color f0");
+    char buffer [] = "Exiting...";
+    cout << string( 10, '\n' );
+    cout << "\n\n\n\n";
+    cout <<
+    	  "              +----------------------------------------------------+ \n"
+    	  "              ¦                                                    ¦ \n"
+    	  "              ¦             THANK YOU FOR CHOOSING US              ¦ \n"
+    	  "              ¦                                                    ¦ \n"
+    	  "              +----------------------------------------------------+ \n";
+    cout << string( 8, '\n' );
+    load(buffer);
 }

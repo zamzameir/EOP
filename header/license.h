@@ -25,13 +25,14 @@ void license (void)
    license=fopen("data/license.txt","r");
    do
    {
-	   putchar(c=getc(license));
+	putchar(c=getc(license));
    }
-	   while(c!=EOF);
-       	   fclose(license);
-   	   cout << "\n\n";
-           cout << "  Type X to go back > ";
-   	   exit = getch();
+	while(c!=EOF);
+       	fclose(license);
+   
+   cout << "\n\n";
+   cout << "  Type X to go back > ";
+   exit = getch();
    
    if (exit !='x' && exit !='X')
 	cout << "\a";
@@ -42,5 +43,5 @@ void license (void)
 		case 'X' : main();break;
 	}
 		
-}  while (exit != 'x' && exit != 'X');
+}   while (exit != 'x' && exit != 'X');
 }

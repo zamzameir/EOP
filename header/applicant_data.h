@@ -58,14 +58,14 @@ do
 }
 void deleteData (void)
 {
-    system("title Final Project");
-    system("color f0");
-    char buffer [] = "Deleting data...";
-    system("cls");
-    load(buffer);
-    system("cls");
-    std::ofstream ofs; // clear external file input
-    ofs.open("data/database.txt", std::ofstream::out | std::ofstream::trunc);
-    ofs.close();
+   system("title Final Project");
+   system("color f0");
+   char buffer [] = "Deleting data...";
+   system("cls");
+   load(buffer);
+   system("cls");
+   std::ofstream ofs; // clear external file input
+   ofs.open("data/database.txt", std::ofstream::out | std::ofstream::trunc);
+   ofs.close();
 }
 
