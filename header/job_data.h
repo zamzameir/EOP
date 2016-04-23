@@ -152,90 +152,90 @@ void userDatabase (void)
    submit = getch();
    while (submit != 'y' && submit != 'Y' && submit != 'X' && submit != 'x')
    {
-   		cout << "\a";
-		system("cls");
-   		char message1 [] = "OVERVIEW";
-   		char message2 [] = "________";
-   		printf("%*s",40+strlen(message1)/2,message1, 40-strlen(message1)/2,"");puts(""); // center message 1
-   		printf("%*s",40+strlen(message2)/2,message2, 40-strlen(message2)/2,"");puts(""); // center message 2
-   		cout << " ID No. " << randNo << endl;
-   		cout << " ----------\n" << endl;
+      cout << "\a";
+      system("cls");
+      char message1 [] = "OVERVIEW";
+      char message2 [] = "________";
+      printf("%*s",40+strlen(message1)/2,message1, 40-strlen(message1)/2,"");puts(""); // center message 1
+      printf("%*s",40+strlen(message2)/2,message2, 40-strlen(message2)/2,"");puts(""); // center message 2
+      cout << " ID No. " << randNo << endl;
+      cout << " ----------\n" << endl;
    
-   		cout << " Name       : " << nplname << endl;
-   		cout << " Education  : " << nedu << endl;
-   		cout << " Course     : " << ncourse << endl;
-   		cout << " CGPA       : " << ncgpa << endl;
-   		cout << " Address    : " << naddr << endl;
-   		cout << " Contact    : " << nphone << endl;
+      cout << " Name       : " << nplname << endl;
+      cout << " Education  : " << nedu << endl;
+      cout << " Course     : " << ncourse << endl;
+      cout << " CGPA       : " << ncgpa << endl;
+      cout << " Address    : " << naddr << endl;
+      cout << " Contact    : " << nphone << endl;
    
-   		cout << "\n\n Press Y to submit or X to cancel > ";
-   		fflush(stdin);
-   		submit = getch();
+      cout << "\n\n Press Y to submit or X to cancel > ";
+      fflush(stdin);
+      submit = getch();
    }
    
    if (submit == 'y' || submit == 'Y')
    {
-   		fprintf(info," ID No : %d\n",randNo);
-		fprintf(info," Applicant Name : %s\n",nplname);
-   		fprintf(info," Education : %s\n",nedu);
-   		fprintf(info," Course background : %s\n",ncourse);
-   		fprintf(info," CGPA : %s\n",ncgpa);
-   		fprintf(info," Address : %s\n",naddr);
-   		fprintf(info," Contact : %s\n",nphone);
-   		time_t mytime;
-   		mytime = time(NULL);
-   		fprintf(info," Application date : %s",ctime(&mytime));
-   		for(i=0;i<=50;i++)
-   		fprintf(info,"%c",'_');
-   		fprintf(info,"\n\n");
-   		fclose(info);
-   		system("cls");
-   		char buffer [] = "Saving data...";
-		load(buffer);
-   		system("cls");
-  		cout << "\n\n\n\n";
-  		char message1 [] = "----------------------------------"; 
-  		char message2 [] = "THANK YOU YOUR DATA HAS BEEN SAVED";
-  		char message3 [] = "----------------------------------";
+      fprintf(info," ID No : %d\n",randNo);
+      fprintf(info," Applicant Name : %s\n",nplname);
+      fprintf(info," Education : %s\n",nedu);
+      fprintf(info," Course background : %s\n",ncourse);
+      fprintf(info," CGPA : %s\n",ncgpa);
+      fprintf(info," Address : %s\n",naddr);
+      fprintf(info," Contact : %s\n",nphone);
+      time_t mytime;
+      mytime = time(NULL);
+      fprintf(info," Application date : %s",ctime(&mytime));
+      for(i=0;i<=50;i++)
+      fprintf(info,"%c",'_');
+      fprintf(info,"\n\n");
+      fclose(info);
+      system("cls");
+      char buffer [] = "Saving data...";
+      load(buffer);
+      system("cls");
+      cout << "\n\n\n\n";
+      char message1 [] = "----------------------------------"; 
+      char message2 [] = "THANK YOU YOUR DATA HAS BEEN SAVED";
+      char message3 [] = "----------------------------------";
       
-  		printf("%*s",40+strlen(message1)/2,message1, 40-strlen(message1)/2,""); // center message 1
-  		puts("");
-  		printf("%*s",40+strlen(message2)/2,message2, 40-strlen(message2)/2,""); // center message 2
-  		puts("");
-  		printf("%*s",40+strlen(message3)/2,message3, 40-strlen(message3)/2,""); // center message 3
-  		puts("");
-  		fclose(info);
+      printf("%*s",40+strlen(message1)/2,message1, 40-strlen(message1)/2,""); // center message 1
+      puts("");
+      printf("%*s",40+strlen(message2)/2,message2, 40-strlen(message2)/2,""); // center message 2
+      puts("");
+      printf("%*s",40+strlen(message3)/2,message3, 40-strlen(message3)/2,""); // center message 3
+      puts("");
+      fclose(info);
    }
    
    else
 
    {
-   		system("cls");
-   		char buffer [] = "Aborting...";
-		load(buffer);
-		system("cls");
-   		cout << "\n\n\n\n";
-  		char message1 [] = "-------------------------------"; 
-  		char message2 [] = "SUBMISSION ABORTED BY APPLICANT";
-  		char message3 [] = "-------------------------------";
+      system("cls");
+      char buffer [] = "Aborting...";
+      load(buffer);
+      system("cls");
+      cout << "\n\n\n\n";
+      char message1 [] = "-------------------------------"; 
+      char message2 [] = "SUBMISSION ABORTED BY APPLICANT";
+      char message3 [] = "-------------------------------";
       
-  		printf("%*s",40+strlen(message1)/2,message1, 40-strlen(message1)/2,""); // center message 1
-  		puts("");
-  		printf("%*s",40+strlen(message2)/2,message2, 40-strlen(message2)/2,""); // center message 2
-  		puts("");
-  		printf("%*s",40+strlen(message3)/2,message3, 40-strlen(message3)/2,""); // center message 3
-  		puts("");
+      printf("%*s",40+strlen(message1)/2,message1, 40-strlen(message1)/2,""); // center message 1
+      puts("");
+      printf("%*s",40+strlen(message2)/2,message2, 40-strlen(message2)/2,""); // center message 2
+      puts("");
+      printf("%*s",40+strlen(message3)/2,message3, 40-strlen(message3)/2,""); // center message 3
+      puts("");
    }
 	
-	cout << "\n\n\n";
-	char cont [] = "< Press anykey to continue >";
-	printf("%*s",40+strlen(cont)/2,cont, 40-strlen(cont)/2,""); // center cont
-	back = getch();
-	switch (back)
-	{
-	    default : main();break;
-	}
-	
+   cout << "\n\n\n";
+   char cont [] = "< Press anykey to continue >";
+   printf("%*s",40+strlen(cont)/2,cont, 40-strlen(cont)/2,""); // center cont
+   back = getch();
+   switch (back)
+    {
+      default : main();break;
+    }
+   return;	
 }
 void peekData (void)
 {
@@ -270,21 +270,22 @@ void peekData (void)
 		case 'x' : 
 		case 'X' : break;
 		default  : peekData();
-	}	
+	}
+   return;	
 }
 void resetData (void)
 {
- // reset array data back to 0 
-    system("title Final Project");
-    system("color f0");
-    char buffer [] = "Resetting data...";
-    system("cls");
-    load(buffer);
-    system("cls");
-    memset(nplname, 0, sizeof(nplname));
-    memset(ncourse, 0, sizeof(ncourse));
-    memset(nphone, 0, sizeof(nphone));
-    memset(ncgpa, 0, sizeof(ncgpa));
-    memset(naddr, 0, sizeof(naddr));
-    memset(nedu, 0, sizeof(nedu));
+   system("title Final Project");
+   system("color f0");
+   char buffer [] = "Resetting data...";
+   system("cls");
+   load(buffer);
+   system("cls");
+   memset(nplname, 0, sizeof(nplname)); // reset array data back to 0 
+   memset(ncourse, 0, sizeof(ncourse));
+   memset(nphone, 0, sizeof(nphone));
+   memset(ncgpa, 0, sizeof(ncgpa));
+   memset(naddr, 0, sizeof(naddr));
+   memset(nedu, 0, sizeof(nedu));
+   return;
 }

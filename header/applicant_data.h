@@ -31,30 +31,31 @@ void viewData (void)
    system("cls");
    load(buffer);
   
-do 
-{
-   system("cls");
-   info=fopen("data/database.txt","r");
-   do
+   do 
+ {
+    system("cls");
+    info=fopen("data/database.txt","r");
+    do
    {
-	   putchar(c=getc(info));
+      putchar(c=getc(info));
    }
-	   while(c!=EOF);
-       	   fclose(info);
+      while(c!=EOF);
+      fclose(info);
   
    cout << "Type X to go back > ";
    exit = getch();
    
    if (exit !='x' && exit !='X')
-	cout << "\a";
+   cout << "\a";
 	
-	switch (exit) 
-	{
-		case 'x' : 
-		case 'X' : break;
-	}
+   switch (exit) 
+   {
+     case 'x' : 
+     case 'X' : break;
+   }
 		
-}  while (exit != 'x' && exit != 'X');
+ } while (exit != 'x' && exit != 'X');
+   return;
 }
 void deleteData (void)
 {
@@ -67,5 +68,6 @@ void deleteData (void)
    std::ofstream ofs; // clear external file input
    ofs.open("data/database.txt", std::ofstream::out | std::ofstream::trunc);
    ofs.close();
+   return;
 }
 

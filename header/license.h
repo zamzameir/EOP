@@ -13,35 +13,36 @@ extern int main ();
 
 void license (void)
 {
-	system("title Final Project");
-    	system("color f0");
-	FILE *license;
-	char exit;
-	char buffer [] = "Loading license...";
-	load(buffer);
+   system("title Final Project");
+   system("color f0");
+   FILE *license;
+   char exit;
+   char buffer [] = "Loading license...";
+   load(buffer);
  do 
-{
-   system("cls");
-   license=fopen("data/license.txt","r");
-   do
-   {
+ {
+    system("cls");
+    license=fopen("data/license.txt","r");
+    do
+    {
 	putchar(c=getc(license));
-   }
+    }
 	while(c!=EOF);
        	fclose(license);
    
-   cout << "\n\n";
-   cout << "  Type X to go back > ";
-   exit = getch();
+    cout << "\n\n";
+    cout << "  Type X to go back > ";
+    exit = getch();
    
-   if (exit !='x' && exit !='X')
-	cout << "\a";
+    if (exit !='x' && exit !='X')
+    cout << "\a";
 	
-	switch (exit) 
-	{
-		case 'x' : 
-		case 'X' : main();break;
-	}
+    switch (exit) 
+    {
+       case 'x' : 
+       case 'X' : main();break;
+    }
 		
-}   while (exit != 'x' && exit != 'X');
+ } while (exit != 'x' && exit != 'X');
+   return;
 }
