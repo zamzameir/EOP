@@ -12,7 +12,6 @@ void about (void)
    system("title Final Project");
    system("color f0");
    system("mode con: cols=87 lines=20");
-   system("mode con: cols=87 lines=19");
    char view [2][256] = { "Credits","Download source code" };
    char choice;
    int index;
