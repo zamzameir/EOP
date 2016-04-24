@@ -25,13 +25,13 @@ FILETYPE VFT_APP
   {
     BLOCK "040904E4"
     {
-      VALUE "CompanyName", "EXPRESS ENGINEERING SDN BHD"
+      VALUE "CompanyName", "EOP CSC1100"
       VALUE "FileVersion", "3.7.0.0"
       VALUE "FileDescription", "Final Project"
       VALUE "InternalName", "IZZAT AMEIR"
       VALUE "LegalCopyright", "Copyright (C) 2016 zamzameir"
       VALUE "LegalTrademarks", "2016"
-      VALUE "OriginalFilename", "JOB APPLICATION SYSTEM"
+      VALUE "OriginalFilename", "EXPRESS ENGINEERING SDN BHD"
       VALUE "ProductName", "JOB APPLICATION SYSTEM"
       VALUE "ProductVersion", "3.7.0.0"
     }
