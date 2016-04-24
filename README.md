@@ -4,4 +4,3 @@
 <tt>Final Project SEM2 15/16</tt><br>
 <tt>Job Application System</tt><br>
 <tt>A Dev C++ Project</tt><br>
-<tt>App / Source codes download is availabe on release tab</tt><br>
