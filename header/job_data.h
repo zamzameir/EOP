@@ -33,7 +33,7 @@ void userDatabase (void)
    system("mode con: cols=87 lines=20");
    char back;
    FILE *info;
-   info=fopen("data/database.txt","a+");
+   info=fopen("data/applicant.db","a+");
     
    system("cls");
    
@@ -127,7 +127,7 @@ void userDatabase (void)
    
    system("cls");
    
-   cout << " Phone number : " << "\n";
+   cout << " Contact number : " << "\n";
    fflush(stdin);
    cout << " ";
    scanf("%[^\n]",phone);

@@ -27,14 +27,14 @@ void viewData (void)
    SetConsoleScreenBufferSize(GetStdHandle(STD_OUTPUT_HANDLE), newSize); // enable scroll bar
    char c,exit;
    FILE *info;
-   info=fopen("data/database.txt","a+");
+   info=fopen("data/applicant.db","a+");
    system("cls");
    load(buffer);
   
    do 
  {
     system("cls");
-    info=fopen("data/database.txt","r");
+    info=fopen("data/applicant.db","r");
     do
    {
       putchar(c=getc(info));
@@ -67,7 +67,7 @@ void deleteData (void)
    load(buffer);
    system("cls");
    std::ofstream ofs; // clear external file input
-   ofs.open("data/database.txt", std::ofstream::out | std::ofstream::trunc);
+   ofs.open("data/applicant.db", std::ofstream::out | std::ofstream::trunc);
    ofs.close();
 
    return;
