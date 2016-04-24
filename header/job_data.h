@@ -244,9 +244,9 @@ void userDatabase (void)
    printf("%*s",40+strlen(cont)/2,cont, 40-strlen(cont)/2,""); // center cont
    back = getch();
    switch (back)
-    {
-      default : main();break;
-    }
+   {
+     default : main();break;
+   }
 
    return;	
 }
