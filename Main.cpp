@@ -1,3 +1,4 @@
+#include <windows.h>
 #include <iostream>
 #include <cstring>
 #include <cstdlib>
@@ -15,6 +16,7 @@
 #include "header/job_data.h"
 #include "header/license.h"
 #include "header/about.h"
+#include "MMSystem.h"
 
 inline int  displayCredit (int,char**);
 inline void initialize (int,char**);
@@ -46,13 +48,14 @@ class StartUp // run at startup
 public:
    StartUp (void)
    { 
+    //PlaySound(TEXT("test.wav"), NULL, SND_SYNC);
       char buffer [] = "Loading...";
       system("mode con: cols=87 lines=20");
       system("color f0");
       system("title Final Project");
       displayCredit(argc,argv); 
       display_splash();
-      load(buffer); 
+      load(buffer);
    }
 };
 StartUp startup;

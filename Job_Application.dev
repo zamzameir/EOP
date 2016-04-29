@@ -11,7 +11,7 @@ ResourceIncludes=
 MakeIncludes=
 Compiler=
 CppCompiler=
-Linker=
+Linker=-lwinmm_@@_
 IsCpp=1
 Icon=Job_Application.ico
 ExeOutput=
@@ -29,7 +29,7 @@ IncludeVersionInfo=1
 SupportXPThemes=1
 CompilerSet=0
 CompilerSettings=0000000000000000000000000
-UnitCount=13
+UnitCount=12
 
 [VersionInfo]
 Major=3
@@ -101,6 +101,16 @@ OverrideBuildCmd=0
 BuildCmd=
 
 [Unit8]
+FileName=Main.cpp
+CompileCpp=1
+Folder=
+Compile=1
+Link=1
+Priority=1000
+OverrideBuildCmd=0
+BuildCmd=
+
+[Unit7]
 FileName=credits\IIUM.png
 CompileCpp=1
 Folder=
@@ -110,18 +120,8 @@ Priority=1000
 OverrideBuildCmd=0
 BuildCmd=
 
-[Unit7]
-FileName=credits\credits.mp3
-CompileCpp=1
-Folder=
-Compile=0
-Link=0
-Priority=1000
-OverrideBuildCmd=0
-BuildCmd=
-
 [Unit10]
-FileName=header\job_data.h
+FileName=header\applicant_data.h
 CompileCpp=1
 Folder=
 Compile=1
@@ -141,7 +141,7 @@ OverrideBuildCmd=0
 BuildCmd=
 
 [Unit9]
-FileName=Main.cpp
+FileName=header\job_data.h
 CompileCpp=1
 Folder=
 Compile=1
@@ -151,7 +151,7 @@ OverrideBuildCmd=0
 BuildCmd=
 
 [Unit11]
-FileName=header\applicant_data.h
+FileName=header\license.h
 CompileCpp=1
 Folder=
 Compile=1
@@ -161,7 +161,7 @@ OverrideBuildCmd=0
 BuildCmd=
 
 [Unit12]
-FileName=header\license.h
+FileName=header\about.h
 CompileCpp=1
 Folder=
 Compile=1
