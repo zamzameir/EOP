@@ -33,7 +33,7 @@ void userDatabase (void)
    system("mode con: cols=87 lines=20");
    char back;
    FILE *info;
-   info=fopen("data/applicant.db","a+");
+   info=fopen("data/applicant.dat","a+");
     
    system("cls");
    
@@ -197,7 +197,8 @@ void userDatabase (void)
       time_t mytime;
       mytime = time(NULL);
       fprintf(info," Application date : %s",ctime(&mytime));
-      for(i=0;i<=50;i++)
+      fprintf(info,"%c",' ');
+      for(i=0;i<=84;i++)
       fprintf(info,"%c",'_');
       fprintf(info,"\n\n");
       fclose(info);
@@ -216,7 +217,7 @@ void userDatabase (void)
       puts("");
       printf("%*s",40+strlen(message3)/2,message3, 40-strlen(message3)/2,""); // center message 3
       puts("");
-      fclose(info);
+
    }
    
    else
@@ -238,6 +239,8 @@ void userDatabase (void)
       printf("%*s",40+strlen(message3)/2,message3, 40-strlen(message3)/2,""); // center message 3
       puts("");
    }
+
+   fclose(info);
 	
    cout << "\n\n\n";
    char cont [] = "< Press anykey to continue >";
