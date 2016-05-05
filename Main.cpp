@@ -74,7 +74,7 @@ int main (void)
    int month = 4, year = 2015, tm_mon, tm_mday, tm_year;
    time_t now = time(NULL);
    struct tm *t = localtime(&now);	// get current date
-  	
+   
    do
  {
     system ("cls");

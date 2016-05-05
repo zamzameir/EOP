@@ -34,10 +34,16 @@ void userDatabase (void)
    char back;
    FILE *info;
    info=fopen("data/applicant.dat","a+");
-    
-   system("cls");
    
-   cout << " Enter your full name : " << "\n";
+   char message1 [] = "EMPLOYMENT APPLICATION FORM";
+   char message2 [] = "___________________________";
+   printf("%*s",40+strlen(message1)/2,message1, 40-strlen(message1)/2,"");puts(""); // center message 1
+   printf("%*s",40+strlen(message2)/2,message2, 40-strlen(message2)/2,"");puts(""); // center message 2
+   cout << "\n";
+   cout << " ID No. " << randNo << "\n";
+   cout << " ----------" << "\n\n";
+   
+   cout << " Full name : ";
    fflush(stdin);
    cout << " ";
    scanf("%[^\n]",plname);
@@ -52,10 +58,11 @@ void userDatabase (void)
      else nplname[j]=plname[j];
    }
    nplname[j]='\0';
+
+   cout << " ";
+   cout << "\n";
    
-   system("cls");
-   
-   cout << " Education background : " << "\n";
+   cout << " Education : ";
    fflush(stdin);
    cout << " ";
    scanf("%[^\n]",edu);
@@ -71,9 +78,10 @@ void userDatabase (void)
    }
    nedu[k]='\0';
    
-   system("cls");
-   
-   cout << " Course background : " << "\n";
+   cout << " ";
+   cout << "\n";
+ 
+   cout << " Course : ";
    fflush(stdin);
    cout << " ";
    scanf("%[^\n]",course);
@@ -88,10 +96,11 @@ void userDatabase (void)
      else ncourse[l]=course[l];
    }
    ncourse[l]='\0';
+
+   cout << " ";
+   cout << "\n";
    
-   system("cls");
-   
-   cout << " CGPA : " << "\n";
+   cout << " CGPA : ";
    fflush(stdin);
    cout << " ";
    scanf("%[^\n]",cgpa);
@@ -107,9 +116,10 @@ void userDatabase (void)
    }
    ncgpa[p]='\0';
    
-   system("cls");
+   cout << " ";
+   cout << "\n";
    
-   cout << " Address : " << "\n";
+   cout << " Address : ";
    fflush(stdin);
    cout << " ";
    scanf("%[^\n]",addr);
@@ -125,9 +135,10 @@ void userDatabase (void)
    }
    naddr[m]='\0';
    
-   system("cls");
+   cout << " ";
+   cout << "\n";
    
-   cout << " Contact number : " << "\n";
+   cout << " Contact number : ";
    fflush(stdin);
    cout << " ";
    scanf("%[^\n]",phone);
@@ -145,13 +156,14 @@ void userDatabase (void)
    
    system("cls");
    
-   char message1 [] = "OVERVIEW";
-   char message2 [] = "________";
-   printf("%*s",40+strlen(message1)/2,message1, 40-strlen(message1)/2,"");puts(""); // center message 1
-   printf("%*s",40+strlen(message2)/2,message2, 40-strlen(message2)/2,"");puts(""); // center message 2
+   char message3 [] = "OVERVIEW";
+   char message4 [] = "________";
+   printf("%*s",40+strlen(message3)/2,message3, 40-strlen(message3)/2,"");puts(""); // center message 3
+   printf("%*s",40+strlen(message4)/2,message4, 40-strlen(message4)/2,"");puts(""); // center message 4
+   cout << "\n";
    cout << " ID No. " << randNo << endl;
    cout << " ----------\n" << endl;
-   
+
    cout << " Name       : " << nplname << endl;
    cout << " Education  : " << nedu << endl;
    cout << " Course     : " << ncourse << endl;
@@ -159,7 +171,8 @@ void userDatabase (void)
    cout << " Address    : " << naddr << endl;
    cout << " Contact    : " << nphone << endl;
    
-   cout << "\n\n Press Y to submit or X to cancel > ";
+   cout << "\n ***Please confirm your informations first\n"; 
+   cout << " Press Y to submit or X to cancel > ";
    fflush(stdin);
    submit = getch();
    while (submit != 'y' && submit != 'Y' && submit != 'X' && submit != 'x')
@@ -170,6 +183,7 @@ void userDatabase (void)
       char message2 [] = "________";
       printf("%*s",40+strlen(message1)/2,message1, 40-strlen(message1)/2,"");puts(""); // center message 1
       printf("%*s",40+strlen(message2)/2,message2, 40-strlen(message2)/2,"");puts(""); // center message 2
+      cout << "\n";
       cout << " ID No. " << randNo << endl;
       cout << " ----------\n" << endl;
    
@@ -179,8 +193,9 @@ void userDatabase (void)
       cout << " CGPA       : " << ncgpa << endl;
       cout << " Address    : " << naddr << endl;
       cout << " Contact    : " << nphone << endl;
-   
-      cout << "\n\n Press Y to submit or X to cancel > ";
+      
+      cout << "\n ***Please confirm your informations first\n";
+      cout << " Press Y to submit or X to cancel > ";
       fflush(stdin);
       submit = getch();
    }
@@ -217,6 +232,7 @@ void userDatabase (void)
       puts("");
       printf("%*s",40+strlen(message3)/2,message3, 40-strlen(message3)/2,""); // center message 3
       puts("");
+      PlaySound(TEXT("sound/thankyou.wav"), NULL, SND_SYNC);
 
    }
    
