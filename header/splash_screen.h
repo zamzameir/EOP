@@ -73,6 +73,7 @@ void exit (void)
     	  "              +----------------------------------------------------+ \n";
    cout << string( 8, '\n' );
    load(buffer);
+   PlaySound(TEXT("sound/goodbye.wav"), NULL, SND_SYNC);
 
    return;
 }

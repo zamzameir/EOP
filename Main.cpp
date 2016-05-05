@@ -48,14 +48,14 @@ class StartUp // run at startup
 public:
    StartUp (void)
    { 
-    //PlaySound(TEXT("test.wav"), NULL, SND_SYNC);
-      char buffer [] = "Loading...";
+      char buffer [] = "Welcome...";
       system("mode con: cols=87 lines=20");
       system("color f0");
       system("title Final Project");
       displayCredit(argc,argv); 
       display_splash();
       load(buffer);
+      PlaySound(TEXT("sound/welcome.wav"), NULL, SND_SYNC);
    }
 };
 StartUp startup;
