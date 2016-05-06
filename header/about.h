@@ -20,6 +20,10 @@ void about (void)
  {
     system ("cls");
     printmessage ();
+
+    cout << "\t\t\tELEMENTS OF PROGRAMMING CSC1100 " << endl;
+    cout << "\t\t      FINAL PROJECT SEMESTER 2 2016/2017 " << endl;
+    cout << "\t\t\t     JOB APPLICATION SYSTEM " << endl << endl;
 				
     for (index = 0; index < 2; ++index)
     cout << " " << index+1 << " - " << view[index] << "\n"; // display char view
@@ -32,12 +36,12 @@ void about (void)
     if (choice !='1' && choice !='2' && choice !='x' && choice !='X')
     cout << "\a";
     
-    char buffer  [] = "Loading credits...";
+    char buffer1 [] = "Loading credits...";
     char buffer2 [] = "Redirecting...";
 	
     switch (choice) 
     {
-      case '1' : system("cls");load(buffer);system("start credits/credits.html");about();break;
+      case '1' : system("cls");load(buffer1);system("start credits/credits.html");about();break;
       case '2' : system("cls");load(buffer2);system("start https://codeload.github.com/zamzameir/EOP/zip/3.8");about();break;
       case 'x' : 
       case 'X' : main();break;
