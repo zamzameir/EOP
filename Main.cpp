@@ -22,6 +22,7 @@ inline int  displayCredit (int,char**);
 inline void initialize (int,char**);
 inline void databaseProfile (void);
 inline void display_splash (void); // splash function
+inline void printmessagedb (void);
 inline void printmessage (void);
 inline void userDatabase (void);
 inline void deleteData (void);

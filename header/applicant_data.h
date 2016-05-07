@@ -38,7 +38,7 @@ void viewData (void)
     
     if(fscanf(info,"%c",&c)==EOF)
    {
-      printmessage ();
+      printmessagedb ();
       cout << endl << " No data was found" << endl << endl;
    }
     

@@ -22,6 +22,23 @@ void printmessage (void)
 
    return;
 }
+void printmessagedb (void)
+{
+   system("title Final Project");
+   system("color f0");
+   char message1 [] = "-----------------------------------"; 
+   char message2 [] = "EXPRESS ENGINEERING DATABASE SYSTEM";
+   char message3 [] = "-----------------------------------";
+      
+   printf("%*s",40+strlen(message1)/2,message1, 40-strlen(message1)/2,""); // center message 1
+   puts("");
+   printf("%*s",40+strlen(message2)/2,message2, 40-strlen(message2)/2,""); // center message 2
+   puts("");
+   printf("%*s",40+strlen(message3)/2,message3, 40-strlen(message3)/2,""); // center message 3
+   puts("");puts("");
+
+   return;
+}
 void credit (void)
 {
    system("title Final Project");
