@@ -34,19 +34,19 @@ UnitCount=12
 [VersionInfo]
 Major=3
 Minor=9
-Release=0
+Release=1
 Build=0
 LanguageID=1033
 CharsetID=1252
 CompanyName=EOP CSC1100
-FileVersion=3.9.0.0
+FileVersion=3.9.1.0
 FileDescription=Final Project
 InternalName=IZZAT AMEIR
 LegalCopyright=Copyright (C) 2016 zamzameir
 LegalTrademarks=2016
 OriginalFilename=EXPRESS ENGINEERING SDN BHD
 ProductName=JOB APPLICATION SYSTEM
-ProductVersion=3.9.0.0
+ProductVersion=3.9.1.0
 AutoIncBuildNr=0
 SyncProduct=1
 

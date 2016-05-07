@@ -16,13 +16,20 @@ void license (void)
    system("title Final Project");
    system("color f0");
    FILE *license;
-   char exit;
+   char c,exit;
    char buffer [] = "Loading license...";
    load(buffer);
    do 
  {
     system("cls");
     license=fopen("data/license.txt","r");
+    
+    if(fscanf(license,"%c",&c)==EOF)
+   {
+     printmessage ();
+     cout << endl << "  Company has not been registered" << endl << endl;
+   }
+		
     do
    {
      putchar(c=getc(license));

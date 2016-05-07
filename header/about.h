@@ -21,9 +21,9 @@ void about (void)
     system ("cls");
     printmessage ();
 
-    cout << "\t\t\tELEMENTS OF PROGRAMMING CSC1100 " << endl;
-    cout << "\t\t      FINAL PROJECT SEMESTER 2 2016/2017 " << endl;
-    cout << "\t\t\t     JOB APPLICATION SYSTEM " << endl << endl;
+    cout << "\t\t\tELEMENTS OF PROGRAMMING CSC1100" << endl;
+    cout << "\t\t       FINAL PROJECT SEMESTER 2 2015/2016" << endl;
+    cout << "\t\t\t     JOB APPLICATION SYSTEM" << endl << endl;
 				
     for (index = 0; index < 2; ++index)
     cout << " " << index+1 << " - " << view[index] << "\n"; // display char view

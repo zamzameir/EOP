@@ -37,7 +37,10 @@ void viewData (void)
     info=fopen("data/applicant.dat","r");
     
     if(fscanf(info,"%c",&c)==EOF)
-    printf(" No data found\n\n");
+   {
+      printmessage ();
+      cout << endl << " No data was found" << endl << endl;
+   }
     
     do
    {
