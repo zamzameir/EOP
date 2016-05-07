@@ -41,8 +41,8 @@ void about (void)
 	
     switch (choice) 
     {
-      case '1' : system("cls");load(buffer1);system("start credits/credits.html");about();break;
-      case '2' : system("cls");load(buffer2);system("start https://codeload.github.com/zamzameir/EOP/zip/3.8");about();break;
+      case '1' : system("cls");/*load(buffer1)*/;system("start credits/credits.html");about();break;
+      case '2' : system("cls");/*load(buffer2)*/;system("start credits/download.html");about();break;
       case 'x' : 
       case 'X' : main();break;
     }
