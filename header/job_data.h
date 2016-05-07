@@ -202,7 +202,7 @@ void userDatabase (void)
    
    if (submit == 'y' || submit == 'Y')
    {
-      fprintf(info," ID No : %d\n",randNo);
+      fprintf(info,"  ID No : %d\n",randNo);
       fprintf(info," Applicant Name : %s\n",nplname);
       fprintf(info," Education : %s\n",nedu);
       fprintf(info," Course background : %s\n",ncourse);

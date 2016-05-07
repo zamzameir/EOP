@@ -35,6 +35,10 @@ void viewData (void)
  {
     system("cls");
     info=fopen("data/applicant.dat","r");
+    
+    if(fscanf(info,"%c",&c)==EOF)
+    printf(" No data found\n\n");
+    
     do
    {
       putchar(c=getc(info));
