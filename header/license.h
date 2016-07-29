@@ -22,14 +22,21 @@ void license (void)
    do 
  {
     system("cls");
+    
+    /*<------- Open license file ------->*/
+    
     license=fopen("data/license.txt","r");
+    
+    /*<------- If license file empty ------->*/
     
     if(fscanf(license,"%c",&c)==EOF)
    {
      printmessage ();
      cout << endl << "  Company has not been registered" << endl << endl;
    }
-		
+	
+   /*<------- Display license file ------->*/	
+	
     do
    {
      putchar(c=getc(license));

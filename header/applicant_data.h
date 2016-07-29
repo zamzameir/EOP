@@ -23,9 +23,15 @@ void viewData (void)
    system("title Final Project");
    system("color f0");
    char buffer [] = "Getting data...";
-   COORD newSize = {100,9999};
-   SetConsoleScreenBufferSize(GetStdHandle(STD_OUTPUT_HANDLE), newSize); // enable scroll bar
    char c,exit;
+   
+   /*<------- Enable scroll bar ------->*/
+   
+   COORD newSize = {100,9999};
+   SetConsoleScreenBufferSize(GetStdHandle(STD_OUTPUT_HANDLE), newSize);
+   
+   /*<------- Open applicant.dat file ------->*/
+   
    FILE *info;
    info=fopen("data/applicant.dat","a+");
    system("cls");
@@ -36,12 +42,16 @@ void viewData (void)
     system("cls");
     info=fopen("data/applicant.dat","r");
     
+    /*<------- If applicant.dat file empty ------->*/
+    
     if(fscanf(info,"%c",&c)==EOF)
    {
       printmessagedb ();
       cout << endl << " No data was found" << endl << endl;
    }
     
+     /*<-------Display applicant.dat file ------->*/
+     
     do
    {
       putchar(c=getc(info));
@@ -73,7 +83,10 @@ void deleteData (void)
    system("cls");
    load(buffer);
    system("cls");
-   std::ofstream ofs; // clear external file input
+   
+   /*<------- Clear applicant.dat file ------->*/
+    
+   std::ofstream ofs;
    ofs.open("data/applicant.dat", std::ofstream::out | std::ofstream::trunc);
    ofs.close();
    system("rm data/applicant.dat");

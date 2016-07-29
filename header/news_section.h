@@ -14,8 +14,9 @@ void info (void)
    time_t now = time(NULL);
    struct tm *t = localtime(&now);
    char choice;
-   char msg [5][256] = { "Calling for fresh graduates! our company needs you!",
-   "Job application is open until 31 May 2016", "Your resume must be submitted directly through our system", 
+   char msg [7][256] = { "Calling for fresh graduates! our company needs you!",
+   "Job application is open until 31 DEC 2016","Position offered : Lead Engineer & System Engineer",
+   "Offered salary : MYR 15K","Your resume must be submitted directly through our system", 
    "Interview and acceptance within 2 weeks of submission","Submit now while chance last!" };
    do
  {
@@ -28,9 +29,11 @@ void info (void)
     cout << " contract manufacturing solution suppliers to the Oil & Gas market." << endl;
     cout << " We have a few announcement for you : " << endl << endl;
 	
-    for (int i = 0; i < 5; i++)
+    /*<------- Display msg array ------->*/
+	 
+    for (int i = 0; i < 7; i++)
      {
-       cout << " " << i+1 << " - " << msg[i] << "\n"; // display message
+       cout << " " << i+1 << " - " << msg[i] << "\n";
      }
 		
     cout << "\n\n Type X to go back > ";

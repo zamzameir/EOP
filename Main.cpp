@@ -15,10 +15,14 @@
 #include "header/job_section.h"
 #include "header/job_data.h"
 #include "header/license.h"
+#include "header/login.h"
 #include "header/about.h"
+#include "header/lock.h"
 #include "MMSystem.h"
 
 inline int  displayCredit (int,char**);
+inline int  login2(void);
+inline int  login(void);
 inline void initialize (int,char**);
 inline void databaseProfile (void);
 inline void display_splash (void); // splash function
@@ -37,6 +41,8 @@ inline void credit (void);
 inline void about (void);
 inline void exit (void);
 inline void info (void);
+inline void check(void);
+inline void truncate(void);
 
 char** argv;
 int argc;
@@ -44,15 +50,22 @@ int randNo;
 
 using namespace std;
 
-class StartUp // run at startup
+/*<------- Run at startup ------->*/
+class StartUp
 {
 public:
    StartUp (void)
    { 
-      char buffer [] = "Welcome...";
+      check();
+	  char buffer [] = "Welcome...";
       system("mode con: cols=87 lines=20");
       system("color f0");
       system("title Final Project");
+      
+      /*<--- Login disable idCheck(); --->*/
+      
+      /*login();*/
+       
       displayCredit(argc,argv); 
       display_splash();
       load(buffer);
@@ -61,6 +74,7 @@ public:
 };
 StartUp startup;
 
+/*<------- Main function ------->*/
 int main (void)
 {	
    system("mode con: cols=87 lines=20"); // set windows size
@@ -68,7 +82,7 @@ int main (void)
    system("title Final Project");
    int index;
    char choice;
-   char view [6][256] = { "News & announcement","Employment application","Applicant data","Restart system","License","About" };
+   char view [6][256] = { "News & announcement\t\t <NEW>","Employment application\t\t <APPLY NOW>","Applicant data\t\t\t <CHECK STATUS>","Restart system","License","About" };
 						 
    srand (time (NULL));
    randNo = 100 + rand () % (200-101); // random number
@@ -83,19 +97,24 @@ int main (void)
     cout << "  Your ID. " << randNo << "\t\t\t\t\t\t" << "\tDATE: " << t->tm_mday <<"/" << t->tm_mon+1 <<"/" << t->tm_year+1900 << "\n\n";
     cout << " Select an action\n";
     cout << " ----------------\n\n";
+    
+    /*<------- Display view array ------->*/
 	
     for (index = 0; index < 6; ++index)
     cout << " " << index+1 << " - " << view[index] << "\n"; // display view
+    //cout << " A - Logout\n";
+    //printf(" X - Exit %c\n",177);
     cout << " X - Exit\n";
 		
     cout << "\n Make a choice > ";
     fflush(stdin);
     choice = getch();
 	
-    if (choice !='1' && choice !='2' && choice !='3' && choice !='4' && choice !='5' && choice !='6' && choice !='x' && choice !='X')
+    if (choice !='1' && choice !='2' && choice !='3' && choice !='4' && choice !='5' && choice !='6' && choice !='a' && choice !='A' && choice !='x' && choice !='X')
     cout << "\a";
 	
     char buffer [] = "Restarting program...";
+    char logout [] = "Logging out...";
 			
     switch (choice) 
     {
@@ -105,11 +124,13 @@ int main (void)
        case '4' : system("cls");load(buffer);StartUp();main();break;
        case '5' : system("cls");license();break;
        case '6' : about();break;
+       case 'a' :
+	   case 'A' : system("cls");load(logout);truncate();login();main();break;
        case 'x' : 
        case 'X' : exit();break;
     }
 
- } while (choice != '1' && choice != '2' && choice != '3' && choice != '4' && choice != '5' && choice !='6' && choice != 'x' && choice != 'X');
+ } while (choice != '1' && choice != '2' && choice != '3' && choice != '4' && choice != '5' && choice !='6' && choice !='a' && choice !='A' && choice != 'x' && choice != 'X');
    
    return 0;
 }

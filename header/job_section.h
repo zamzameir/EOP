@@ -26,9 +26,11 @@ void profile (void)
  {
      system ("cls");
      printmessage ();
-				
+     
+     /*<------- Display view array ------->*/
+	  				
      for (index = 0; index < 3; ++index)
-     cout << " " << index+1 << " - " << view[index] << "\n"; // display char view
+     cout << " " << index+1 << " - " << view[index] << "\n";
      cout << " X - Go back\n";
 		
      cout << "\n Make a choice > ";

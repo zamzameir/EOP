@@ -32,8 +32,12 @@ void userDatabase (void)
    system("color f0");
    system("mode con: cols=87 lines=20");
    char back;
+   
+   /*<------- Open applicant.dat file ------->*/
+   
    FILE *info;
    info=fopen("data/applicant.dat","a+");
+   fprintf(info,"\n");
    
    char message1 [] = "EMPLOYMENT APPLICATION FORM";
    char message2 [] = "___________________________";
@@ -43,10 +47,15 @@ void userDatabase (void)
    cout << " ID No. " << randNo << "\n";
    cout << " ----------" << "\n\n";
    
+   /*<------- Get data ------->*/
+   
    cout << " Full name : ";
    fflush(stdin);
    cout << " ";
    scanf("%[^\n]",plname);
+   
+   /*<------- To upper first letter ------->*/
+   
    for(j=0;plname[j]!='\0';j++)
    { 
      nplname[0]=toupper(plname[0]);
@@ -66,6 +75,9 @@ void userDatabase (void)
    fflush(stdin);
    cout << " ";
    scanf("%[^\n]",edu);
+   
+   /*<------- To upper first letter ------->*/
+    
    for(k=0;edu[k]!='\0';k++)
    { 
      nedu[0]=toupper(edu[0]);
@@ -85,6 +97,9 @@ void userDatabase (void)
    fflush(stdin);
    cout << " ";
    scanf("%[^\n]",course);
+   
+   /*<------- To upper first letter ------->*/
+    
    for(l=0;course[l]!='\0';l++)
    { 
      ncourse[0]=toupper(course[0]);
@@ -104,6 +119,9 @@ void userDatabase (void)
    fflush(stdin);
    cout << " ";
    scanf("%[^\n]",cgpa);
+   
+   /*<------- To upper first letter ------->*/
+    
    for(p=0;cgpa[p]!='\0';p++)
    { 
      ncgpa[0]=toupper(cgpa[0]);
@@ -123,6 +141,9 @@ void userDatabase (void)
    fflush(stdin);
    cout << " ";
    scanf("%[^\n]",addr);
+   
+   /*<------- To upper first letter ------->*/
+    
    for(m=0;addr[m]!='\0';m++)
    { 
      naddr[0]=toupper(addr[0]);
@@ -142,6 +163,9 @@ void userDatabase (void)
    fflush(stdin);
    cout << " ";
    scanf("%[^\n]",phone);
+   
+   /*<------- To upper first letter ------->*/
+    
    for(n=0;phone[n]!='\0';n++)
    { 
      nphone[0]=toupper(phone[0]);
@@ -155,6 +179,8 @@ void userDatabase (void)
    nphone[n]='\0';
    
    system("cls");
+   
+   /*<------- Display overview before saving data ------->*/
    
    char message3 [] = "OVERVIEW";
    char message4 [] = "________";
@@ -171,7 +197,8 @@ void userDatabase (void)
    cout << " Address    : " << naddr << endl;
    cout << " Contact    : " << nphone << endl;
    
-   cout << "\n ***Please confirm your informations first\n"; 
+   cout << "\n ***Please confirm your informations first\n";
+   cout << " Your data cannot be modified once submitted\n"; 
    cout << " Press Y to submit or X to cancel > ";
    fflush(stdin);
    submit = getch();
@@ -195,14 +222,19 @@ void userDatabase (void)
       cout << " Contact    : " << nphone << endl;
       
       cout << "\n ***Please confirm your informations first\n";
+      cout << " Your data cannot be modified once submitted\n"; 
       cout << " Press Y to submit or X to cancel > ";
       fflush(stdin);
       submit = getch();
    }
    
+   /*<------- Submit data ------->*/
+   
    if (submit == 'y' || submit == 'Y')
    {
-      fprintf(info,"  ID No : %d\n",randNo);
+      /*<------- Writing into external file ------->*/
+	   
+	  fprintf(info," ID No : %d\n",randNo);
       fprintf(info," Applicant Name : %s\n",nplname);
       fprintf(info," Education : %s\n",nedu);
       fprintf(info," Course background : %s\n",ncourse);
@@ -213,7 +245,7 @@ void userDatabase (void)
       mytime = time(NULL);
       fprintf(info," Application date : %s",ctime(&mytime));
       fprintf(info,"%c",' ');
-      for(i=0;i<=84;i++)
+      for(i=0;i<=75;i++)
       fprintf(info,"%c",'_');
       fprintf(info,"\n\n");
       fclose(info);
@@ -226,17 +258,24 @@ void userDatabase (void)
       char message2 [] = "THANK YOU YOUR DATA HAS BEEN SAVED";
       char message3 [] = "----------------------------------";
       
-      printf("%*s",40+strlen(message1)/2,message1, 40-strlen(message1)/2,""); // center message 1
+      /*<------- Center message ------->*/
+      
+      printf("%*s",40+strlen(message1)/2,message1, 40-strlen(message1)/2,"");
       puts("");
-      printf("%*s",40+strlen(message2)/2,message2, 40-strlen(message2)/2,""); // center message 2
+      printf("%*s",40+strlen(message2)/2,message2, 40-strlen(message2)/2,"");
       puts("");
-      printf("%*s",40+strlen(message3)/2,message3, 40-strlen(message3)/2,""); // center message 3
+      printf("%*s",40+strlen(message3)/2,message3, 40-strlen(message3)/2,"");
       puts("");
+      
+      /*<------- Play thank you sound ------->*/
+       
       PlaySound(TEXT("sound/thankyou.wav"), NULL, SND_SYNC);
 
    }
    
    else
+   
+   /*<------- Abort saving data ------->*/
 
    {
       system("cls");
@@ -256,11 +295,11 @@ void userDatabase (void)
       puts("");
    }
 
-   fclose(info);
+   fclose(info); // close file
 	
    cout << "\n\n\n";
    char cont [] = "< Press anykey to continue >";
-   printf("%*s",40+strlen(cont)/2,cont, 40-strlen(cont)/2,""); // center cont
+   printf("%*s",40+strlen(cont)/2,cont, 40-strlen(cont)/2,"");
    back = getch();
    switch (back)
    {
@@ -276,6 +315,9 @@ void peekData (void)
    char conts;
 
    system ("cls");
+   
+   /*<------- Display current array data ------->*/
+    
    char message1 [] = "EMPLOYMENT APPLICATION FORM";
    char message2 [] = "___________________________";
    printf("%*s",40+strlen(message1)/2,message1, 40-strlen(message1)/2,"");puts(""); // center message 1
@@ -314,7 +356,10 @@ void resetData (void)
    system("cls");
    load(buffer);
    system("cls");
-   memset(nplname, 0, sizeof(nplname)); // reset array data back to 0 
+   
+   /*<------- Reset current array to 0 ------->*/
+    
+   memset(nplname, 0, sizeof(nplname));
    memset(ncourse, 0, sizeof(ncourse));
    memset(nphone, 0, sizeof(nphone));
    memset(ncgpa, 0, sizeof(ncgpa));

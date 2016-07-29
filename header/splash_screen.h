@@ -15,6 +15,8 @@ using namespace std;
 
 void gotoxy (int x, int y)
 {
+   /*<------- Center animation ------->*/
+   
    system("title Final Project");
    system("color f0");
    COORD coord;
@@ -26,15 +28,21 @@ void gotoxy (int x, int y)
 }
 void load (char buffer[])
 {
-   system("title Final Project"); // animated function
+   system("title Final Project");
    system("color f0");
    int row,col,r,c,q;
+   
+   /*<------- Animation ------->*/
+   
    gotoxy(36,14);
    printf("%s",(buffer));
    gotoxy(30,15);
+   
+   /*<------- To display character slowly ------->*/
+   
    for(r=1;r<=20;r++)
    {
-      for(q=0;q<=50000000;q++); // to display the character slowly
+      for(q=0;q<=5000000;q++);
       printf("%c",177);
    }
 
