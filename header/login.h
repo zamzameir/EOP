@@ -11,11 +11,11 @@ int login(void)
 { 
   system("mode con: cols=87 lines=20");
   system("title ");
-  char userChar[100], choice='Y', input, passChar[100];
+  char userChar[100], input, passChar[100];
   
-  char message1 [] = "\t    -------------"; 
-  char message2 [] = "\t    PLEASE LOG IN";
-  char message3 [] = "\t    -------------";
+  char message1 [] = "\t    --------------"; 
+  char message2 [] = "\t    PLEASE SIGN IN";
+  char message3 [] = "\t    --------------";
   
   char abort [] = "Aborting Access...";
   char grant [] = "Granting Access...";
@@ -141,8 +141,9 @@ int login(void)
 				
                         else
                         {
-                          cout << "\a";
-                          cout << "\n\n ID & PASSWORD DOES NOT MATCH";
+                          //cout << "\a";
+                          MessageBox(NULL, "ID & PASSWORD DOES NOT MATCH","Error!",MB_ICONEXCLAMATION|MB_OK);
+                          //cout << "\n\n ID & PASSWORD DOES NOT MATCH";
                           load(out);
                         }
                       }
@@ -151,15 +152,17 @@ int login(void)
 						{
 							if (!strcmp(passChar, "mirmira"))
 							{
-								cout << "\a";
-		   						cout << "\n\n WRONG ID. TRY AGAIN";
+								//cout << "\a";
+								MessageBox(NULL, "WRONG ID","Error!",MB_ICONEXCLAMATION|MB_OK);
+		   						//cout << "\n\n WRONG ID. TRY AGAIN";
            						load(out);
 							}
 				
 							else
 							{
-								cout << "\a";
-		   						cout << "\n\n THIS ID DOES NOT EXIST. TRY AGAIN";
+								//cout << "\a";
+								MessageBox(NULL, "THIS ID DOES NOT EXIST","Error!",MB_ICONEXCLAMATION|MB_OK);
+		   						//cout << "\n\n THIS ID DOES NOT EXIST. TRY AGAIN";
            						load(out);
 							}
 						}
@@ -233,8 +236,9 @@ int login(void)
 				
 				else
 				{
-					cout << "\a";
-		   			cout << "\n\n ID & PASSWORD DOES NOT MATCH";
+					//cout << "\a";
+					MessageBox(NULL, "ID & PASSWORD DOES NOT MATCH","Error!",MB_ICONEXCLAMATION|MB_OK);
+		   			//cout << "\n\n ID & PASSWORD DOES NOT MATCH";
       	   			load(abort);
 				}
 			}
@@ -243,15 +247,17 @@ int login(void)
 			{
 				if (!strcmp(passChar, "mirmira"))
 				{
-					cout << "\a";
-		   			cout << "\n\n WRONG ID. TRY AGAIN";
+					//cout << "\a";
+					MessageBox(NULL, "WRONG ID","Error!",MB_ICONEXCLAMATION|MB_OK);
+		   			//cout << "\n\n WRONG ID. TRY AGAIN";
            			load(abort);
 				}
 				
 				else
 				{
-					cout << "\a";
-		   			cout << "\n\n THIS ID DOES NOT EXIST. TRY AGAIN";
+					//cout << "\a";
+					MessageBox(NULL, "THIS ID DOES NOT EXIST","Error!",MB_ICONEXCLAMATION|MB_OK);
+		   			//cout << "\n\n THIS ID DOES NOT EXIST. TRY AGAIN";
            			load(abort);
 				}
 			}

@@ -257,8 +257,10 @@ void userDatabase (void)
       char message1 [] = "----------------------------------"; 
       char message2 [] = "THANK YOU YOUR DATA HAS BEEN SAVED";
       char message3 [] = "----------------------------------";
+      cout << "\a";
+      MessageBox(NULL, "Your data has been saved","Message",MB_OK);
       
-      /*<------- Center message ------->*/
+      /*<------- Center message ------->
       
       printf("%*s",40+strlen(message1)/2,message1, 40-strlen(message1)/2,"");
       puts("");
@@ -267,9 +269,9 @@ void userDatabase (void)
       printf("%*s",40+strlen(message3)/2,message3, 40-strlen(message3)/2,"");
       puts("");
       
-      /*<------- Play thank you sound ------->*/
+      /*<------- Play thank you sound ------->
        
-      PlaySound(TEXT("sound/thankyou.wav"), NULL, SND_SYNC);
+      PlaySound(TEXT("sound/thankyou.wav"), NULL, SND_SYNC);*/
 
    }
    
@@ -286,13 +288,15 @@ void userDatabase (void)
       char message1 [] = "-------------------------------"; 
       char message2 [] = "SUBMISSION ABORTED BY APPLICANT";
       char message3 [] = "-------------------------------";
+      cout << "\a";
+      MessageBox(NULL, "Submission aborted","Warning",MB_ICONEXCLAMATION|MB_OK);
       
-      printf("%*s",40+strlen(message1)/2,message1, 40-strlen(message1)/2,""); // center message 1
+      /*printf("%*s",40+strlen(message1)/2,message1, 40-strlen(message1)/2,""); // center message 1
       puts("");
       printf("%*s",40+strlen(message2)/2,message2, 40-strlen(message2)/2,""); // center message 2
       puts("");
       printf("%*s",40+strlen(message3)/2,message3, 40-strlen(message3)/2,""); // center message 3
-      puts("");
+      puts("");*/
    }
 
    fclose(info); // close file
